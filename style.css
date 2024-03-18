@@ -47,7 +47,7 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    bottom: 0;
+    bottom: 3vw;
     width: 73.125vw;
     padding-left: 0.938vw;
     padding-right: 0.938vw;
@@ -76,6 +76,7 @@
     overflow: hidden;
     display: block;
     cursor: pointer;
+    padding: 0 0 1.225vw;
 }
 
 .building-manufacturing-slider .slick-dots li a::after {
