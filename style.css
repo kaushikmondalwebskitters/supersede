@@ -150,7 +150,8 @@
 }
 
 .supersede-nav-menu-link.w--current::after, 
-.supersede-nav-menu-link:hover::after {
+.supersede-nav-menu-link:hover::after,
+.nav-dropdown-new:hover .supersede-nav-menu-link::after {
     transform: scaleX(1);
     transform-origin: left;
     transition-delay: .1s;
