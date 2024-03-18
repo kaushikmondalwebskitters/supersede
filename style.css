@@ -1,6 +1,7 @@
 /* https://kaushikmondalwebskitters.github.io/supersede/style.css */
 
-.supersede-nav-btn:hover .supersede-nav-btn-circle-icon {
+.supersede-nav-btn:hover .supersede-nav-btn-circle-icon,
+.supersede-tertiary-btn:hover .supersede-tertiary-btn-circle-icon {
     animation: navBtnArrowHover .6s ease
 }
 
