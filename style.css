@@ -42,3 +42,29 @@
         transform: none
     }
 }
+
+.building-manufacturing-slider .slick-dots {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 73.125vw;
+    padding-left: 0.938vw;
+    padding-right: 0.938vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    list-style: none;
+    display: flex;
+}
+
+.building-manufacturing-slider .slick-dots li {
+
+}
+
+.building-manufacturing-slider .slick-dots li a {
+    
+}
+
+.building-manufacturing-slider .slick-dots li.slick-active a {
+    
+}
