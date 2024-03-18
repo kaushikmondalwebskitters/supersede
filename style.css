@@ -21,19 +21,20 @@
     }
 }
 
-.supersede-primary-btn:hover .supersede-primary-btn-text {
+.supersede-primary-btn:hover .supersede-primary-btn-text,
+.supersede-primary-btn-outline:hover .supersede-primary-btn-text {
     animation: BtnTextHover .6s ease
 }
 
 @keyframes BtnTextHover {
     49% {
         opacity: 0;
-        transform: translate3d(0, 50%, 0)
+        transform: translate3d(0, -50%, 0)
     }
 
     50% {
         opacity: 0;
-        transform: translate3d(0, -50%, 0)
+        transform: translate3d(0, 50%, 0)
     }
 
     to {
