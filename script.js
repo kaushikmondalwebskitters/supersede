@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
 
     if ($('.building-manufacturing-slider').length) {
 
-        $(".slider").slick({
+        $(".building-manufacturing-slider").slick({
             dots: true,
             arrows: false,
             infinite: false,
