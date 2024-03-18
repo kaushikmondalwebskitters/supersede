@@ -58,7 +58,7 @@
     z-index: 99;
 }
 
-.building-manufacturing-slider .slick-slide {
+/* .building-manufacturing-slider .slick-slide {
     transform: translate3d(100%, 0, 0);
     transition: transform 0s cubic-bezier(.165,.84,.44,1);
     will-change: transform;
@@ -80,7 +80,7 @@
 .building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-slider-box {
     transform: none;
     transition: transform 1.2s cubic-bezier(.165,.84,.44,1);
-}
+} */
 
 .building-manufacturing-slider .slick-dots li {
     width: 50%;
