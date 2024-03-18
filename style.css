@@ -1,0 +1,22 @@
+/* https://kaushikmondalwebskitters.github.io/supersede/style.css */
+
+.supersede-nav-btn:hover .supersede-nav-btn-circle-icon {
+    animation: navBtnArrowHover .6s ease
+}
+
+@keyframes navBtnArrowHover {
+    49% {
+        opacity: 0;
+        transform: translate3d(50%, 0, 0)
+    }
+
+    50% {
+        opacity: 0;
+        transform: translate3d(-50%, 0, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
