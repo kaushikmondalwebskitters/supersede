@@ -55,16 +55,55 @@
     transform: translate(-50%, 0);
     list-style: none;
     display: flex;
+    z-index: 99;
 }
 
 .building-manufacturing-slider .slick-dots li {
-
+    width: 50%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5vw;
+    line-height: 1.5em;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    padding: 0 0.625vw;
 }
 
 .building-manufacturing-slider .slick-dots li a {
-    
+    position: relative;
+    color: #FFFFFF;
+    opacity: 0.5;
+    overflow: hidden;
+    display: block;
 }
 
-.building-manufacturing-slider .slick-dots li.slick-active a {
-    
+.building-manufacturing-slider .slick-dots li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.25vw;
+    background: rgba(217, 217, 217, 0.50);
+}
+
+.building-manufacturing-slider .slick-dots li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.25vw;
+    background: rgba(217, 217, 217, 1);
+    transition: width 0.4s ease-in-out;
+}
+
+.building-manufacturing-slider .slick-dots li.slick-active a,
+.building-manufacturing-slider .slick-dots li a:hover {
+    opacity: 1;
+}
+
+.building-manufacturing-slider .slick-dots li.slick-active a::before,
+.building-manufacturing-slider .slick-dots li a:hover::before {
+    width: 100%;
 }
