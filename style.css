@@ -75,6 +75,7 @@
     opacity: 0.5;
     overflow: hidden;
     display: block;
+    cursor: pointer;
 }
 
 .building-manufacturing-slider .slick-dots li a::after {
