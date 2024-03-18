@@ -142,13 +142,14 @@
     height: 0.063vw;
     left: 0;
     position: absolute;
+    transform: scaleX(0);
     transform-origin: right;
     transition: transform .5s cubic-bezier(.77,0,.175,1), background-color .3s ease;
     transition-delay: 0s;
     width: 100%;
 }
 
-.supersede-nav-menu-link.w--current:before, 
+.supersede-nav-menu-link.w--current::after, 
 .supersede-nav-menu-link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
