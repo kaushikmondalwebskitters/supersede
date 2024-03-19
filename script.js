@@ -89,7 +89,7 @@ jQuery(document).ready(function ($) {
             });
 
             gsap.to(".supersede-home-banner-title",{
-                opacity: 0,
+                // opacity: 0,
                 yPercent: -56,
                 scrollTrigger:{
                     trigger: ".supersede-home-banner",
