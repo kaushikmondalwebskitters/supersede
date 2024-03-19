@@ -220,9 +220,9 @@ jQuery(document).ready(function ($) {
                 // opacity: 0,
                 yPercent: 56,
                 scrollTrigger: {
-                    trigger: introducingSec,
-                    start: 'top bottom',
-                    end: 'bottom 0',
+                    trigger: ".supersede-info-wrapper",
+                    start: 'top 0',
+                    end: 'bottom 80%',
                     scrub: true,
                     // markers: true,
                 }
