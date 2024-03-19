@@ -75,6 +75,30 @@ jQuery(document).ready(function ($) {
                     markers: true,
                 }
             });
+
+            gsap.to(".supersede-home-banner-subtitle",{
+                opacity: 0,
+                yPercent: -36,
+                scrollTrigger:{
+                    trigger: ".supersede-home-banner",
+                    start: 'top 0',
+                    end: 'bottom 80%',
+                    scrub: true,
+                    markers: true,
+                }
+            });
+
+            gsap.to(".supersede-home-banner-title",{
+                opacity: 0,
+                yPercent: -36,
+                scrollTrigger:{
+                    trigger: ".supersede-home-banner",
+                    start: 'top 0',
+                    end: 'bottom 80%',
+                    scrub: true,
+                    markers: true,
+                }
+            });
         }
     }
 
@@ -83,5 +107,5 @@ jQuery(document).ready(function ($) {
     setTimeout(() => {
         $('.loader').addClass('isEnding');
         afterLoad();
-    }, 3000);
+    }, 1000);
 })
