@@ -244,6 +244,9 @@ jQuery(document).ready(function ($) {
                     toggleActions: "play reverse",
                     onEnter() {
                         elem.classList.add('active');
+                    },
+                    onEnterBack() {
+                        elem.classList.remove('active');
                     }
                 });
             })
