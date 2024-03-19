@@ -59,7 +59,7 @@ jQuery(document).ready(function ($) {
             ScrollTrigger.create({
                 trigger: ".supersede-home-intro",
                 start: "top 100%",
-                end: "bottom top",
+                end: "top 100%",
                 animation: Tl,
                 scrub: true,
                 markers: true,
