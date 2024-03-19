@@ -309,6 +309,12 @@
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
+.building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-head-title,
+.building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-head-text {
+    opacity: 1;
+    transform: translateY(1);
+}
+
 .building-manufacturing-slider .slick-slide {
     transition: unset!important;
 }
