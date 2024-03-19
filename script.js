@@ -231,6 +231,23 @@ jQuery(document).ready(function ($) {
 
 
         }
+
+
+
+        if ($(".supersede-video-block").length) {
+            var reveal = gsap.utils.toArray(".reveal > *");
+            reveal.forEach((elem, i) => {
+                ScrollTrigger.create({
+                    trigger: elem,
+                    start: "top 80%",
+                    end: "top 20%",
+                    //toggleActions: "play reverse",
+                    onEnter() {
+                        elem.classList.add('active');
+                    }
+                });
+            })
+        }
     }
 
 
