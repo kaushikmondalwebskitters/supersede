@@ -53,7 +53,7 @@ jQuery(document).ready(function ($) {
                 opacity: 1
             });
             Tl.to(banner, {
-                opacity: -0.25,
+                opacity: 0,
             });
             //scroll anim
             ScrollTrigger.create({
