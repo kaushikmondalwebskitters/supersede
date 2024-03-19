@@ -43,15 +43,10 @@ jQuery(document).ready(function ($) {
             //     by: "lines",
             // });
 
-            var s = Splitting({
+            Splitting({
                 target: "[data-splitting]",
                 by: 'lines'
-            }).forEach(s => {
-                Splitting({
-                        target: s.words,
-                        by: 'chars'
-                })
-            });
+            })
 
             // splitting text end
         }
