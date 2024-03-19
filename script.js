@@ -183,7 +183,7 @@ jQuery(document).ready(function ($) {
             specTl.pause();
 
             ScrollTrigger.create({
-                trigger: ".pt-column-box",
+                trigger: ".fig_points",
                 start: "top 80%",
                 end: "+=1%",
                 onUpdate: (self) => {
