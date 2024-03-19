@@ -218,11 +218,11 @@ jQuery(document).ready(function ($) {
 
             gsap.to(".sd-logo", {
                 // opacity: 0,
-                yPercent: -56,
+                yPercent: 56,
                 scrollTrigger: {
                     trigger: introducingSec,
                     start: 'top bottom',
-                    end: 'bottom 50%',
+                    end: 'bottom 0',
                     scrub: true,
                     // markers: true,
                 }
