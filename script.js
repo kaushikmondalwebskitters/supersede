@@ -65,9 +65,9 @@ jQuery(document).ready(function ($) {
             //     markers: true,
             // });
 
-            gsap.to(".supersede-home-banner",{
-                opacity: 0 ,
-                scrollTrigger:{
+            gsap.to(".supersede-home-banner", {
+                opacity: 0,
+                scrollTrigger: {
                     trigger: ".supersede-home-banner",
                     start: 'top 0',
                     end: 'bottom 10%',
@@ -76,10 +76,10 @@ jQuery(document).ready(function ($) {
                 }
             });
 
-            gsap.to(".supersede-home-banner-subtitle",{
+            gsap.to(".supersede-home-banner-subtitle", {
                 opacity: 0,
                 yPercent: -36,
-                scrollTrigger:{
+                scrollTrigger: {
                     trigger: ".supersede-home-banner",
                     start: 'top 0',
                     end: 'bottom 90%',
@@ -88,63 +88,79 @@ jQuery(document).ready(function ($) {
                 }
             });
 
-            gsap.to(".supersede-home-banner-title",{
+            gsap.to(".supersede-home-banner-title", {
                 // opacity: 0,
                 yPercent: -56,
-                scrollTrigger:{
+                scrollTrigger: {
                     trigger: ".supersede-home-banner",
                     start: 'top 0',
                     end: 'bottom 50%',
                     scrub: true,
-                   // markers: true,
+                    // markers: true,
                 }
             });
         }
 
         if ($(".supersede-home-intro").length) {
-            gsap.to(".supersede-tag-in",{
+            gsap.to(".supersede-tag-in", {
                 // opacity: 0,
                 yPercent: -56,
-                scrollTrigger:{
+                scrollTrigger: {
                     trigger: ".supersede-tag-in",
                     start: 'top bottom',
                     end: 'bottom 50%',
                     scrub: true,
-                   // markers: true,
+                    // markers: true,
                 }
             });
 
-            gsap.to(".supersede_sticky_box",{
+            gsap.to(".supersede_sticky_box", {
                 // opacity: 0,
                 yPercent: -56,
-                scrollTrigger:{
+                scrollTrigger: {
                     trigger: ".supersede_sticky_box",
                     start: 'top bottom',
                     end: 'bottom 50%',
                     scrub: true,
-                   // markers: true,
+                    // markers: true,
                 }
             });
 
             var specItem = $(".pt-column")
             var specItem = specItem.find(".pt-column-box");
-            // var SpecTl = gsap.timeline();
-            gsap.set(specItem, { 
-                opacity: 0, 
+            var specTl = gsap.timeline();
+            gsap.set(specItem, {
+                opacity: 0,
                 xPercent: -16,
             });
 
-            gsap.to(specItem,{
-                opacity: 1,
-                xPercent: 0,
-                scrollTrigger:{
-                    trigger: specItem,
-                    start: 'top center',
-                    end: 'bottom 50%',
-                    //scrub: true,
-                   // markers: true,
-                }
+            specItem.each(function (i) {
+                specTl
+                    .to(specItem.eq(i),
+                        {
+                            opacity: 1,
+                            xPercent: 0,
+                            duration: 0.6,
+                            ease: "Back.easeOut",
+                        })
             });
+            specTl.pause();
+
+            ScrollTrigger.create({
+                trigger: ".pt-column-box",
+                start: "top 70%",
+                end: "+=1%",
+                onUpdate: (self) => {
+                    if (self.progress >= 0.95) {
+                        specTl.timeScale(3.5).restart()
+                    } else if (self.progress < 0.95) {
+                        specTl.timeScale(5).reverse();
+                    }
+                },
+                // markers: true,
+            });
+
+
         }
     }
 
