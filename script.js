@@ -150,23 +150,36 @@ jQuery(document).ready(function ($) {
             });
 
             var specItem = $(".pt-column")
-            var specItem = specItem.find(".pt-column-box");
+            var greenCircle = specItem.find(".green-white-circle");
+            var line = specItem.find(".white-line");
+            var ptElem = specItem.find(".pt");
+            // var specItem = specItem.find(".pt-column-box");
+
             var specTl = gsap.timeline();
-            gsap.set(specItem, {
-                opacity: 0,
-                xPercent: -16,
-            });
+            gsap.set([greenCircle, ptElem], { opacity: 0, });
+            gsap.set(line, { width: 0, });
+            gsap.set(greenCircle, { scale: 0, });
+
 
             specItem.each(function (i) {
                 specTl
-                    .to(specItem.eq(i),
+                    .to(greenCircle.eq(i),
                         {
                             opacity: 1,
-                            xPercent: 0,
+                            scale: 1,
                             duration: 0.6,
-                            // ease: "Back.easeOut",
+                            ease: "Back.easeOut",
                         })
+                    .to(line.eq(i),
+                        {
+                            width: "100%",
+                        }, "<")
+                    .to(ptElem.eq(i),
+                        {
+                            opacity: 1,
+                        }, "-=0.15")
             });
+
             specTl.pause();
 
             ScrollTrigger.create({
@@ -275,7 +288,7 @@ jQuery(document).ready(function ($) {
             })
         }
 
-        
+
 
     }
 
@@ -285,7 +298,7 @@ jQuery(document).ready(function ($) {
         $('.loader').addClass('isEnding');
         afterLoad();
     }, 1000);
-    
+
     setTimeout(() => {
         if ($("[data-line]").length) {
             var reveal = gsap.utils.toArray("[data-line] > *");
