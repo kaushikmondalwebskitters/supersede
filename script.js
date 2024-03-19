@@ -170,14 +170,14 @@ jQuery(document).ready(function ($) {
                             duration: 0.6,
                             ease: "Back.easeOut",
                         })
-                    .to(line.eq(i),
-                        {
-                            width: "100%",
-                        }, "<")
-                    .to(ptElem.eq(i),
-                        {
-                            opacity: 1,
-                        }, "-=0.15")
+                    // .to(line.eq(i),
+                    //     {
+                    //         width: "100%",
+                    //     }, "<")
+                    // .to(ptElem.eq(i),
+                    //     {
+                    //         opacity: 1,
+                    //     }, "-=0.15")
             });
 
             specTl.pause();
