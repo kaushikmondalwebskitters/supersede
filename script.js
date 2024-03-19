@@ -47,22 +47,33 @@ jQuery(document).ready(function ($) {
 
         // banner 
         if ($(".supersede-home-banner").length) {
-            var banner = $(".supersede-home-banner");
-            var Tl = gsap.timeline();
-            gsap.set(banner, {
-                opacity: 1
-            });
-            Tl.to(banner, {
-                opacity: 0,
-            });
-            //scroll anim
-            ScrollTrigger.create({
-                trigger: ".supersede-home-intro",
-                start: "top 100%",
-                end: "top 100%",
-                animation: Tl,
-                scrub: true,
-                markers: true,
+            // var banner = $(".supersede-home-banner");
+            // var Tl = gsap.timeline();
+            // gsap.set(banner, {
+            //     opacity: 1
+            // });
+            // Tl.to(banner, {
+            //     opacity: 0,
+            // });
+            // //scroll anim
+            // ScrollTrigger.create({
+            //     trigger: ".supersede-home-intro",
+            //     start: "top 100%",
+            //     end: "top 100%",
+            //     animation: Tl,
+            //     scrub: true,
+            //     markers: true,
+            // });
+
+            gsap.to(".supersede-home-banner",{
+                opacity: 0 ,
+                scrollTrigger:{
+                    trigger: ".supersede-home-banner",
+                    start: 'top 0',
+                    end: 'bottom 20%',
+                    scrub: true,
+                    markers: true,
+                }
             });
         }
     }
