@@ -241,7 +241,7 @@ jQuery(document).ready(function ($) {
                     trigger: elem,
                     start: "top 0",
                     end: "top 20%",
-                    //toggleActions: "play reverse",
+                    toggleActions: "play reverse",
                     onEnter() {
                         elem.classList.add('active');
                     }
