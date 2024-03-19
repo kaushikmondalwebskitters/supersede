@@ -303,6 +303,20 @@ jQuery(document).ready(function ($) {
             });
         }
 
+        if ($(".supersede-footer-inner").length) {
+            gsap.set(".supersede-footer-inner", { yPercent: 22, });
+            gsap.to(".supersede-footer-inner", {
+                yPercent: 0,
+                scrollTrigger: {
+                    trigger: ".supersede-footer",
+                    start: 'top 100%',
+                    end: 'bottom 100%',
+                    scrub: true,
+                    // markers: true,
+                }
+            });
+        }
+
 
 
 
