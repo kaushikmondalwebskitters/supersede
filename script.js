@@ -141,14 +141,14 @@ jQuery(document).ready(function ($) {
                             opacity: 1,
                             xPercent: 0,
                             duration: 0.6,
-                            ease: "Back.easeOut",
+                            // ease: "Back.easeOut",
                         })
             });
             specTl.pause();
 
             ScrollTrigger.create({
                 trigger: ".pt-column-box",
-                start: "top 70%",
+                start: "top 50%",
                 end: "+=1%",
                 onUpdate: (self) => {
                     if (self.progress >= 0.95) {
