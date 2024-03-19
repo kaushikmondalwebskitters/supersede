@@ -167,11 +167,11 @@ jQuery(document).ready(function ($) {
             var intButton = introducingSec.find('.supersede-home-introducing-head-btn');
             var specIntroTl = gsap.timeline();
 
-            gsap.to(".introducingSec", {
+            gsap.to(introducingSec, {
                 // opacity: 0,
                 yPercent: -56,
                 scrollTrigger: {
-                    trigger: ".introducingSec",
+                    trigger: introducingSec,
                     start: 'top 0',
                     end: 'bottom 50%',
                     scrub: true,
@@ -187,15 +187,19 @@ jQuery(document).ready(function ($) {
             specIntroTl.to(subTitle, {
                 opacity: 1,
                 yPercent: 0,
+                duration: 0.6,
             }).to(title, {
                 opacity: 1,
                 yPercent: 0,
+                duration: 0.6,
             }).to(titleHed, {
                 opacity: 1,
                 yPercent: 0,
+                duration: 0.6,
             }).to(intButton, {
                 opacity: 1,
                 yPercent: 0,
+                duration: 0.6,
             })
             specIntroTl.pause();
 
