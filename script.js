@@ -156,9 +156,9 @@ jQuery(document).ready(function ($) {
             // var specItem = specItem.find(".pt-column-box");
 
             var specTl = gsap.timeline();
-            gsap.set([greenCircle, ptElem], { opacity: 0, });
-            gsap.set(line, { width: 0, });
-            gsap.set(greenCircle, { scale: 0, });
+            // gsap.set([greenCircle, ptElem], { opacity: 0, });
+            // gsap.set(line, { width: 0, });
+            // gsap.set(greenCircle, { scale: 0, });
 
 
             specItem.each(function (i) {
