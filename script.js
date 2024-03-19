@@ -205,7 +205,7 @@ jQuery(document).ready(function ($) {
 
             ScrollTrigger.create({
                 trigger: introducingSec,
-                start: "top 100%",
+                start: "top bottom",
                 end: "bottom 50%",
                 onUpdate: (self) => {
                     if (self.progress >= 0.95) {
