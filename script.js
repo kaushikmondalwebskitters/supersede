@@ -55,16 +55,15 @@ jQuery(document).ready(function ($) {
             Tl.to(banner, {
                 opacity: -0.25,
             });
-            Tl.pause();
             //scroll anim
             ScrollTrigger.create({
-                trigger: banner,
+                trigger: ".supersede-home-intro",
                 start: "top bottom",
                 end: "bottom bottom",
                 animation: Tl,
                 scrub: 1.2,
                 // markers: true,
-            });
+            }).pause();
         }
     }
 
