@@ -148,7 +148,7 @@ jQuery(document).ready(function ($) {
 
             ScrollTrigger.create({
                 trigger: ".pt-column-box",
-                start: "top 50%",
+                start: "top 80%",
                 end: "+=1%",
                 onUpdate: (self) => {
                     if (self.progress >= 0.95) {
