@@ -281,7 +281,7 @@ jQuery(document).ready(function ($) {
                 ScrollTrigger.create({
                     trigger: elem,
                     start: "top 0",
-                    end: "top 20%",
+                    end: "top 0",
                     toggleActions: "play reverse",
                     onEnter() {
                         elem.classList.add('active');
