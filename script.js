@@ -106,7 +106,7 @@ jQuery(document).ready(function ($) {
                 // opacity: 0,
                 yPercent: -56,
                 scrollTrigger:{
-                    trigger: ".supersede-home-intro",
+                    trigger: ".supersede-tag-in",
                     start: 'top bottom',
                     end: 'bottom 50%',
                     scrub: true,
