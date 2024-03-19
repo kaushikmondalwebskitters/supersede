@@ -156,9 +156,9 @@ jQuery(document).ready(function ($) {
             // var specItem = specItem.find(".pt-column-box");
 
             var specTl = gsap.timeline();
-            // gsap.set([greenCircle, ptElem], { opacity: 0, });
-            // gsap.set(line, { width: 0, });
-            // gsap.set(greenCircle, { scale: 0, });
+            gsap.set([greenCircle, ptElem], { opacity: 0, });
+            gsap.set(line, { width: 0, });
+            gsap.set(greenCircle, { scale: 0, });
 
 
             specItem.each(function (i) {
@@ -170,14 +170,14 @@ jQuery(document).ready(function ($) {
                             duration: 0.6,
                             ease: "Back.easeOut",
                         })
-                    // .to(line.eq(i),
-                    //     {
-                    //         width: "100%",
-                    //     }, "<")
-                    // .to(ptElem.eq(i),
-                    //     {
-                    //         opacity: 1,
-                    //     }, "-=0.15")
+                    .to(line.eq(i),
+                        {
+                            width: "100%",
+                        }, "<")
+                    .to(ptElem.eq(i),
+                        {
+                            opacity: 1,
+                        }, "-=0.15")
             });
 
             specTl.pause();
