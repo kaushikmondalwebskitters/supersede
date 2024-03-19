@@ -167,6 +167,18 @@ jQuery(document).ready(function ($) {
             var intButton = introducingSec.find('.supersede-home-introducing-head-btn');
             var specIntroTl = gsap.timeline();
 
+            gsap.to(".introducingSec", {
+                // opacity: 0,
+                yPercent: -56,
+                scrollTrigger: {
+                    trigger: ".introducingSec",
+                    start: 'top 0',
+                    end: 'bottom 50%',
+                    scrub: true,
+                    // markers: true,
+                }
+            });
+
             gsap.set([subTitle, title, titleHed, intButton], {
                 opacity: 0,
                 yPercent: 66,
@@ -196,7 +208,7 @@ jQuery(document).ready(function ($) {
 
             ScrollTrigger.create({
                 trigger: introducingSec,
-                start: "top 0",
+                start: "top 50%",
                 end: "bottom 50%",
                 onUpdate: (self) => {
                     if (self.progress >= 0.95) {
