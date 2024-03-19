@@ -165,22 +165,34 @@ jQuery(document).ready(function ($) {
             var title = introducingSec.find('.supersede-int-title');
             var titleHed = introducingSec.find('.supersede-int-head-heading');
             var intButton = introducingSec.find('.supersede-home-introducing-head-btn');
+            var specIntroTl = gsap.timeline();
 
-            gsap.set([subTitle, title, titleHed, intButton], { 
+            gsap.set([subTitle, title, titleHed, intButton], {
                 opacity: 0,
                 yPercent: 66,
             });
 
-            gsap.to([subTitle, title, titleHed, intButton], {
+            specIntroTl.to(subTitle, {
                 opacity: 1,
                 yPercent: 0,
-                scrollTrigger: {
-                    trigger: introducingSec,
-                    start: 'top 0',
-                    end: 'bottom 50%',
-                    //scrub: true,
-                    // markers: true,
-                }
+            }).to(title, {
+                opacity: 1,
+                yPercent: 0,
+            }).to(titleHed, {
+                opacity: 1,
+                yPercent: 0,
+            }).to(intButton, {
+                opacity: 1,
+                yPercent: 0,
+            })
+
+            ScrollTrigger.create({
+                trigger: introducingSec,
+                start: "top 0",
+                end: "bottom 50%",
+                animation: specIntroTl,
+                // scrub: true,
+                // markers: true,
             });
 
 
