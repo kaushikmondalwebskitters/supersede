@@ -4,12 +4,23 @@
 
 jQuery(document).ready(function ($) {
 
+     // Smooth Scroll
+     const lenis = new Lenis()
+     lenis.on('scroll', (e) => {
+         console.log(e)
+     })
+     function raf(time) {
+         lenis.raf(time)
+         requestAnimationFrame(raf)
+     }
+     requestAnimationFrame(raf)
+
     if ($('.building-manufacturing-slider').length) {
 
         $(".building-manufacturing-slider").slick({
             dots: true,
             arrows: false,
-            infinite: true,
+            infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
 
