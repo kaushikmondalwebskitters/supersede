@@ -82,7 +82,7 @@ jQuery(document).ready(function ($) {
                 scrollTrigger:{
                     trigger: ".supersede-home-banner",
                     start: 'top 0',
-                    end: 'bottom 80%',
+                    end: 'bottom 90%',
                     scrub: true,
                     markers: true,
                 }
@@ -90,11 +90,11 @@ jQuery(document).ready(function ($) {
 
             gsap.to(".supersede-home-banner-title",{
                 opacity: 0,
-                yPercent: -36,
+                yPercent: -56,
                 scrollTrigger:{
                     trigger: ".supersede-home-banner",
                     start: 'top 0',
-                    end: 'bottom 80%',
+                    end: 'bottom 50%',
                     scrub: true,
                     markers: true,
                 }
