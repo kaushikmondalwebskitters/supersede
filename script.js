@@ -57,12 +57,12 @@ jQuery(document).ready(function ($) {
             });
             //scroll anim
             ScrollTrigger.create({
-                trigger: ".supersede-home-banner",
+                trigger: banner,
                 start: "top top",
                 end: "bottom bottom",
                 animation: Tl,
                 scrub: 1.2,
-                // markers: true,
+                markers: true,
             });
         }
     }
