@@ -16,14 +16,12 @@ jQuery(document).ready(function ($) {
      requestAnimationFrame(raf)
 
     if ($('.building-manufacturing-slider').length) {
-
         $(".building-manufacturing-slider").slick({
             dots: true,
             arrows: false,
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
-
             //autoplay: true,
             //dots: true
             customPaging: function (slider, i) {
@@ -31,7 +29,14 @@ jQuery(document).ready(function ($) {
                 return '<a class="pager__item"> ' + title + ' </a>';
             },
         });
-
     }
 
+
+
+
+
+
+    setTimeout(() => {
+        $('.loader').addClass('isEnding')
+    }, 3000);
 })
