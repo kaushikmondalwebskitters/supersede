@@ -280,8 +280,8 @@ jQuery(document).ready(function ($) {
             reveal.forEach((elem, i) => {
                 ScrollTrigger.create({
                     trigger: elem,
-                    start: "top 0",
-                    end: "top 0",
+                    start: "top 100%",
+                    end: "top 100%",
                     toggleActions: "play reverse",
                     onEnter() {
                         elem.classList.add('active');
