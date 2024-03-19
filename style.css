@@ -65,7 +65,7 @@
     transform: scaleY(0)
 }
 
-.loader_logo {
+.loader_logo .loader_logo_img {
     transition: opacity .3s ease;
     will-change: opacity;
     animation: loaderFadeInOut 2.5s infinite;
