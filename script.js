@@ -102,6 +102,22 @@ jQuery(document).ready(function ($) {
         }
 
         if ($(".supersede-home-intro").length) {
+
+            gsap.set(".supersede-home-intro", {
+                opacity: 0,
+            });
+
+            gsap.to(".supersede-home-intro", {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: ".supersede-home-intro",
+                    start: 'top bottom',
+                    end: 'bottom 50%',
+                    scrub: true,
+                    // markers: true,
+                }
+            });
+
             gsap.to(".supersede-tag-in", {
                 // opacity: 0,
                 yPercent: -56,
