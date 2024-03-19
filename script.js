@@ -235,7 +235,7 @@ jQuery(document).ready(function ($) {
 
 
         if ($(".supersede-video-block").length) {
-            var reveal = gsap.utils.toArray(".reveal > *");
+            var reveal = gsap.utils.toArray(".supersede-video-block > *");
             reveal.forEach((elem, i) => {
                 ScrollTrigger.create({
                     trigger: elem,
