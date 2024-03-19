@@ -34,32 +34,26 @@ jQuery(document).ready(function ($) {
 
 
     function afterLoad() {
-        let page_container = document.querySelector('.supersede-body');
-        //// dynamic text animation -- by word
-        if ($("[data-split]").length) {
-            $("[data-split]").each(function () {
-                let els = $(this);
-                let txt_target3 = els.find(".word");
-                gsap.to(els, 0.5, {
+
+
+        if ($('[data-split="line"]').length) {
+            const splitLines = new SplitText('[data-split="line"]', {
+                type: "lines",
+                linesClass: "line line++"
+            });
+
+            jQuery('[data-split="line"] .line').wrap('<div class="line-wrapper">');
+
+            gsap.utils.toArray(".line").forEach((el) => {
+                gsap.from(el, {
+                    yPercent: 200,
+                    duration: 1,
+                    ease: "power4",
                     scrollTrigger: {
-                        trigger: els,
-                        start: "top bottom",
-                        end: "bottom bottom",
-                        scroller: page_container,
-                        scrub: false,
-                        //  markers: true,
-                    },
-                    onComplete: function () {
-                        gsap.to(txt_target3, 0.5, {
-                            overwrite: true,
-                            opacity: 1,
-                            yPercent: 0,
-                            stagger: 0.05,
-                            transformOrigin: "center top",
-                            transformStyle: "preserve-3d",
-                            ease: Power3.easeOut,
-                        });
-                    },
+                        trigger: el,
+                        start: "top 60%"
+                        //toggleActions: "play none none reverse"
+                    }
                 });
             });
         }
