@@ -179,42 +179,42 @@ jQuery(document).ready(function ($) {
                 }
             });
 
-            gsap.set([subTitle, title, titleHed, intButton], {
-                opacity: 0,
-                yPercent: 66,
-            });
+            // gsap.set([subTitle, title, titleHed, intButton], {
+            //     opacity: 0,
+            //     yPercent: 66,
+            // });
 
-            specIntroTl.to(subTitle, {
-                opacity: 1,
-                yPercent: 0,
-                duration: 0.6,
-            }).to(title, {
-                opacity: 1,
-                yPercent: 0,
-                duration: 0.6,
-            }).to(titleHed, {
-                opacity: 1,
-                yPercent: 0,
-                duration: 0.6,
-            }).to(intButton, {
-                opacity: 1,
-                yPercent: 0,
-                duration: 0.6,
-            })
-            specIntroTl.pause();
+            // specIntroTl.to(subTitle, {
+            //     opacity: 1,
+            //     yPercent: 0,
+            //     duration: 0.6,
+            // }).to(title, {
+            //     opacity: 1,
+            //     yPercent: 0,
+            //     duration: 0.6,
+            // }).to(titleHed, {
+            //     opacity: 1,
+            //     yPercent: 0,
+            //     duration: 0.6,
+            // }).to(intButton, {
+            //     opacity: 1,
+            //     yPercent: 0,
+            //     duration: 0.6,
+            // })
+            // specIntroTl.pause();
 
-            ScrollTrigger.create({
-                trigger: introducingSec,
-                start: "top bottom",
-                end: "bottom 50%",
-                onUpdate: (self) => {
-                    if (self.progress >= 0.95) {
-                        specIntroTl.timeScale(3.5).restart()
-                    } else if (self.progress < 0.95) {
-                        specIntroTl.timeScale(5).reverse();
-                    }
-                },
-            });
+            // ScrollTrigger.create({
+            //     trigger: introducingSec,
+            //     start: "top bottom",
+            //     end: "bottom 50%",
+            //     onUpdate: (self) => {
+            //         if (self.progress >= 0.95) {
+            //             specIntroTl.timeScale(3.5).restart()
+            //         } else if (self.progress < 0.95) {
+            //             specIntroTl.timeScale(5).reverse();
+            //         }
+            //     },
+            // });
 
 
 
