@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
         $(".building-manufacturing-slider").slick({
             dots: true,
             arrows: false,
-            infinite: false,
+            infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             //autoplay: true,
