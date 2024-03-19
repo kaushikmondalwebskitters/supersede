@@ -40,7 +40,7 @@ jQuery(document).ready(function ($) {
             // splitting text
             Splitting({
                 target: "[data-splitting]",
-                by: "chars",
+                by: "lines",
             });
             // splitting text end
         }
