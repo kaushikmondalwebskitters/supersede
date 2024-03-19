@@ -58,8 +58,8 @@ jQuery(document).ready(function ($) {
             //scroll anim
             ScrollTrigger.create({
                 trigger: ".supersede-home-intro",
-                start: "top 100%",
-                end: "bottom 50%",
+                start: "top 200%",
+                end: "bottom 70%",
                 animation: Tl,
                 scrub: 1.2,
                 markers: true,
