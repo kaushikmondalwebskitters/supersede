@@ -33,10 +33,14 @@ jQuery(document).ready(function ($) {
 
 
 
+    function afterLoad() {
+        alert('sd')
+    }
 
 
 
     setTimeout(() => {
-        $('.loader').addClass('isEnding')
+        $('.loader').addClass('isEnding');
+        afterLoad();
     }, 3000);
 })
