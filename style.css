@@ -252,7 +252,14 @@
 }
 
 .supersede-video-wrap {
-    transition: transform 1.2s cubic-bezier(.165,.84,.44,1);
+    transform-origin: top;
+    transition: all 1.2s cubic-bezier(.165,.84,.44,1);
+    transition: all 1.2s cubic-bezier(.165,.84,.44,1);
+    transition: all 1.2s cubic-bezier(.165,.84,.44,1), all 1.2s cubic-bezier(.165,.84,.44,1);
+}
+
+.supersede-video-item {
+    transition: all .4s ease-in-out;
 }
 
 .supersede-video-wrap.active {
@@ -262,5 +269,9 @@
     width: 100%;
     will-change: transform;
     transform: scale(1) translate3d(10vw, 0, 0);
-    transition: transform 1.2s cubic-bezier(.165,.84,.44,1);
+    transition: all 1.2s cubic-bezier(.165,.84,.44,1);
+}
+
+.supersede-video-wrap.active .supersede-video-item {
+    height: 50vh;
 }
