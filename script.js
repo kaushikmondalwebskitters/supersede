@@ -35,11 +35,10 @@ jQuery(document).ready(function ($) {
 
     function afterLoad() {
         let page_container = document.querySelector('.supersede-body');
-        //// dynamic text animation -- by lines
-        if ($("[data-char='intro']").length) {
-            $("[data-char='intro']").each(function () {
+        //// dynamic text animation -- by word
+        if ($("[data-split]").length) {
+            $("[data-split]").each(function () {
                 let els = $(this);
-                let txt_target2 = els.find(".word_wrapper");
                 let txt_target3 = els.find(".word");
                 gsap.to(els, 0.5, {
                     scrollTrigger: {
@@ -51,17 +50,14 @@ jQuery(document).ready(function ($) {
                         //  markers: true,
                     },
                     onComplete: function () {
-                        gsap.to(txt_target2, 1, {
-                            scaleY: 1,
+                        gsap.to(txt_target3, 0.5, {
+                            overwrite: true,
+                            opacity: 1,
                             yPercent: 0,
-                            rotationX: 0,
                             stagger: 0.05,
-                            transformOrigin: "center bottom",
+                            transformOrigin: "center top",
                             transformStyle: "preserve-3d",
                             ease: Power3.easeOut,
-                        });
-                        gsap.to(txt_target3, 1, {
-                            opacity: 1,
                         });
                     },
                 });
@@ -69,10 +65,10 @@ jQuery(document).ready(function ($) {
         }
     }
 
-afterLoad();
+
 
     setTimeout(() => {
         $('.loader').addClass('isEnding');
-        
+        afterLoad();
     }, 3000);
 })
