@@ -221,8 +221,8 @@ jQuery(document).ready(function ($) {
                 yPercent: 56,
                 scrollTrigger: {
                     trigger: ".supersede-info-wrapper",
-                    start: 'top 0',
-                    end: 'bottom 80%',
+                    start: 'top 100%',
+                    end: 'bottom 100%',
                     scrub: true,
                     // markers: true,
                 }
