@@ -104,7 +104,7 @@ jQuery(document).ready(function ($) {
         if ($(".supersede-home-intro").length) {
 
             gsap.set(".supersede-home-intro", {
-                opacity: 0,
+                opacity: 0.6,
             });
 
             gsap.to(".supersede-home-intro", {
