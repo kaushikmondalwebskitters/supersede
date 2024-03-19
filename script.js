@@ -58,8 +58,8 @@ jQuery(document).ready(function ($) {
             //scroll anim
             ScrollTrigger.create({
                 trigger: ".banner",
-                start: "top top",
-                end: "bottom bottom",
+                start: "top 70%",
+                end: "+=1%",
                 animation: Tl,
                 scrub: 1.2,
                 // markers: true,
