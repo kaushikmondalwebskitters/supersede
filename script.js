@@ -36,6 +36,8 @@ jQuery(document).ready(function ($) {
     function afterLoad() {
 
 
+
+
         if ($('[data-splitting]').length) {
             // splitting text
             // Splitting({
@@ -272,6 +274,22 @@ jQuery(document).ready(function ($) {
                 });
             })
         }
+
+        if ($("[data-line]").length) {
+            var reveal = gsap.utils.toArray("[data-line] > *");
+            reveal.forEach((elem, i) => {
+                ScrollTrigger.create({
+                    trigger: elem,
+                    start: "top 0",
+                    end: "top 20%",
+                    toggleActions: "play reverse",
+                    onEnter() {
+                        elem.classList.add('active');
+                    }
+                });
+            })
+        }
+
     }
 
 
