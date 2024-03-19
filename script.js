@@ -289,6 +289,23 @@ jQuery(document).ready(function ($) {
         }
 
 
+        if ($(".new-cta-logo").length) {
+            gsap.set(".new-cta-logo", { yPercent: 60, });
+            gsap.to(".new-cta-logo", {
+                yPercent: 0,
+                scrollTrigger: {
+                    trigger: ".new-cta-block",
+                    start: 'top 100%',
+                    end: 'bottom 100%',
+                    scrub: true,
+                    // markers: true,
+                }
+            });
+        }
+
+
+
+
 
     }
 
