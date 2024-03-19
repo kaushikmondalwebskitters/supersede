@@ -301,5 +301,5 @@ jQuery(document).ready(function ($) {
                 });
             })
         }
-    }, 1100);
+    }, 2000);
 })
