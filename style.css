@@ -285,3 +285,15 @@
 .supersede-video-wrap.active .supersede-video-item {
     height: 50vh;
 } */
+
+[data-line] > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+[data-line] .active {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
