@@ -52,7 +52,7 @@ jQuery(document).ready(function ($) {
                         by: 'chars'
                 })
             });
-            
+
             // splitting text end
         }
 
@@ -81,7 +81,7 @@ jQuery(document).ready(function ($) {
                 scrollTrigger: {
                     trigger: ".supersede-home-banner",
                     start: 'top 0',
-                    end: 'bottom 10%',
+                    end: 'bottom 30%',
                     scrub: true,
                     //markers: true,
                 }
