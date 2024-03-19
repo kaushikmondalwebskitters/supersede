@@ -36,26 +36,13 @@ jQuery(document).ready(function ($) {
     function afterLoad() {
 
 
-        if ($('[data-split="line"]').length) {
-            const splitLines = new SplitText('[data-split="line"]', {
-                type: "lines",
-                linesClass: "line line++"
+        if ($('[data-splitting]').length) {
+            // splitting text
+            Splitting({
+                target: "[data-splitting]",
+                by: "chars",
             });
-
-            jQuery('[data-split="line"] .line').wrap('<div class="line-wrapper">');
-
-            gsap.utils.toArray(".line").forEach((el) => {
-                gsap.from(el, {
-                    yPercent: 200,
-                    duration: 1,
-                    ease: "power4",
-                    scrollTrigger: {
-                        trigger: el,
-                        start: "top 60%"
-                        //toggleActions: "play none none reverse"
-                    }
-                });
-            });
+            // splitting text end
         }
     }
 
