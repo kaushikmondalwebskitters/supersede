@@ -42,6 +42,20 @@ jQuery(document).ready(function ($) {
                 target: "[data-splitting]",
                 by: "lines",
             });
+
+            mySplitText = new SplitText('[data-splitting]', {type:"words"}),
+            splitTextTimeline = gsap.timeline();
+        
+            gsap.set('[data-splitting]', {perspective:400});
+
+            splitTextTimeline.from(mySplitText.lines, { 
+                duration: 0.5, 
+                opacity: 0, 
+                rotationX: -120, 
+                force3D: true, 
+                transformOrigin: "top center -150", 
+                stagger: 0.1 
+            });
             // splitting text end
         }
     }
