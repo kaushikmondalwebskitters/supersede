@@ -107,7 +107,7 @@ jQuery(document).ready(function ($) {
                 yPercent: -56,
                 scrollTrigger:{
                     trigger: ".supersede-home-intro",
-                    start: 'top 0',
+                    start: 'top bottom',
                     end: 'bottom 50%',
                     scrub: true,
                    // markers: true,
@@ -119,7 +119,7 @@ jQuery(document).ready(function ($) {
                 yPercent: -56,
                 scrollTrigger:{
                     trigger: ".supersede_sticky_box",
-                    start: 'top 0',
+                    start: 'top bottom',
                     end: 'bottom 50%',
                     scrub: true,
                    // markers: true,
