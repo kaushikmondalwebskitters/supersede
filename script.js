@@ -160,6 +160,30 @@ jQuery(document).ready(function ($) {
                 // markers: true,
             });
 
+            var introducingSec = $(".supersede-home-introducing");
+            var subTitle = introducingSec.find('.supersede-subtitle');
+            var title = introducingSec.find('.supersede-int-title');
+            var titleHed = introducingSec.find('.supersede-int-head-heading');
+            var intButton = introducingSec.find('.supersede-home-introducing-head-btn');
+
+            gsap.set([subTitle, title, titleHed, intButton], { 
+                opacity: 0,
+                yPercent: 66,
+            });
+
+            gsap.to([subTitle, title, titleHed, intButton], {
+                opacity: 1,
+                yPercent: 0,
+                scrollTrigger: {
+                    trigger: introducingSec,
+                    start: 'top 0',
+                    end: 'bottom 50%',
+                    //scrub: true,
+                    // markers: true,
+                }
+            });
+
+
 
         }
     }
