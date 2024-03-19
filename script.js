@@ -196,8 +196,8 @@ jQuery(document).ready(function ($) {
 
             ScrollTrigger.create({
                 trigger: introducingSec,
-                start: "top 80%",
-                end: "+=1%",
+                start: "top 0",
+                end: "bottom 50%",
                 onUpdate: (self) => {
                     if (self.progress >= 0.95) {
                         specIntroTl.timeScale(3.5).restart()
