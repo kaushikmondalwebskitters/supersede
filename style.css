@@ -301,3 +301,22 @@
 .fig_points {
     opacity: 1!important;
 }
+
+.building-manufacturing-head-title,
+.building-manufacturing-head-text {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.building-manufacturing-slider .slick-slide {
+    transition: unset!important;
+}
+
+.building-manufacturing-slider .slick-slide .building-manufacturing-image {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+
+.building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-image {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
