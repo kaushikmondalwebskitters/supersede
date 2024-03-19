@@ -292,6 +292,18 @@
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
+[data-line] span:first-child {
+    transition-delay: 1s;
+}
+
+[data-line] span:nth-child(2n) {
+    transition-delay: 1.5s;
+}
+
+[data-line] span:nth-child(3n) {
+    transition-delay: 2s;
+}
+
 [data-line] .active {
     opacity: 1;
     transform: translateY(0px);
