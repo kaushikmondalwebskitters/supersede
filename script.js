@@ -1,350 +1,322 @@
-// https://kaushikmondalwebskitters.github.io/supersede/script.js
+/* https://kaushikmondalwebskitters.github.io/supersede/style.css */
 
-"use strict";
+/* loader start */
+.loader {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    transition: opacity .3s cubic-bezier(.165,.84,.44,1);
+    will-change: opacity;
+    z-index: 9999999999999;
+}
 
-jQuery(document).ready(function ($) {
+.loader-side {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: #000000;
+    position: absolute;
+    transition: transform 1.6s cubic-bezier(.86,0,.12,1);
+    will-change: transform
+}
 
-    // Smooth Scroll
-    const lenis = new Lenis()
-    lenis.on('scroll', (e) => {
-        console.log(e)
-    })
-    function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
+.loader_left {
+    left: 0;
+    transform-origin: left
+}
 
-    if ($('.building-manufacturing-slider').length) {
-        $(".building-manufacturing-slider").slick({
-            dots: true,
-            arrows: false,
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            fade: true,
-            //autoplay: true,
-            //dots: true
-            customPaging: function (slider, i) {
-                var title = $(slider.$slides[i].innerHTML).find('div[data-title]').data('title');
-                return '<a class="pager__item"> ' + title + ' </a>';
-            },
-        });
-    }
+.loader_left,
+.loader_right {
+    height: 100vh;
+    top: 0;
+    width: 49.9999999968vw
+}
 
+.loader_right {
+    right: 0;
+    transform-origin: right
+}
 
+.loader_top {
+    top: 0;
+    transform-origin: top
+}
 
-    function afterLoad() {
+.loader_bottom,
+.loader_top {
+    height: 49.999999995vh;
+    left: 0;
+    width: 100%
+}
 
+.loader_bottom {
+    bottom: 0;
+    transform-origin: bottom
+}
 
+.loader.isEnding .loader_left,
+.loader.isEnding .loader_right {
+    transform: scaleX(0)
+}
 
+.loader.isEnding .loader_bottom,
+.loader.isEnding .loader_top {
+    transform: scaleY(0)
+}
 
-        if ($('[data-splitting]').length) {
-            // splitting text
-            // Splitting({
-            //     target: "[data-splitting]",
-            //     by: "lines",
-            // });
+.loader_logo .loader_logo_img {
+    transition: opacity .3s ease;
+    will-change: opacity;
+    animation: loaderFadeInOut 2.5s infinite;
+}
 
-            Splitting({
-                target: "[data-splitting]",
-                by: 'lines'
-            })
-
-            // splitting text end
-        }
-
-        // banner 
-        if ($(".supersede-home-banner").length) {
-            // var banner = $(".supersede-home-banner");
-            // var Tl = gsap.timeline();
-            // gsap.set(banner, {
-            //     opacity: 1
-            // });
-            // Tl.to(banner, {
-            //     opacity: 0,
-            // });
-            // //scroll anim
-            // ScrollTrigger.create({
-            //     trigger: ".supersede-home-intro",
-            //     start: "top 100%",
-            //     end: "top 100%",
-            //     animation: Tl,
-            //     scrub: true,
-            //     markers: true,
-            // });
-
-            gsap.to(".supersede-home-banner", {
-                opacity: 0,
-                scrollTrigger: {
-                    trigger: ".supersede-home-banner",
-                    start: 'top 0',
-                    end: 'bottom 30%',
-                    scrub: true,
-                    //markers: true,
-                }
-            });
-
-            gsap.to(".supersede-home-banner-subtitle", {
-                opacity: 0,
-                yPercent: -36,
-                scrollTrigger: {
-                    trigger: ".supersede-home-banner",
-                    start: 'top 0',
-                    end: 'bottom 90%',
-                    scrub: true,
-                    //markers: true,
-                }
-            });
-
-            gsap.to(".supersede-home-banner-title", {
-                // opacity: 0,
-                yPercent: -56,
-                scrollTrigger: {
-                    trigger: ".supersede-home-banner",
-                    start: 'top 0',
-                    end: 'bottom 50%',
-                    scrub: true,
-                    // markers: true,
-                }
-            });
-        }
-
-        if ($(".supersede-home-intro").length) {
-
-            // gsap.set(".supersede-home-intro", {
-            //     opacity: 0.55,
-            // });
-
-            // gsap.to(".supersede-home-intro", {
-            //     opacity: 1,
-            //     scrollTrigger: {
-            //         trigger: ".supersede-home-intro",
-            //         start: 'top bottom',
-            //         end: 'bottom 50%',
-            //         scrub: true,
-            //     }
-            // });
-
-            gsap.to(".supersede-tag-in", {
-                // opacity: 0,
-                yPercent: -56,
-                scrollTrigger: {
-                    trigger: ".supersede-tag-in",
-                    start: 'top bottom',
-                    end: 'bottom 50%',
-                    scrub: true,
-                    // markers: true,
-                }
-            });
-
-            gsap.to(".supersede_sticky_box", {
-                // opacity: 0,
-                yPercent: -56,
-                scrollTrigger: {
-                    trigger: ".supersede_sticky_box",
-                    start: 'top bottom',
-                    end: 'bottom 50%',
-                    scrub: true,
-                    // markers: true,
-                }
-            });
-
-            var specItem = $(".pt-column")
-            var greenCircle = specItem.find(".green-white-circle");
-            var line = specItem.find(".white-line");
-            var ptElem = specItem.find(".pt");
-            // var specItem = specItem.find(".pt-column-box");
-
-            var specTl = gsap.timeline();
-            gsap.set([greenCircle, ptElem], { opacity: 0, });
-            gsap.set(line, { width: 0, });
-            gsap.set(greenCircle, { scale: 0, });
-
-
-            specItem.each(function (i) {
-                specTl
-                    .to(greenCircle.eq(i),
-                        {
-                            opacity: 1,
-                            scale: 1,
-                            duration: 0.6,
-                            ease: "Back.easeOut",
-                        })
-                    .to(line.eq(i),
-                        {
-                            width: "100%",
-                        }, "<")
-                    .to(ptElem.eq(i),
-                        {
-                            opacity: 1,
-                        }, "-=0.15")
-            });
-
-            specTl.pause();
-
-            ScrollTrigger.create({
-                trigger: ".fig_points",
-                start: "top 80%",
-                end: "+=1%",
-                onUpdate: (self) => {
-                    if (self.progress >= 0.95) {
-                        specTl.timeScale(3.5).restart()
-                    } else if (self.progress < 0.95) {
-                        specTl.timeScale(5).reverse();
-                    }
-                },
-                // markers: true,
-            });
-
-            var introducingSec = $(".supersede-home-introducing");
-            var subTitle = introducingSec.find('.supersede-subtitle');
-            var title = introducingSec.find('.supersede-int-title');
-            var titleHed = introducingSec.find('.supersede-int-head-heading');
-            var intButton = introducingSec.find('.supersede-home-introducing-head-btn');
-            var specIntroTl = gsap.timeline();
-
-            gsap.to(introducingSec, {
-                // opacity: 0,
-                yPercent: -56,
-                scrollTrigger: {
-                    trigger: introducingSec,
-                    start: 'top bottom',
-                    end: 'bottom 50%',
-                    scrub: true,
-                    // markers: true,
-                }
-            });
-
-            // gsap.set([subTitle, title, titleHed, intButton], {
-            //     opacity: 0,
-            //     yPercent: 66,
-            // });
-
-            // specIntroTl.to(subTitle, {
-            //     opacity: 1,
-            //     yPercent: 0,
-            //     duration: 0.6,
-            // }).to(title, {
-            //     opacity: 1,
-            //     yPercent: 0,
-            //     duration: 0.6,
-            // }).to(titleHed, {
-            //     opacity: 1,
-            //     yPercent: 0,
-            //     duration: 0.6,
-            // }).to(intButton, {
-            //     opacity: 1,
-            //     yPercent: 0,
-            //     duration: 0.6,
-            // })
-            // specIntroTl.pause();
-
-            // ScrollTrigger.create({
-            //     trigger: introducingSec,
-            //     start: "top bottom",
-            //     end: "bottom 50%",
-            //     onUpdate: (self) => {
-            //         if (self.progress >= 0.95) {
-            //             specIntroTl.timeScale(3.5).restart()
-            //         } else if (self.progress < 0.95) {
-            //             specIntroTl.timeScale(5).reverse();
-            //         }
-            //     },
-            // });
-
-            gsap.to(".sd-logo", {
-                // opacity: 0,
-                yPercent: 56,
-                scrollTrigger: {
-                    trigger: ".supersede-info-wrapper",
-                    start: 'top 100%',
-                    end: 'bottom 100%',
-                    scrub: true,
-                    // markers: true,
-                }
-            });
-
-
-
-        }
-
-
-
-        if ($(".supersede-video-block").length) {
-            var reveal = gsap.utils.toArray(".supersede-video-block > *");
-            reveal.forEach((elem, i) => {
-                ScrollTrigger.create({
-                    trigger: elem,
-                    start: "top 0",
-                    end: "top 20%",
-                    toggleActions: "play reverse",
-                    onEnter() {
-                        elem.classList.add('active');
-                    },
-                    onEnterBack() {
-                        elem.classList.remove('active');
-                    }
-                });
-            })
-        }
-
-
-        if ($(".new-cta-logo").length) {
-            gsap.set(".new-cta-logo", { yPercent: 60, });
-            gsap.to(".new-cta-logo", {
-                yPercent: 0,
-                scrollTrigger: {
-                    trigger: ".new-cta-block",
-                    start: 'top 100%',
-                    end: 'bottom 100%',
-                    scrub: true,
-                    // markers: true,
-                }
-            });
-        }
-
-        if ($(".supersede-footer-inner").length) {
-            gsap.set(".supersede-footer-inner", { yPercent: 22, });
-            gsap.to(".supersede-footer-inner", {
-                yPercent: 0,
-                scrollTrigger: {
-                    trigger: ".supersede-footer",
-                    start: 'top 100%',
-                    end: 'bottom 100%',
-                    scrub: true,
-                    // markers: true,
-                }
-            });
-        }
-
-
-
-
-
+@keyframes loaderFadeInOut {
+    0% {
+        opacity: 1
     }
 
+    50% {
+        opacity: .2
+    }
 
+    to {
+        opacity: 1
+    }
+}
 
-    setTimeout(() => {
-        $('.loader').addClass('isEnding');
-        afterLoad();
-    }, 1000);
+.loader.isEnding .loader_logo {
+    opacity: 0
+}
 
-    setTimeout(() => {
-        if ($("[data-line]").length) {
-            var reveal = gsap.utils.toArray("[data-line] > *");
-            reveal.forEach((elem, i) => {
-                ScrollTrigger.create({
-                    trigger: elem,
-                    start: "top 100%",
-                    end: "top 100%",
-                    toggleActions: "play reverse",
-                    onEnter() {
-                        elem.classList.add('active');
-                    }
-                });
-            })
-        }
-    }, 2000);
-})
+.loader.isEnding {
+    pointer-events: none;
+}
+/* loader end */
+
+.supersede-nav-btn:hover .supersede-nav-btn-circle-icon,
+.supersede-tertiary-btn:hover .supersede-tertiary-btn-circle-icon {
+    animation: navBtnArrowHover .6s ease
+}
+
+@keyframes navBtnArrowHover {
+    49% {
+        opacity: 0;
+        transform: translate3d(50%, 0, 0)
+    }
+
+    50% {
+        opacity: 0;
+        transform: translate3d(-50%, 0, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.supersede-primary-btn:hover .supersede-primary-btn-text,
+.supersede-primary-btn-outline:hover .supersede-primary-btn-text {
+    animation: BtnTextHover .6s ease
+}
+
+@keyframes BtnTextHover {
+    49% {
+        opacity: 0;
+        transform: translate3d(0, -50%, 0)
+    }
+
+    50% {
+        opacity: 0;
+        transform: translate3d(0, 50%, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.building-manufacturing-slider .slick-dots {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 3vw;
+    width: 73.125vw;
+    padding-left: 0.938vw;
+    padding-right: 0.938vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    list-style: none;
+    display: flex;
+    z-index: 99;
+}
+
+/* .building-manufacturing-slider .slick-slide {
+    transform: translate3d(100%, 0, 0);
+    transition: transform 0s cubic-bezier(.165,.84,.44,1);
+    will-change: transform;
+}
+
+.building-manufacturing-slider .slick-slide.slick-cloned .building-manufacturing-slider-box {
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0s cubic-bezier(.165,.84,.44,1);
+    width: 100%;
+    will-change: transform;
+}
+
+.building-manufacturing-slider .slick-slide.slick-current {
+    transform: none;
+    transition: transform 1.2s cubic-bezier(.165,.84,.44,1);
+    z-index: 1;
+}
+
+.building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-slider-box {
+    transform: none;
+    transition: transform 1.2s cubic-bezier(.165,.84,.44,1);
+} */
+
+.building-manufacturing-slider .slick-dots li {
+    width: 50%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5vw;
+    line-height: 1.5em;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    padding: 0 0.625vw;
+}
+
+.building-manufacturing-slider .slick-dots li a {
+    position: relative;
+    color: #FFFFFF;
+    opacity: 0.5;
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+    padding: 0 0 1.225vw;
+}
+
+.building-manufacturing-slider .slick-dots li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.25vw;
+    background: rgba(217, 217, 217, 0.50);
+}
+
+.building-manufacturing-slider .slick-dots li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.25vw;
+    background: rgba(217, 217, 217, 1);
+    transition: width 0.4s ease-in-out;
+}
+
+.building-manufacturing-slider .slick-dots li.slick-active a,
+.building-manufacturing-slider .slick-dots li a:hover {
+    opacity: 1;
+}
+
+.building-manufacturing-slider .slick-dots li.slick-active a::before,
+.building-manufacturing-slider .slick-dots li a:hover::before {
+    width: 100%;
+}
+
+.supersede-nav-menu-link::after {
+    content: "";
+    background-color: #ffffff;
+    bottom: 2.3vw;
+    height: 0.063vw;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s cubic-bezier(.77,0,.175,1), background-color .3s ease;
+    transition-delay: 0s;
+    width: 100%;
+}
+
+.supersede-nav-menu-link.w--current::after, 
+.supersede-nav-menu-link:hover::after,
+.nav-dropdown-new:hover .supersede-nav-menu-link::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition-delay: .1s;
+}
+
+/* .supersede-video-wrap {
+    transform-origin: top;
+    transition: all 1.2s cubic-bezier(.165,.84,.44,1);
+    transition: all 1.2s cubic-bezier(.165,.84,.44,1);
+    transition: all 1.2s cubic-bezier(.165,.84,.44,1), all 1.2s cubic-bezier(.165,.84,.44,1);
+}
+
+.supersede-video-block-inner {
+    transition: all 1.2s cubic-bezier(.165,.84,.44,1);
+    transition: all 1.2s cubic-bezier(.165,.84,.44,1);
+    transition: all 1.2s cubic-bezier(.165,.84,.44,1), all 1.2s cubic-bezier(.165,.84,.44,1);
+}
+
+.supersede-video-item {
+    transition: all .4s ease-in-out;
+} */
+
+/* .supersede-video-block-inner.active {
+    padding: 10vw;
+}
+
+.supersede-video-block-inner.active .supersede-video-wrap {
+    -webkit-clip-path: path("M1345.17 731.991C1287.85 731.991 431.714 730.757 389.185 731.991C317.069 732.4 317.686 719.037 288.717 691.895C259.748 664.752 45.2505 445.764 19.363 418.005C-6.52455 390.246 -5.90818 340.28 26.7594 307.586C59.427 274.892 241.256 91.6824 296.729 34.9306C352.202 -21.8213 416.305 2.85345 451.438 34.9306C486.571 67.0077 722.024 291.547 757.774 327.326C793.523 363.104 850.229 330.41 850.229 284.145V162.622C850.229 123.759 874.267 71.3256 945.766 71.3256H1340.86C1386.47 70.7088 1429 107.104 1429 163.239V635.759C1429 685.109 1402.5 731.991 1345.17 731.991Z");
+    clip-path: path("M1345.17 731.991C1287.85 731.991 431.714 730.757 389.185 731.991C317.069 732.4 317.686 719.037 288.717 691.895C259.748 664.752 45.2505 445.764 19.363 418.005C-6.52455 390.246 -5.90818 340.28 26.7594 307.586C59.427 274.892 241.256 91.6824 296.729 34.9306C352.202 -21.8213 416.305 2.85345 451.438 34.9306C486.571 67.0077 722.024 291.547 757.774 327.326C793.523 363.104 850.229 330.41 850.229 284.145V162.622C850.229 123.759 874.267 71.3256 945.766 71.3256H1340.86C1386.47 70.7088 1429 107.104 1429 163.239V635.759C1429 685.109 1402.5 731.991 1345.17 731.991Z");
+    transform-origin: center;
+    width: 100%;
+    will-change: transform;
+    transition: all 1.2s cubic-bezier(.165,.84,.44,1);
+    overflow: hidden;
+}
+
+.supersede-video-wrap.active .supersede-video-item {
+    height: 50vh;
+} */
+
+[data-line] > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+[data-line] .active {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.fig_points {
+    opacity: 1!important;
+}
+
+.building-manufacturing-head-title,
+.building-manufacturing-head-text {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.building-manufacturing-slider .slick-slide {
+    transition: unset!important;
+}
+
+.building-manufacturing-slider .slick-slide .building-manufacturing-image {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+
+.building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-image {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
