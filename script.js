@@ -44,6 +44,28 @@ jQuery(document).ready(function ($) {
             });
             // splitting text end
         }
+
+        // banner 
+        if ($(".supersede-home-banner").length) {
+            var banner = $(".supersede-home-banner");
+            var Tl = gsap.timeline();
+            gsap.set(banner, {
+                opacity: 1
+            });
+            Tl.to(banner, {
+                opacity: -0.25,
+            });
+            Tl.pause();
+            //scroll anim
+            ScrollTrigger.create({
+                trigger: banner,
+                start: "top bottom",
+                end: "bottom bottom",
+                animation: Tl,
+                scrub: 1.2,
+                // markers: true,
+            });
+        }
     }
 
 
