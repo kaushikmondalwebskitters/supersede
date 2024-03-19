@@ -125,6 +125,26 @@ jQuery(document).ready(function ($) {
                    // markers: true,
                 }
             });
+
+            var specItem = $(".pt-column")
+            var specItem = specItem.find(".pt-column-box");
+            // var SpecTl = gsap.timeline();
+            gsap.set(specItem, { 
+                opacity: 0, 
+                xPercent: -16,
+            });
+
+            gsap.to(specItem,{
+                opacity: 1,
+                xPercent: 0,
+                scrollTrigger:{
+                    trigger: specItem,
+                    start: 'top center',
+                    end: 'bottom 50%',
+                    //scrub: true,
+                   // markers: true,
+                }
+            });
         }
     }
 
