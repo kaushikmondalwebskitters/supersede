@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
                 scrollTrigger:{
                     trigger: ".supersede-home-banner",
                     start: 'top 0',
-                    end: 'bottom 60%',
+                    end: 'bottom 5%',
                     scrub: true,
                     markers: true,
                 }
