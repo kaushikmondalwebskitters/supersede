@@ -310,7 +310,7 @@ jQuery(document).ready(function ($) {
                 scrollTrigger: {
                     trigger: ".supersede-footer",
                     start: 'top 100%',
-                    end: 'bottom 100%',
+                    end: 'bottom 50%',
                     scrub: true,
                     // markers: true,
                 }
