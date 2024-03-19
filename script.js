@@ -185,13 +185,26 @@ jQuery(document).ready(function ($) {
                 opacity: 1,
                 yPercent: 0,
             })
+            specIntroTl.pause();
+
+            // ScrollTrigger.create({
+            //     trigger: introducingSec,
+            //     start: "top 0",
+            //     end: "bottom 50%",
+            //     animation: specIntroTl,
+            // });
 
             ScrollTrigger.create({
                 trigger: introducingSec,
-                start: "top 0",
-                end: "bottom 50%",
-                animation: specIntroTl,
-                // scrub: true,
+                start: "top 80%",
+                end: "+=1%",
+                onUpdate: (self) => {
+                    if (self.progress >= 0.95) {
+                        specIntroTl.timeScale(3.5).restart()
+                    } else if (self.progress < 0.95) {
+                        specIntroTl.timeScale(5).reverse();
+                    }
+                },
                 // markers: true,
             });
 
