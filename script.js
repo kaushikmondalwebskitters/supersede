@@ -57,9 +57,9 @@ jQuery(document).ready(function ($) {
             });
             //scroll anim
             ScrollTrigger.create({
-                trigger: banner,
-                start: "top top",
-                end: "bottom bottom",
+                trigger: ".supersede-home-intro",
+                start: "top 100%",
+                end: "bottom 50%",
                 animation: Tl,
                 scrub: 1.2,
                 markers: true,
