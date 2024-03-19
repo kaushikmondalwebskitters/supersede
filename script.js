@@ -69,10 +69,10 @@ jQuery(document).ready(function ($) {
         }
     }
 
-
+afterLoad();
 
     setTimeout(() => {
         $('.loader').addClass('isEnding');
-        afterLoad();
+        
     }, 3000);
 })
