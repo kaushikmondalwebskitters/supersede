@@ -72,7 +72,7 @@ jQuery(document).ready(function ($) {
                     start: 'top 0',
                     end: 'bottom 10%',
                     scrub: true,
-                    markers: true,
+                    //markers: true,
                 }
             });
 
@@ -84,7 +84,7 @@ jQuery(document).ready(function ($) {
                     start: 'top 0',
                     end: 'bottom 90%',
                     scrub: true,
-                    markers: true,
+                    //markers: true,
                 }
             });
 
@@ -96,7 +96,33 @@ jQuery(document).ready(function ($) {
                     start: 'top 0',
                     end: 'bottom 50%',
                     scrub: true,
-                    markers: true,
+                   // markers: true,
+                }
+            });
+        }
+
+        if ($(".supersede-home-intro").length) {
+            gsap.to(".supersede-tag-in",{
+                // opacity: 0,
+                yPercent: -56,
+                scrollTrigger:{
+                    trigger: ".supersede-home-intro",
+                    start: 'top 0',
+                    end: 'bottom 50%',
+                    scrub: true,
+                   // markers: true,
+                }
+            });
+
+            gsap.to(".supersede_sticky_box",{
+                // opacity: 0,
+                yPercent: -56,
+                scrollTrigger:{
+                    trigger: ".supersede_sticky_box",
+                    start: 'top 0',
+                    end: 'bottom 50%',
+                    scrub: true,
+                   // markers: true,
                 }
             });
         }
