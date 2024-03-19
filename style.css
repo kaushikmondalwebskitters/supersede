@@ -2,11 +2,14 @@
 
 /* loader start */
 .loader {
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
-    height: calc(var(--vh, 1vh)*100);
     position: fixed;
     transition: opacity .3s cubic-bezier(.165,.84,.44,1);
     will-change: opacity;
+    z-index: 9999999999999;
 }
 
 .loader-side {
