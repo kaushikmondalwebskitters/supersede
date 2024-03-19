@@ -1,5 +1,96 @@
 /* https://kaushikmondalwebskitters.github.io/supersede/style.css */
 
+/* loader start */
+.loader {
+    height: 100vh;
+    height: calc(var(--vh, 1vh)*100);
+    position: fixed;
+    transition: opacity .3s cubic-bezier(.165,.84,.44,1);
+    will-change: opacity;
+}
+
+.loader-side {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: #000000;
+    position: absolute;
+    transition: transform 1.6s cubic-bezier(.86,0,.12,1);
+    will-change: transform
+}
+
+.loader_left {
+    left: 0;
+    transform-origin: left
+}
+
+.loader_left,
+.loader_right {
+    height: 100vh;
+    top: 0;
+    width: 49.9999999968vw
+}
+
+.loader_right {
+    right: 0;
+    transform-origin: right
+}
+
+.loader_top {
+    top: 0;
+    transform-origin: top
+}
+
+.loader_bottom,
+.loader_top {
+    height: 49.999999995vh;
+    left: 0;
+    width: 100%
+}
+
+.loader_bottom {
+    bottom: 0;
+    transform-origin: bottom
+}
+
+.loader.isEnding .loader_left,
+.loader.isEnding .loader_right {
+    transform: scaleX(0)
+}
+
+.loader.isEnding .loader_bottom,
+.loader.isEnding .loader_top {
+    transform: scaleY(0)
+}
+
+.loader_logo {
+    transition: opacity .3s ease;
+    will-change: opacity;
+    animation: loaderFadeInOut 2.5s infinite;
+}
+
+@keyframes loaderFadeInOut {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .2
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.loader.isEnding .loader_logo {
+    opacity: 0
+}
+
+.loader.isEnding {
+    pointer-events: none;
+}
+/* loader end */
+
 .supersede-nav-btn:hover .supersede-nav-btn-circle-icon,
 .supersede-tertiary-btn:hover .supersede-tertiary-btn-circle-icon {
     animation: navBtnArrowHover .6s ease
