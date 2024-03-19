@@ -38,10 +38,21 @@ jQuery(document).ready(function ($) {
 
         if ($('[data-splitting]').length) {
             // splitting text
-            Splitting({
+            // Splitting({
+            //     target: "[data-splitting]",
+            //     by: "lines",
+            // });
+
+            var s = Splitting({
                 target: "[data-splitting]",
-                by: "lines",
+                by: 'lines'
+            }).forEach(s => {
+                Splitting({
+                        target: s.words,
+                        by: 'chars'
+                })
             });
+            
             // splitting text end
         }
 
