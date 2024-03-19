@@ -275,6 +275,18 @@ jQuery(document).ready(function ($) {
             })
         }
 
+        
+
+    }
+
+
+
+    setTimeout(() => {
+        $('.loader').addClass('isEnding');
+        afterLoad();
+    }, 1000);
+    
+    setTimeout(() => {
         if ($("[data-line]").length) {
             var reveal = gsap.utils.toArray("[data-line] > *");
             reveal.forEach((elem, i) => {
@@ -289,13 +301,5 @@ jQuery(document).ready(function ($) {
                 });
             })
         }
-
-    }
-
-
-
-    setTimeout(() => {
-        $('.loader').addClass('isEnding');
-        afterLoad();
-    }, 1000);
+    }, 1100);
 })
