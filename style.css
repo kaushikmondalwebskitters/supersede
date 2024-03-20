@@ -315,6 +315,10 @@
     opacity: 1 !important;
 }
 
+.building-manufacturing-block {
+    height: 100vh;
+}
+
 .building-manufacturing-slider.slick-slider {
     height: 100%;
 }
