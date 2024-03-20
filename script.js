@@ -176,17 +176,15 @@ jQuery(document).ready(function ($) {
                 }
             });
 
-            gsap.to(".supersede_sticky_box", {
-                // opacity: 0,
-                yPercent: -30,
-                scrollTrigger: {
-                    trigger: ".supersede_sticky_box",
-                    start: 'top bottom',
-                    end: 'bottom 50%',
-                    scrub: true,
-                    // markers: true,
-                }
-            });
+            // gsap.to(".supersede_sticky_box", {
+            //     yPercent: -30,
+            //     scrollTrigger: {
+            //         trigger: ".supersede_sticky_box",
+            //         start: 'top bottom',
+            //         end: 'bottom 50%',
+            //         scrub: true,
+            //     }
+            // });
 
             var specItem = $(".pt-column")
             var greenCircle = specItem.find(".green-white-circle");
@@ -242,17 +240,15 @@ jQuery(document).ready(function ($) {
             var intButton = introducingSec.find('.supersede-home-introducing-head-btn');
             var specIntroTl = gsap.timeline();
 
-            gsap.to(introducingSec, {
-                // opacity: 0,
-                yPercent: -56,
-                scrollTrigger: {
-                    trigger: introducingSec,
-                    start: 'top bottom',
-                    end: 'bottom 50%',
-                    scrub: true,
-                    // markers: true,
-                }
-            });
+            // gsap.to(introducingSec, {
+            //     yPercent: -56,
+            //     scrollTrigger: {
+            //         trigger: introducingSec,
+            //         start: 'top bottom',
+            //         end: 'bottom 50%',
+            //         scrub: true,
+            //     }
+            // });
 
             // gsap.set([subTitle, title, titleHed, intButton], {
             //     opacity: 0,
