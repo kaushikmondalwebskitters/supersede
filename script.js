@@ -297,7 +297,7 @@ jQuery(document).ready(function ($) {
                     trigger: ".supersede-info-wrapper",
                     start: 'top 100%',
                     end: 'bottom 100%',
-                    scrub: 0.5,
+                    scrub: true
 
                     // markers: true,
                 }
