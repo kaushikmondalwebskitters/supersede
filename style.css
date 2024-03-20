@@ -431,8 +431,8 @@
 }
 
 .supersede-video-block-inner.active .supersede-video-wrap {
-    -webkit-mask-size: 50% 50%;
-    mask-size: 50% 50%;
+    -webkit-mask-size: 85% 85%;
+    mask-size: 85% 85%;
 }
 
 .vid-top-logo,
