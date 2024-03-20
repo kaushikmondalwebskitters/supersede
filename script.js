@@ -4,6 +4,12 @@
 
 jQuery(document).ready(function ($) {
 
+    $(".new-cta-block-right .supersede-tertiary-btn").mouseenter(function() {
+        $(".new-cta-logo").addClass('active')
+    }).mouseleave(function() {
+        $(".new-cta-logo").removeClass('active')
+    });
+
     function stickey_nav() {
         if (jQuery(window).scrollTop() > 150) {
             jQuery('.supersede-header').addClass('scroll_nav');
