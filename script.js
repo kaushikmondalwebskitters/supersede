@@ -308,21 +308,30 @@ jQuery(document).ready(function ($) {
 
 
         if ($(".supersede-video-block").length) {
-            var reveal = gsap.utils.toArray(".supersede-video-block > *");
-            reveal.forEach((elem, i) => {
-                ScrollTrigger.create({
-                    trigger: elem,
-                    start: "top -50%",
-                    end: "+=5%",
-                    toggleActions: "play reverse",
-                    onEnter() {
-                        elem.classList.add('active');
-                    },
-                    onEnterBack() {
-                        elem.classList.remove('active');
-                    }
-                });
-            })
+            // var reveal = gsap.utils.toArray(".supersede-video-block > *");
+            // reveal.forEach((elem, i) => {
+            //     ScrollTrigger.create({
+            //         trigger: elem,
+            //         start: "top -50%",
+            //         end: "+=5%",
+            //         toggleActions: "play reverse",
+            //         onEnter() {
+            //             elem.classList.add('active');
+            //         },
+            //         onEnterBack() {
+            //             elem.classList.remove('active');
+            //         }
+            //     });
+            // })
+
+            ScrollTrigger.create({
+                trigger: ".supersede-video-block-inner",
+                pin: true,
+                start: "top 15%",
+                end: "bottom",
+                //markers: true,
+              });
+
         }
 
 
