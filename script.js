@@ -400,7 +400,7 @@ jQuery(document).ready(function ($) {
                 scrollTrigger: {
                     trigger: onSec,
                     start: 'top 80%',
-                    end: 'bottom 100%',
+                    end: 'bottom top',
                     scrub: true,
                     // markers: true,
                     toggleActions: "play reverse",
