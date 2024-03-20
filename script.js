@@ -312,7 +312,7 @@ jQuery(document).ready(function ($) {
             reveal.forEach((elem, i) => {
                 ScrollTrigger.create({
                     trigger: elem,
-                    start: "top center",
+                    start: "top -50%",
                     end: "+=5%",
                     toggleActions: "play reverse",
                     onEnter() {
