@@ -465,3 +465,11 @@
 .supersede-video-block-inner.active .supersede-video-item:last-child {
     transform: translateY(0);
 }
+
+.supersede-header.hideNav {
+    transform: translateY(-100%);
+}
+
+.supersede-header.scroll_nav {
+    box-shadow: 0 0px 13px rgba(255,255,255,0.25);
+}
