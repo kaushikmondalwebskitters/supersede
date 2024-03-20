@@ -352,6 +352,9 @@ jQuery(document).ready(function ($) {
                         } else {
                             element.classList.remove('active');
                         }
+                    },
+                    onComplete: () => {
+                        ScrollTrigger.refresh(true);
                     }
                 }
             })
