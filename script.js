@@ -318,6 +318,20 @@ jQuery(document).ready(function ($) {
             });
         }
 
+        if ($(".building-manufacturing-block").length) {
+            gsap.to(".building-manufacturing-block", {
+                // opacity: 0,
+                yPercent: 10,
+                scrollTrigger: {
+                    trigger: ".new-cta-block",
+                    start: 'top 0',
+                    end: 'bottom 50%',
+                    scrub: true,
+                    // markers: true,
+                }
+            });
+        }
+
 
 
 
