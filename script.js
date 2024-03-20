@@ -16,10 +16,6 @@ jQuery(document).ready(function ($) {
     requestAnimationFrame(raf)
 
     if ($('.building-manufacturing-slider').length) {
-        $('.building-manufacturing-slider').on('init',function(){
-            $(".slick-active").prev().removeClass('nextdiv').addClass('prevdiv');
-            $(".slick-active").next().removeClass('prevdiv').addClass('nextdiv');
-        });
         $(".building-manufacturing-slider").slick({
             dots: true,
             arrows: false,
@@ -33,11 +29,7 @@ jQuery(document).ready(function ($) {
                 var title = $(slider.$slides[i].innerHTML).find('div[data-title]').data('title');
                 return '<a class="pager__item"> ' + title + ' </a>';
             },
-        }).on('afterChange',function(){
-            console.log($(".slick-active"));
-            $(".slick-active").prev().removeClass('nextdiv').addClass('prevdiv');
-            $(".slick-active").next().removeClass('prevdiv').addClass('nextdiv');
-        });
+        })
     }
 
 
@@ -193,7 +185,7 @@ jQuery(document).ready(function ($) {
 
             ScrollTrigger.create({
                 trigger: ".fig_points",
-                start: "top 30%",
+                start: "top 80%",
                 end: "+=1%",
                 onUpdate: (self) => {
                     if (self.progress >= 0.95) {
