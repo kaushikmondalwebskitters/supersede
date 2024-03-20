@@ -4,9 +4,9 @@
 
 jQuery(document).ready(function ($) {
 
-    $(".new-cta-block-right .supersede-tertiary-btn").mouseenter(function() {
+    $(".new-cta-block-right .supersede-tertiary-btn").mouseenter(function () {
         $(".new-cta-logo").addClass('active')
-    }).mouseleave(function() {
+    }).mouseleave(function () {
         $(".new-cta-logo").removeClass('active')
     });
 
@@ -324,24 +324,24 @@ jQuery(document).ready(function ($) {
             //     });
             // })
             var element = document.querySelector(".supersede-video-block-inner");
-gsap.to(".supersede-video-wrap",{
-    y:"-50vh",
-    scrollTrigger:{
-        trigger: element,
-        pin: true,
-        pinSpacing: false,
-        start: "top 0",
-        end: "+=50%",
-        scrub: true,
-        markers: true,onUpdate:(self)=>{
-            if(self.progress>0.5){
-                element.classList.add('active');
-            }else {
-                element.classList.remove('active');
-            }
-        }
-    }
-})
+            gsap.to(".supersede-video-wrap", {
+                y: "-50vh",
+                scrollTrigger: {
+                    trigger: element,
+                    pin: true,
+                    pinSpacing: false,
+                    start: "top 0",
+                    end: "+=50%",
+                    scrub: true,
+                    markers: true, onUpdate: (self) => {
+                        if (self.progress > 0.5) {
+                            element.classList.add('active');
+                        } else {
+                            element.classList.remove('active');
+                        }
+                    }
+                }
+            })
             // ScrollTrigger.create({
             //     trigger: ".supersede-video-block-inner",
             //     pin: true,
@@ -393,6 +393,27 @@ gsap.to(".supersede-video-wrap",{
                     // markers: true,
                 }
             });
+
+            var onSec = document.querySelector(".building-manufacturing-ftr")
+
+            gsap.to(onSec, {
+                scrollTrigger: {
+                    trigger: onSec,
+                    start: 'top top',
+                    end: 'bottom 100%',
+                    scrub: true,
+                    // markers: true,
+                    toggleActions: "play reverse",
+                    onEnter() {
+                        onSec.classList.add('active');
+                    },
+                    onEnterBack() {
+                        onSec.classList.remove('active');
+                    }
+                }
+            });
+
+
         }
 
 
