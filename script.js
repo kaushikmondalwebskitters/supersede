@@ -330,7 +330,7 @@ gsap.to(".supersede-video-wrap",{
         trigger: element,
         pin: true,
         start: "top 0",
-        end: "+=100%",
+        end: "+=50%",
         scrub: true,
         markers: true,onUpdate:(self)=>{
             if(self.progress>0.5){
