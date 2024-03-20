@@ -16,7 +16,7 @@ jQuery(document).ready(function ($) {
     requestAnimationFrame(raf)
 
     if ($('.building-manufacturing-slider').length) {
-        $('.center').on('init',function(){
+        $('.building-manufacturing-slider').on('init',function(){
             $(".slick-active").prev().removeClass('nextdiv').addClass('prevdiv');
             $(".slick-active").next().removeClass('prevdiv').addClass('nextdiv');
         });
