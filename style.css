@@ -435,6 +435,16 @@
     mask-size: 50% 50%;
 }
 
+.vid-top-logo,
+.vid-bbtm-logo {
+    transition: all .4s ease-in-out;
+}
+
+.supersede-video-block-inner.active .vid-top-logo,
+.supersede-video-block-inner.active .vid-bbtm-logo  {
+    opacity: 0;
+}
+
 /* .supersede-video-block-inner.active .supersede-video-wrap .supersede-video-item {
     height: 50vh;
 } */
