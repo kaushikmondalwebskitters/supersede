@@ -334,6 +334,7 @@
 
 .building-manufacturing-slider .slick-slide {
     transition: unset !important;
+    position: absolute!important;
 }
 
 /* .building-manufacturing-slider .slick-slide .building-manufacturing-image {
