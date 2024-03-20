@@ -323,14 +323,30 @@ jQuery(document).ready(function ($) {
             //         }
             //     });
             // })
-
-            ScrollTrigger.create({
-                trigger: ".supersede-video-block-inner",
-                pin: true,
-                start: "top 0",
-                end: "+=100%",
-                markers: true,
-              });
+            var element = document.querySelector(".supersede-video-block-inner");
+gsap.to(".supersede-video-wrap",{
+    y:"-50vh",
+    scrollTrigger:{
+        trigger: element,
+        pin: true,
+        start: "top 0",
+        end: "+=100%",
+        markers: true,onUpdate:(self)=>{
+            if(self.progress>0.98){
+                element.classList.add('active');
+            }else {
+                element.classList.remove('active');
+            }
+        }
+    }
+})
+            // ScrollTrigger.create({
+            //     trigger: ".supersede-video-block-inner",
+            //     pin: true,
+            //     start: "top 0",
+            //     end: "+=100%",
+            //     markers: true,
+            //   });
 
         }
 
