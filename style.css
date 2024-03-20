@@ -473,3 +473,12 @@
 .supersede-header.scroll_nav {
     box-shadow: 0 0px 13px rgba(255,255,255,0.25);
 }
+
+.nav-dropdown-new-list.w--open > .nav-dropdown-line,
+.nav-dropdown-new-list.w--open {
+    animation: fadeInMenu 0.5s;
+    -webkit-animation: fadeInMenu 0.5s;
+    -moz-animation: fadeInMenu 0.5s;
+    -o-animation: fadeInMenu 0.5s;
+    -ms-animation: fadeInMenu 0.5s;
+}
