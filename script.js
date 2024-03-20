@@ -327,8 +327,8 @@ jQuery(document).ready(function ($) {
             ScrollTrigger.create({
                 trigger: ".supersede-video-block-inner",
                 pin: true,
-                start: "top 15%",
-                end: "bottom",
+                start: "top 0",
+                end: "+=100%",
                 //markers: true,
               });
 
