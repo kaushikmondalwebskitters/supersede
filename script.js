@@ -354,7 +354,7 @@ jQuery(document).ready(function ($) {
                         }
                     },
                     onComplete: () => {
-                        ScrollTrigger.refresh(true);
+                        ScrollTrigger.refresh(true); 
                     }
                 }
             })
