@@ -176,7 +176,7 @@ jQuery(document).ready(function ($) {
 
             gsap.to(".supersede_sticky_box", {
                 // opacity: 0,
-                yPercent: -56,
+                yPercent: -40,
                 scrollTrigger: {
                     trigger: ".supersede_sticky_box",
                     start: 'top bottom',
