@@ -482,3 +482,19 @@
     -o-animation: fadeInMenu 0.5s;
     -ms-animation: fadeInMenu 0.5s;
 }
+
+.new-cta-logo.active .logo-mask-video {
+    opacity: 1;
+    -webkit-mask-image: url(https://assets-global.website-files.com/659801cf81794869cad57b69/65f832c234acd4d6dc6b4737_Group%20209.svg);
+    mask-image: url(https://assets-global.website-files.com/659801cf81794869cad57b69/65f832c234acd4d6dc6b4737_Group%20209.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+}
+
+.new-cta-logo.active .new-cta-logo-img {
+    opacity: 0;
+}
