@@ -298,11 +298,11 @@
 }
 
 [data-line] span:nth-child(2n) {
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 
 [data-line] span:nth-child(3n) {
-    transition-delay: 0.4s;
+    transition-delay: 0.2s;
 }
 
 [data-line] .active {
