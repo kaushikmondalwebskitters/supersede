@@ -193,7 +193,7 @@ jQuery(document).ready(function ($) {
 
             ScrollTrigger.create({
                 trigger: ".fig_points",
-                start: "top 50%",
+                start: "top 30%",
                 end: "+=1%",
                 onUpdate: (self) => {
                     if (self.progress >= 0.95) {
