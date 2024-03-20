@@ -311,8 +311,8 @@ jQuery(document).ready(function ($) {
                 yPercent: 0,
                 scrollTrigger: {
                     trigger: ".supersede-footer",
-                    start: 'top 100%',
-                    end: 'bottom 100%',
+                    start: 'top 0',
+                    end: 'bottom 50%',
                     scrub: true,
                 }
             });
