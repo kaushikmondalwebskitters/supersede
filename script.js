@@ -326,7 +326,6 @@ jQuery(document).ready(function ($) {
             var element = document.querySelector(".supersede-video-block-inner");
 gsap.to(".supersede-video-wrap",{
     y:"-50vh",
-    scale: 0.5,
     scrollTrigger:{
         trigger: element,
         pin: true,
