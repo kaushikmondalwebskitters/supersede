@@ -256,7 +256,7 @@
 .ftr-tile-link::after {
     content: "";
     background-color: #ffffff;
-    bottom: 2.3vw;
+    bottom: 0;
     height: 0.063vw;
     left: 0;
     position: absolute;
