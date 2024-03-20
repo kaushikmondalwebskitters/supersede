@@ -339,6 +339,7 @@
 
 .building-manufacturing-block {
     height: 100vh;
+    max-height: 37.5vw;
 }
 
 .building-manufacturing-slider.slick-slider {
