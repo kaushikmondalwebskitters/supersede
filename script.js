@@ -326,13 +326,14 @@ jQuery(document).ready(function ($) {
             var element = document.querySelector(".supersede-video-block-inner");
 gsap.to(".supersede-video-wrap",{
     y:"-50vh",
+    scale: 0.5,
     scrollTrigger:{
         trigger: element,
         pin: true,
         start: "top 0",
         end: "+=100%",
         markers: true,onUpdate:(self)=>{
-            if(self.progress>0.98){
+            if(self.progress>0.5){
                 element.classList.add('active');
             }else {
                 element.classList.remove('active');
