@@ -406,7 +406,7 @@ jQuery(document).ready(function ($) {
             // })
 
             const  CAA = () => {
-               element.style.height = `${window.innerHeight + window.innerHeight / 2}px`
+               element.style.height = `${window.innerHeight * 2}px`
             };
             CAA(), window.addEventListener("resize", CAA);
             //, gsap.matchMedia().add("(min-width: 991px)", () => {})
