@@ -324,17 +324,17 @@ jQuery(document).ready(function ($) {
             //     });
             // })
             var element = document.querySelector(".supersede-video-block-inner");
-            gsap.to(".supersede-video-item-f", {
+            gsap.to(".supersede-video-wrap", {
                 y: "-50vh",
                 scrollTrigger: {
                     trigger: element,
                     pin: true,
-                    // pinSpacing: false,
+                    pinSpacing: false,
                     start: "top 0",
                     end: "+=50%",
                     scrub: true,
                     markers: true, onUpdate: (self) => {
-                        if (self.progress > 0.95) {
+                        if (self.progress > 0.5) {
                             element.classList.add('active');
                         } else {
                             element.classList.remove('active');
