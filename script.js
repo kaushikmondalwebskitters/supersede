@@ -312,8 +312,8 @@ jQuery(document).ready(function ($) {
             reveal.forEach((elem, i) => {
                 ScrollTrigger.create({
                     trigger: elem,
-                    start: "top 0",
-                    end: "top 20%",
+                    start: "top center",
+                    end: "+=5%",
                     toggleActions: "play reverse",
                     onEnter() {
                         elem.classList.add('active');
