@@ -332,6 +332,12 @@ jQuery(document).ready(function ($) {
             //     }
             // })
 
+            const  CAA = () => {
+                window.innerWidth > 991 ? element.style.height = `${window.innerHeight}px` : element.style.height = "auto"
+            };
+            CAA(), window.addEventListener("resize", CAA);
+            //, gsap.matchMedia().add("(min-width: 991px)", () => {})
+
             gsap.to(".supersede-video-item-f", {
                 y: "-50vh",
                 scrollTrigger: {
