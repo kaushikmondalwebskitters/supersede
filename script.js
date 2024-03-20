@@ -396,7 +396,8 @@ jQuery(document).ready(function ($) {
                     start: "top 0",
                     end: "+=50%",
                     scrub: true,
-                    markers: true, onUpdate: (self) => {
+                    // markers: true, 
+                    onUpdate: (self) => {
                         if (self.progress > 0.5) {
                             element.classList.add('active');
                         } else {
