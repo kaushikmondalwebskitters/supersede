@@ -335,7 +335,7 @@ jQuery(document).ready(function ($) {
                 y: "-50vh",
                 scrollTrigger: {
                     trigger: element,
-                    pin: true,
+                    // pin: true,
                     // pinSpacing: false,
                     start: "top top",
                     end: "+=50%",
