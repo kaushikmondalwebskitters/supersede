@@ -416,7 +416,7 @@ jQuery(document).ready(function ($) {
                 scrollTrigger: {
                     trigger: element,
                     pin: true,
-                    pinSpacing: false,
+                    // pinSpacing: false,
                     start: "top top",
                     end: "+=50%",
                     scrub: true,
