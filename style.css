@@ -387,24 +387,25 @@
 
 @-webkit-keyframes text-clip4 {
     from {
-        -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
     to {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
     }
 }
 
 @keyframes text-clip4 {
     from {
-        -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
     to {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
     }
 }
