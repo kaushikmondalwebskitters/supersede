@@ -399,7 +399,7 @@ jQuery(document).ready(function ($) {
             gsap.to(onSec, {
                 scrollTrigger: {
                     trigger: onSec,
-                    start: 'top top',
+                    start: 'top 80%',
                     end: 'bottom 100%',
                     scrub: true,
                     // markers: true,
