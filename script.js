@@ -329,7 +329,7 @@ jQuery(document).ready(function ($) {
                 pin: true,
                 start: "top 0",
                 end: "+=100%",
-                //markers: true,
+                markers: true,
               });
 
         }
