@@ -252,6 +252,28 @@
     transition-delay: .1s;
 }
 
+.ftr-box-menu-list-item-link::after,
+.ftr-tile-link::after {
+    content: "";
+    background-color: #ffffff;
+    bottom: 2.3vw;
+    height: 0.063vw;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s cubic-bezier(.77, 0, .175, 1), background-color .3s ease;
+    transition-delay: 0s;
+    width: 100%;
+}
+
+.ftr-box-menu-list-item-link:hover::after,
+.ftr-tile-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition-delay: .1s;
+}
+
 /* .supersede-video-wrap {
     transform-origin: top;
     transition: all 1.2s cubic-bezier(.165,.84,.44,1);
