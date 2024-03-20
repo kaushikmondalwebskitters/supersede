@@ -312,37 +312,17 @@ jQuery(document).ready(function ($) {
         if ($(".supersede-video-block").length) {
 
             var element = document.querySelector(".supersede-video-block-inner");
-            // gsap.to(".supersede-video-wrap", {
-            //     y: "-50vh",
-            //     scrollTrigger: {
-            //         trigger: element,
-            //         pin: true,
-            //         pinSpacing: false,
-            //         start: "top 0",
-            //         end: "+=50%",
-            //         scrub: true,
-            //         markers: true, onUpdate: (self) => {
-            //             if (self.progress > 0.5) {
-            //                 element.classList.add('active');
-            //             } else {
-            //                 element.classList.remove('active');
-            //             }
-            //         }
-            //     }
-            // })
-
-            gsap.to(".supersede-video-item-f", {
+            gsap.to(".supersede-video-wrap", {
                 y: "-50vh",
                 scrollTrigger: {
                     trigger: element,
                     pin: true,
-                    // pinSpacing: false,
-                    start: "top top",
+                    pinSpacing: false,
+                    start: "top 0",
                     end: "+=50%",
                     scrub: true,
-                    //markers: true, 
-                    onUpdate: (self) => {
-                        if (self.progress > 0.9) {
+                    markers: true, onUpdate: (self) => {
+                        if (self.progress > 0.5) {
                             element.classList.add('active');
                         } else {
                             element.classList.remove('active');
@@ -350,6 +330,24 @@ jQuery(document).ready(function ($) {
                     }
                 }
             })
+
+            // gsap.to(".supersede-video-item-f", {
+            //     y: "-50vh",
+            //     scrollTrigger: {
+            //         trigger: element,
+            //         pin: true,
+            //         start: "top top",
+            //         end: "+=50%",
+            //         scrub: true,
+            //         onUpdate: (self) => {
+            //             if (self.progress > 0.9) {
+            //                 element.classList.add('active');
+            //             } else {
+            //                 element.classList.remove('active');
+            //             }
+            //         }
+            //     }
+            // })
 
 
         }
