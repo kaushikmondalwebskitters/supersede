@@ -331,6 +331,7 @@ gsap.to(".supersede-video-wrap",{
         pin: true,
         start: "top 0",
         end: "+=100%",
+        scrub: true,
         markers: true,onUpdate:(self)=>{
             if(self.progress>0.5){
                 element.classList.add('active');
