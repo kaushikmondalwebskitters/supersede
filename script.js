@@ -42,14 +42,15 @@ jQuery(document).ready(function ($) {
 
     // Smooth Scroll
     const lenis = new Lenis()
-    lenis.on('scroll', (e) => {
-        console.log(e)
-    })
+    // lenis.on('scroll', (e) => {
+    //     console.log(e)
+    // })
     function raf(time) {
         lenis.raf(time)
         requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)
+    lenis.on('scroll', ScrollTrigger.update)
 
     if ($('.building-manufacturing-slider').length) {
         $(".building-manufacturing-slider").slick({
@@ -312,35 +313,17 @@ jQuery(document).ready(function ($) {
         if ($(".supersede-video-block").length) {
 
             var element = document.querySelector(".supersede-video-block-inner");
-            gsap.to(".supersede-video-wrap", {
-                y: "-50vh",
-                scrollTrigger: {
-                    trigger: element,
-                    pin: true,
-                    pinSpacing: false,
-                    start: "top 0",
-                    end: "+=50%",
-                    scrub: true,
-                    markers: true, onUpdate: (self) => {
-                        if (self.progress > 0.5) {
-                            element.classList.add('active');
-                        } else {
-                            element.classList.remove('active');
-                        }
-                    }
-                }
-            })
-
-            // gsap.to(".supersede-video-item-f", {
+            // gsap.to(".supersede-video-wrap", {
             //     y: "-50vh",
             //     scrollTrigger: {
             //         trigger: element,
             //         pin: true,
-            //         start: "top top",
+            //         pinSpacing: false,
+            //         start: "top 0",
             //         end: "+=50%",
             //         scrub: true,
-            //         onUpdate: (self) => {
-            //             if (self.progress > 0.9) {
+            //         markers: true, onUpdate: (self) => {
+            //             if (self.progress > 0.5) {
             //                 element.classList.add('active');
             //             } else {
             //                 element.classList.remove('active');
@@ -348,6 +331,24 @@ jQuery(document).ready(function ($) {
             //         }
             //     }
             // })
+
+            gsap.to(".supersede-video-item-f", {
+                y: "-50vh",
+                scrollTrigger: {
+                    trigger: element,
+                    pin: true,
+                    start: "top top",
+                    end: "+=50%",
+                    scrub: true,
+                    onUpdate: (self) => {
+                        if (self.progress > 0.9) {
+                            element.classList.add('active');
+                        } else {
+                            element.classList.remove('active');
+                        }
+                    }
+                }
+            })
 
 
         }
