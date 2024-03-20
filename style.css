@@ -440,7 +440,7 @@
     height: 50vh;
 } */
 
-.supersede-video-item {
+/* .supersede-video-item {
     height: 50vh;
 }
 
@@ -466,7 +466,7 @@
 .supersede-video-block-inner.active .vid-top-logo,
 .supersede-video-block-inner.active .vid-bbtm-logo  {
     opacity: 0;
-}
+} */
 
 .supersede-video-block-inner.active .supersede-video-item:last-child {
     transform: translateY(0);
