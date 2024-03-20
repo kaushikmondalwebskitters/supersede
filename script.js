@@ -308,33 +308,38 @@ jQuery(document).ready(function ($) {
 
 
         if ($(".supersede-video-block").length) {
-            // var reveal = gsap.utils.toArray(".supersede-video-block > *");
-            // reveal.forEach((elem, i) => {
-            //     ScrollTrigger.create({
-            //         trigger: elem,
-            //         start: "top -50%",
-            //         end: "+=5%",
-            //         toggleActions: "play reverse",
-            //         onEnter() {
-            //             elem.classList.add('active');
-            //         },
-            //         onEnterBack() {
-            //             elem.classList.remove('active');
-            //         }
-            //     });
-            // })
+
             var element = document.querySelector(".supersede-video-block-inner");
-            gsap.to(".supersede-video-wrap", {
+            // gsap.to(".supersede-video-wrap", {
+            //     y: "-50vh",
+            //     scrollTrigger: {
+            //         trigger: element,
+            //         pin: true,
+            //         pinSpacing: false,
+            //         start: "top 0",
+            //         end: "+=50%",
+            //         scrub: true,
+            //         markers: true, onUpdate: (self) => {
+            //             if (self.progress > 0.5) {
+            //                 element.classList.add('active');
+            //             } else {
+            //                 element.classList.remove('active');
+            //             }
+            //         }
+            //     }
+            // })
+
+            gsap.to(".supersede-video-item-f", {
                 y: "-50vh",
                 scrollTrigger: {
                     trigger: element,
                     pin: true,
-                    pinSpacing: false,
-                    start: "top 0",
+                    // pinSpacing: false,
+                    start: "top top",
                     end: "+=50%",
                     scrub: true,
                     markers: true, onUpdate: (self) => {
-                        if (self.progress > 0.5) {
+                        if (self.progress > 0.9) {
                             element.classList.add('active');
                         } else {
                             element.classList.remove('active');
@@ -342,13 +347,7 @@ jQuery(document).ready(function ($) {
                     }
                 }
             })
-            // ScrollTrigger.create({
-            //     trigger: ".supersede-video-block-inner",
-            //     pin: true,
-            //     start: "top 0",
-            //     end: "+=100%",
-            //     markers: true,
-            //   });
+
 
         }
 
