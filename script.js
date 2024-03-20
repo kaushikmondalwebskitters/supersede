@@ -16,6 +16,10 @@ jQuery(document).ready(function ($) {
     requestAnimationFrame(raf)
 
     if ($('.building-manufacturing-slider').length) {
+        $('.center').on('init',function(){
+            $(".slick-active").prev().removeClass('nextdiv').addClass('prevdiv');
+            $(".slick-active").next().removeClass('prevdiv').addClass('nextdiv');
+        });
         $(".building-manufacturing-slider").slick({
             dots: true,
             arrows: false,
@@ -29,6 +33,10 @@ jQuery(document).ready(function ($) {
                 var title = $(slider.$slides[i].innerHTML).find('div[data-title]').data('title');
                 return '<a class="pager__item"> ' + title + ' </a>';
             },
+        }).on('afterChange',function(){
+            console.log($(".slick-active"));
+            $(".slick-active").prev().removeClass('nextdiv').addClass('prevdiv');
+            $(".slick-active").next().removeClass('prevdiv').addClass('nextdiv');
         });
     }
 
