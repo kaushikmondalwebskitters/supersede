@@ -335,12 +335,13 @@ jQuery(document).ready(function ($) {
                 y: "-50vh",
                 scrollTrigger: {
                     trigger: element,
-                    // pin: true,
+                    pin: true,
                     // pinSpacing: false,
                     start: "top top",
                     end: "+=50%",
                     scrub: true,
-                    markers: true, onUpdate: (self) => {
+                    //markers: true, 
+                    onUpdate: (self) => {
                         if (self.progress > 0.9) {
                             element.classList.add('active');
                         } else {
