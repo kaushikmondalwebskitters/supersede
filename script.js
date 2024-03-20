@@ -291,12 +291,12 @@ jQuery(document).ready(function ($) {
 
             gsap.to(".sd-logo", {
                 // opacity: 0,
-                yPercent: 56,
+                yPercent: 55,
                 scrollTrigger: {
                     trigger: ".supersede-info-wrapper",
                     start: 'top 100%',
                     end: 'bottom 100%',
-                    scrub: 1,
+                    scrub: 0.5,
                     // markers: true,
                 }
             });
