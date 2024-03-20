@@ -336,14 +336,14 @@
     transition: unset !important;
 }
 
-.building-manufacturing-slider .slick-slide .building-manufacturing-image {
-    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+/* .building-manufacturing-slider .slick-slide .building-manufacturing-image {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
     transition: all .4s ease-in-out;
 }
 
 .building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-image {
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-}
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+} */
 
 /* .building-manufacturing-slider .slick-slide.prevdiv .building-manufacturing-image {
     z-index: 99;
