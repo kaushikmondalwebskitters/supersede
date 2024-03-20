@@ -407,7 +407,13 @@ jQuery(document).ready(function ($) {
                     onEnter() {
                         onSec.classList.add('active');
                     },
+                    onLeave() {
+                        onSec.classList.remove('active');
+                    },
                     onEnterBack() {
+                        onSec.classList.add('active');
+                    },
+                    onLeaveBack() {
                         onSec.classList.remove('active');
                     }
                 }
