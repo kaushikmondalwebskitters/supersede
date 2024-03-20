@@ -296,7 +296,7 @@ jQuery(document).ready(function ($) {
                     trigger: ".supersede-info-wrapper",
                     start: 'top 100%',
                     end: 'bottom 100%',
-                    scrub: true,
+                    scrub: 1,
                     // markers: true,
                 }
             });
