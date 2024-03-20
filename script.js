@@ -306,7 +306,7 @@ jQuery(document).ready(function ($) {
 
         if ($(".supersede-footer-inner").length) {
             // gsap.set(".supersede-footer-inner", { yPercent: 22, });
-            gsap.set(".ftr-btm-graphics", { yPercent: -22, });
+            gsap.set(".ftr-btm-graphics", { yPercent: 22, });
             gsap.to(".ftr-btm-graphics", {
                 yPercent: 0,
                 scrollTrigger: {
