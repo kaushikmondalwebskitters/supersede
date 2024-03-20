@@ -513,3 +513,14 @@
 .new-cta-logo.active .new-cta-logo-img {
     opacity: 0;
 }
+
+.building-manufacturing-bg {
+    transform: scale(1.4);
+    width: 100%;
+    will-change: transform;
+}
+
+.building-manufacturing-ftr.active .building-manufacturing-bg {
+    transform: none;
+    transition: transform 2s cubic-bezier(.165,.84,.44,1);
+}
