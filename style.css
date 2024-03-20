@@ -345,7 +345,7 @@
     clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
 } */
 
-.building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-image {
+.building-manufacturing-slider .slick-slide.prevdiv .building-manufacturing-image {
     z-index: 99;
     animation: text-clip4 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
     -webkit-animation: text-clip4 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
