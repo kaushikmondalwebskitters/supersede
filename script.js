@@ -329,6 +329,7 @@ gsap.to(".supersede-video-wrap",{
     scrollTrigger:{
         trigger: element,
         pin: true,
+        pinSpacing: false,
         start: "top 0",
         end: "+=50%",
         scrub: true,
