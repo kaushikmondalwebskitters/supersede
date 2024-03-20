@@ -4,6 +4,36 @@
 
 jQuery(document).ready(function ($) {
 
+    function stickey_nav() {
+        if (jQuery(window).scrollTop() > 150) {
+            jQuery('.supersede-header').addClass('scroll_nav');
+        } else {
+            jQuery('.supersede-header').removeClass('scroll_nav');
+        }
+    }
+    $(window).scroll(function () {
+        // sticky function call
+        stickey_nav();
+    });
+    //show menu on scroll up
+
+    var lastScrollTop = 0;
+    $(window).scroll(function (event) {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            // downscroll code
+            $(".supersede-header").addClass("hideNav");
+        } else {
+            // upscroll code
+            $(".supersede-header").removeClass("hideNav");
+        }
+        if (st <= window.innerHeight / 2) {
+            // downscroll code
+            $(".supersede-header").removeClass("scroll_nav");
+        }
+        lastScrollTop = st;
+    });
+
     // Smooth Scroll
     const lenis = new Lenis()
     lenis.on('scroll', (e) => {
