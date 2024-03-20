@@ -354,18 +354,24 @@
 }
 
 .building-manufacturing-head-title,
-.building-manufacturing-head-text {
+.building-manufacturing-head-text,
+.vd-btn {
     opacity: 0;
     transform: translateY(30px);
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .building-manufacturing-head-text {
-    transition-delay: 0.3s;
+    transition-delay: 0.1s;
+}
+
+.vd-btn {
+    transition-delay: 0.1s;
 }
 
 .building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-head-title,
-.building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-head-text {
+.building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-head-text,
+.building-manufacturing-slider .slick-slide.slick-current .vd-btn {
     opacity: 1;
     transform: translateY(0px);
 }
