@@ -336,20 +336,20 @@
     transition: unset !important;
 }
 
-/* .building-manufacturing-slider .slick-slide .building-manufacturing-image {
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+.building-manufacturing-slider .slick-slide .building-manufacturing-image {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
     transition: all .4s ease-in-out;
 }
 
 .building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-image {
-    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-} */
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
 
-.building-manufacturing-slider .slick-slide.prevdiv .building-manufacturing-image {
+/* .building-manufacturing-slider .slick-slide.prevdiv .building-manufacturing-image {
     z-index: 99;
     animation: text-clip4 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
     -webkit-animation: text-clip4 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-}
+} */
 
 /* .feature-slider-item.prev,
 .feature-slider-item.next {
