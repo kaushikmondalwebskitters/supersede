@@ -334,8 +334,19 @@
 
 .building-manufacturing-slider .slick-slide {
     transition: unset !important;
-    position: absolute!important;
 }
+
+.building-manufacturing-image {
+    position: absolute;
+    bottom: 0;
+    z-index: 90;
+}
+
+.building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-image {
+    z-index: 99;
+    animation: text-clip4 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    -webkit-animation: text-clip4 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
 
 /* .building-manufacturing-slider .slick-slide .building-manufacturing-image {
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
