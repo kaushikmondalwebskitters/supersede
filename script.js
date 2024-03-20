@@ -324,7 +324,7 @@ jQuery(document).ready(function ($) {
                 yPercent: 10,
                 scrollTrigger: {
                     trigger: ".new-cta-block",
-                    start: 'top 0',
+                    start: 'top 100%',
                     end: 'bottom 50%',
                     scrub: true,
                     // markers: true,
