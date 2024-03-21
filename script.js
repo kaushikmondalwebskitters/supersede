@@ -15,15 +15,7 @@
 
 var Webflow = Webflow || [];
 Webflow.push(function () {
-    // lenis.start();
-});
-
-  
-
-jQuery(document).ready(function ($) {    
-
-        // Smooth Scroll
-    const lenis = new Lenis()
+        const lenis = new Lenis()
 
     function raf(time) {
         lenis.raf(time)
@@ -33,6 +25,23 @@ jQuery(document).ready(function ($) {
     lenis.on('scroll', ScrollTrigger.update);
 
     lenis.start()
+});
+
+  
+
+jQuery(document).ready(function ($) {    
+
+        // Smooth Scroll
+    // const lenis = new Lenis()
+
+    // function raf(time) {
+    //     lenis.raf(time)
+    //     requestAnimationFrame(raf)
+    // }
+    // requestAnimationFrame(raf)
+    // lenis.on('scroll', ScrollTrigger.update);
+
+    // lenis.start()
 
 
 
