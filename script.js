@@ -43,17 +43,15 @@ jQuery(document).ready(function ($) {
     });
 
     // Smooth Scroll
-    const lenis = new Lenis()
-    // lenis.on('scroll', (e) => {
-    //     console.log(e)
-    // })
-    function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
-    lenis.on('scroll', ScrollTrigger.update);
-    // lenis.stop();
+    // const lenis = new Lenis()
+
+    // function raf(time) {
+    //     lenis.raf(time)
+    //     requestAnimationFrame(raf)
+    // }
+    // requestAnimationFrame(raf)
+    // lenis.on('scroll', ScrollTrigger.update);
+
 
     if ($('.building-manufacturing-slider').length) {
         $(".building-manufacturing-slider").slick({
