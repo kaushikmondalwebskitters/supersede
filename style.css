@@ -720,4 +720,8 @@
     .supersede-nav-menu-link::after {
         display: none;
     }
+
+    .building-manufacturing-block {
+        height: 50vh;
+    }
 }
