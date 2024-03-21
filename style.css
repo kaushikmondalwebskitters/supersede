@@ -649,4 +649,8 @@
         padding-top: 1.5vw;
         padding-right: 1vw;
     }
+
+    .loader_logo {
+        width: 12vw;
+    }
 }
