@@ -2,30 +2,65 @@
 
 "use strict";
 
-// gsap.registerPlugin(ScrollTrigger)
-
-// const lenis = new Lenis()
-//   function raf(time) {
-//     lenis.raf(time);
-//     ScrollTrigger.update();
-//     requestAnimationFrame(raf)
-//   }
-//   requestAnimationFrame(raf)
-//   lenis.stop();
+const responsive_size = 1024;
+var isDekstop = true;
+//detect device width
+if (window.innerWidth <= responsive_size) {
+    isDekstop = false;
+    document.body.classList.add("mobileLayout");
+  }
+const page_container = document.querySelector("[data-scroll-container]");
+var loco_scroll;
 
 var Webflow = Webflow || [];
 Webflow.push(function () {
-    const lenis = new Lenis();
-
-    function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
+  //for desktop
+  if (isDekstop) {
+    loco_scroll = new LocomotiveScroll({
+      el: page_container,
+      smooth: true,
+      class: "inviewport",
+      reloadOnContextChange: true,
+      offset: [0, 0],
+      repeat: true,
+      initPosition: { x: 0, y: 0 },
+      direction: "vertical",
+      getDirection: true,
+      getSpeed: true,
+      tablet: { breakpoint: 0, smooth: false },
+      smartphone: { smooth: false },
+    });
+    loco_scroll.on("scroll", ScrollTrigger.update);
+    ScrollTrigger.scrollerProxy(page_container, {
+      scrollTop(value) {
+        return arguments.length
+          ? loco_scroll.scrollTo(value, 0, 0)
+          : loco_scroll.scroll.instance.scroll.y;
+      },
+      getBoundingClientRect() {
+        return {
+          top: 0,
+          left: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        };
+      },
+      pinType: page_container.style.transform ? "transform" : "fixed",
+    });
+    ScrollTrigger.addEventListener("refresh", () => loco_scroll.update());
+    loco_scroll.stop();
+  }
+  function refresh() {
+    if (isDekstop) {
+      loco_scroll.update();
     }
+    ScrollTrigger.update();
+    ScrollTrigger.refresh();
+  }
+  refresh();
 
-    lenis.on('scroll', ScrollTrigger.update);
-    requestAnimationFrame(raf)
+  window.addEventListener("resize", refresh);
 
-    // jQuery(document).ready(function ($) {    
 
 
 
@@ -92,8 +127,12 @@ Webflow.push(function () {
 
 
     function afterLoad() {
-
-
+ ScrollTrigger.clearScrollMemory();
+  window.history.scrollRestoration = "manual";
+  window.scrollTo(0, 0);
+  if (isDekstop) {
+    loco_scroll.start();
+  }
 
 
         if ($('[data-splitting]').length) {
@@ -134,6 +173,7 @@ Webflow.push(function () {
             gsap.to(".supersede-home-banner", {
                 opacity: 0,
                 scrollTrigger: {
+                    scroller: isDekstop ? page_container : window,
                     trigger: ".supersede-home-banner",
                     start: 'top 0',
                     end: 'bottom 30%',
@@ -146,6 +186,7 @@ Webflow.push(function () {
                 opacity: 0,
                 yPercent: -36,
                 scrollTrigger: {
+                    scroller: isDekstop ? page_container : window,
                     trigger: ".supersede-home-banner",
                     start: 'top 0',
                     end: 'bottom 90%',
@@ -158,6 +199,7 @@ Webflow.push(function () {
                 // opacity: 0,
                 yPercent: -56,
                 scrollTrigger: {
+                    scroller: isDekstop ? page_container : window,
                     trigger: ".supersede-home-banner",
                     start: 'top 0',
                     end: 'bottom 50%',
@@ -187,6 +229,7 @@ Webflow.push(function () {
                 // opacity: 0,
                 yPercent: -56,
                 scrollTrigger: {
+                    scroller: isDekstop ? page_container : window,
                     trigger: ".supersede-tag-in",
                     start: 'top bottom',
                     end: 'bottom 50%',
@@ -239,6 +282,7 @@ Webflow.push(function () {
             specTl.pause();
 
             ScrollTrigger.create({
+                scroller: isDekstop ? page_container : window,
                 trigger: ".fig_points",
                 start: "top 60%",
                 end: "+=1%",
@@ -311,6 +355,7 @@ Webflow.push(function () {
                 yPercent: 55,
                 ease: "none",
                 scrollTrigger: {
+                    scroller: isDekstop ? page_container : window,
                     trigger: ".supersede-info-wrapper",
                     start: 'top 100%',
                     end: 'bottom 100%',
@@ -334,6 +379,7 @@ Webflow.push(function () {
             gsap.to(".new-cta-logo", {
                 yPercent: 0,
                 scrollTrigger: {
+                    scroller: isDekstop ? page_container : window,
                     trigger: ".new-cta-block",
                     start: 'top 100%',
                     end: 'bottom 100%',
@@ -348,6 +394,7 @@ Webflow.push(function () {
             gsap.to(".ftr-btm-graphics", {
                 yPercent: 0,
                 scrollTrigger: {
+                    scroller: isDekstop ? page_container : window,
                     trigger: ".supersede-footer",
                     start: 'top 100%',
                     end: 'bottom 0',
@@ -361,6 +408,7 @@ Webflow.push(function () {
                 // opacity: 0,
                 yPercent: 10,
                 scrollTrigger: {
+                    scroller: isDekstop ? page_container : window,
                     trigger: ".new-cta-block",
                     start: 'top 100%',
                     end: 'bottom 50%',
@@ -373,6 +421,7 @@ Webflow.push(function () {
 
             gsap.to(onSec, {
                 scrollTrigger: {
+                    scroller: isDekstop ? page_container : window,
                     trigger: onSec,
                     start: 'top 80%',
                     end: 'bottom top',
@@ -430,6 +479,7 @@ Webflow.push(function () {
             gsap.to(".supersede-video-item-f", {
                 y: "-50vh",
                 scrollTrigger: {
+                    scroller: isDekstop ? page_container : window,
                     trigger: element,
                     pin: true,
                     start: "top top",
@@ -452,12 +502,11 @@ Webflow.push(function () {
         }
 
 
-        // lenis.start();
-
         if ($(".reveal").length) {
             var reveal = gsap.utils.toArray(".reveal > *");
             reveal.forEach((elem, i) => {
                 ScrollTrigger.create({
+                    scroller: isDekstop ? page_container : window,
                     trigger: elem,
                     start: "top 80%",
                     end: "top 20%",
@@ -486,6 +535,7 @@ Webflow.push(function () {
             var reveal = gsap.utils.toArray("[data-line] > *");
             reveal.forEach((elem, i) => {
                 ScrollTrigger.create({
+                    scroller: isDekstop ? page_container : window,
                     trigger: elem,
                     start: "top 100%",
                     end: "top 100%",
