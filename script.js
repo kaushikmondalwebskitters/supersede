@@ -307,7 +307,7 @@ jQuery(document).ready(function ($) {
 
 
 
-        
+
 
 
         if ($(".new-cta-logo").length) {
@@ -461,4 +461,59 @@ jQuery(document).ready(function ($) {
             })
         }
     }, 2000);
+
+
+
+
+
+
+
+    /*menu*/
+    let mediaScreen = gsap.matchMedia();
+    mediaScreen.add("(max-width: 991px)", () => {
+        gsap.set(".supersede-nav-menu-list-item", {
+            opacity: 0,
+            xPercent: -100,
+        });
+        gsap.set(".supersede-nav-menu-wrapper", {
+            opacity: 0,
+            xPercent: -110,
+        });
+    })
+    const nav_anim_sp = gsap.timeline({ pause: true });
+    nav_anim_sp
+        .to(".supersede-nav-menu-wrapper", {
+            xPercent: 0,
+            opacity: 1,
+            duration: 0.6,
+            ease: "Power2.easeOut",
+        })
+        .to(
+            ".supersede-nav-menu-list-item",
+            {
+                opacity: 1,
+                xPercent: 0,
+                stagger: 0.1,
+                duration: 1,
+                ease: "Power3.easeOut",
+            },
+            "-=0.2"
+        )
+        .pause();
+    $(".menu-toggle-sp").on("click", function (e) {
+        e.preventDefault();
+        if ($(this).hasClass("w--open")) {
+            nav_anim_sp.reverse(1.5).then(() => {
+                $(this).removeClass("w--open");
+                $("body").removeClass("open-nav");
+                $("html").removeClass("open-nav");
+            });
+        } else {
+            $(this).addClass("w--open");
+            $("body").addClass("open-nav");
+            $("html").addClass("open-nav");
+            nav_anim_sp.restart();
+        }
+    });
+    /*menu*/
 })
