@@ -658,4 +658,8 @@
         -webkit-mask-size: 70% 70%;
         mask-size: 90% 90%;
     }
+
+    .ftr-btm-graphics {
+        width: 18vw;
+    }
 }
