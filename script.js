@@ -76,8 +76,32 @@ Webflow.push(function () {
 
 
     var lastScrollTop = 0;
-    function nav(st){
-        if (st > 150) {
+    if (isDekstop) {
+        loco_scroll.on("scroll", (e) => {
+           var st=e.delta.y;
+            if (st > 150) {
+                jQuery('.supersede-header').addClass('scroll_nav');
+            } else {
+                jQuery('.supersede-header').removeClass('scroll_nav');
+            }
+            if (e.direction == "down") {
+                // downscroll code
+                jQuery(".supersede-header").addClass("hideNav");
+            } else {
+                // upscroll code
+                jQuery(".supersede-header").removeClass("hideNav");
+            }
+            if (st <= window.innerHeight / 2) {
+                // downscroll code
+                jQuery(".supersede-header").removeClass("scroll_nav");
+            }
+            lastScrollTop = st;
+        });
+    }
+    else{
+        $(window).scroll(function (event) {
+          var st=jQuery(window).scrollTop();
+          if (st > 150) {
             jQuery('.supersede-header').addClass('scroll_nav');
         } else {
             jQuery('.supersede-header').removeClass('scroll_nav');
@@ -85,26 +109,16 @@ Webflow.push(function () {
 
         if (st > lastScrollTop) {
             // downscroll code
-            $(".supersede-header").addClass("hideNav");
+            jQuery(".supersede-header").addClass("hideNav");
         } else {
             // upscroll code
-            $(".supersede-header").removeClass("hideNav");
+            jQuery(".supersede-header").removeClass("hideNav");
         }
         if (st <= window.innerHeight / 2) {
             // downscroll code
-            $(".supersede-header").removeClass("scroll_nav");
+            jQuery(".supersede-header").removeClass("scroll_nav");
         }
         lastScrollTop = st;
-    }
-
-    if (isDekstop) {
-        loco_scroll.on("scroll", (e) => {
-            nav(e.delta.y);
-        });
-    }
-    else{
-        $(window).scroll(function (event) {
-            nav(jQuery(window).scrollTop());
         });
     }
     //show menu on scroll up
