@@ -722,6 +722,23 @@
     }
 
     .building-manufacturing-block {
-        height: 50vh;
+        max-height: 50vh;
+    }
+
+    .building-manufacturing-slider .slick-dots {
+        bottom: 6vw;
+    }
+
+    .building-manufacturing-slider .slick-dots li {
+        font-size: 2vw;
+    }
+
+    .building-manufacturing-slider .slick-dots li a {
+        padding: 0 0 1.825vw;
+    }
+
+    .ftr-box-menu-list-item-link::after, 
+    .ftr-tile-link::after {
+        display: none;
     }
 }
