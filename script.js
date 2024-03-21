@@ -2,33 +2,6 @@
 
 "use strict";
 
-const scroller = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true
-})
-
-gsap.registerPlugin(ScrollTrigger)
-
-
-scroller.on('scroll', ScrollTrigger.update)
-
-ScrollTrigger.scrollerProxy(
-    '.scroll_c', {
-        scrollTop(value) {
-            return arguments.length ?
-            scroller.scrollTo(value, 0, 0) :
-            scroller.scroll.instance.scroll.y
-        },
-        getBoundingClientRect() {
-            return {
-                left: 0, top: 0, 
-                width: window.innerWidth,
-                height: window.innerHeight
-            }
-        }
-    }
-)
-
 jQuery(document).ready(function ($) {
 
         // Smooth Scroll
@@ -43,7 +16,20 @@ jQuery(document).ready(function ($) {
 
     // lenis.start()
 
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      })
+      
+      function raf(time) {
+        lenis.raf(time);
+        ScrollTrigger.update();
+        requestAnimationFrame(raf)
+      }
+      
+      requestAnimationFrame(raf)
 
+      lenis.start()
 
 
 
@@ -493,10 +479,6 @@ jQuery(document).ready(function ($) {
     setTimeout(() => {
         $('.loader').addClass('isEnding');
         afterLoad();
-        ScrollTrigger.addEventListener('refresh', () => scroller.update())
-
-
-ScrollTrigger.refresh()
     }, 1000);
 
     setTimeout(() => {
@@ -571,9 +553,3 @@ ScrollTrigger.refresh()
     });
     /*menu*/
 })
-
-
-ScrollTrigger.addEventListener('refresh', () => scroller.update())
-
-
-ScrollTrigger.refresh()
