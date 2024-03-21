@@ -597,4 +597,13 @@
     .supersede-info-text {
         font-size: 1.55vw;
     }
+
+    .panel-spec-wrapper-box-table-data-new {
+        min-height: 13.6vw;
+        font-size: 1.39vw;
+    }
+
+    .panel-spec-header-inner-new {
+        font-size: 1.7vw;
+    }
 }
