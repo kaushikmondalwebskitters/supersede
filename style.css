@@ -768,10 +768,22 @@
         right: -27px;
     }
 
-    /* .building-manufacturing-block {
-        height: auto;
-        max-height: unset;
-        min-height: 380px;
-    } */
+    .building-manufacturing-block {
+        max-height: 300px;
+    }
+
+    .building-manufacturing-slider .slick-dots li {
+        font-size: 15px;
+        padding: 0 6px;
+    }
+
+    .building-manufacturing-slider .slick-dots li a {
+        padding: 0 0 8px;
+    }
+
+    .building-manufacturing-slider .slick-dots li a::after,
+    .building-manufacturing-slider .slick-dots li a::before {
+        height: 3px;
+    }
 }
 
