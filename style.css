@@ -151,6 +151,16 @@ html.has-scroll-dragging * {
 
 /* loader end */
 
+.supersede-header {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.supersede-header.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
 .supersede-nav-btn:hover .supersede-nav-btn-circle-icon,
 .supersede-tertiary-btn:hover .supersede-tertiary-btn-circle-icon {
     animation: navBtnArrowHover .6s ease
