@@ -104,8 +104,7 @@ Webflow.push(function () {
     }
     else{
         $(window).scroll(function (event) {
-            var st =jQuery(window).scrollTop();
-            nav(e.delta.y);
+            nav(jQuery(window).scrollTop());
         });
     }
     //show menu on scroll up
