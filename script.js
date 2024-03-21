@@ -2,7 +2,60 @@
 
 "use strict";
 
+const update = (time, deltaTime, frame) => {
+    lenis.raf(time * 1000)
+  }
+  
+  const resize = (e) => {
+    ScrollTrigger.refresh()
+  }
+  
+  const lenis = new Lenis({
+    duration: .7,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    infinite: false,
+  })
+  
+  lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+    // console.log({ scroll, limit, velocity, direction, progress })
+    ScrollTrigger.update()
+  })
+  
+  gsap.ticker.add(update)
+  
+  ScrollTrigger.scrollerProxy(document.body, {
+    scrollTop(value) {
+      if (arguments.length) {
+        lenis.scroll = value
+      }
+      return lenis.scroll
+    },
+    getBoundingClientRect() {
+      return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+    }
+  })
+  
+  ScrollTrigger.defaults({ scroller: document.body })
+  
+  window.addEventListener('resize', resize)
+  
+
 jQuery(document).ready(function ($) {
+
+        // Smooth Scroll
+    // const lenis = new Lenis()
+
+    // function raf(time) {
+    //     lenis.raf(time)
+    //     requestAnimationFrame(raf)
+    // }
+    // requestAnimationFrame(raf)
+    // lenis.on('scroll', ScrollTrigger.update);
+
+    // lenis.start()
+
+
+
     let mediaScreen = gsap.matchMedia();
     
 
@@ -42,15 +95,7 @@ jQuery(document).ready(function ($) {
         lastScrollTop = st;
     });
 
-    // Smooth Scroll
-    // const lenis = new Lenis()
 
-    // function raf(time) {
-    //     lenis.raf(time)
-    //     requestAnimationFrame(raf)
-    // }
-    // requestAnimationFrame(raf)
-    // lenis.on('scroll', ScrollTrigger.update);
 
 
     if ($('.building-manufacturing-slider').length) {
