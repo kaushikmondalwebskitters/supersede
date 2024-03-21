@@ -4,14 +4,14 @@
 
 gsap.registerPlugin(ScrollTrigger)
 
-const lenis = new Lenis()
-  function raf(time) {
-    lenis.raf(time);
-    ScrollTrigger.update();
-    requestAnimationFrame(raf)
-  }
-  requestAnimationFrame(raf)
-  lenis.stop();
+// const lenis = new Lenis()
+//   function raf(time) {
+//     lenis.raf(time);
+//     ScrollTrigger.update();
+//     requestAnimationFrame(raf)
+//   }
+//   requestAnimationFrame(raf)
+//   lenis.stop();
 
 var Webflow = Webflow || [];
 Webflow.push(function () {
@@ -25,16 +25,16 @@ jQuery(document).ready(function ($) {
     
 
         // Smooth Scroll
-    // const lenis = new Lenis()
+    const lenis = new Lenis()
 
-    // function raf(time) {
-    //     lenis.raf(time)
-    //     requestAnimationFrame(raf)
-    // }
-    // requestAnimationFrame(raf)
-    // lenis.on('scroll', ScrollTrigger.update);
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+    lenis.on('scroll', ScrollTrigger.update);
 
-    // lenis.start()
+    lenis.start()
 
 
 
