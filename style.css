@@ -662,4 +662,9 @@
     .ftr-btm-graphics {
         width: 18vw;
     }
+
+    .supersede-home-banner-overlay-inner {
+        padding-top: 15vw;
+        padding-bottom: 5vw;
+    }
 }
