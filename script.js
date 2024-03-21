@@ -2,7 +2,30 @@
 
 "use strict";
 
+gsap.registerPlugin(ScrollTrigger)
+
+const lenis = new Lenis({
+    lerp: 0.05, 
+    wheelMultiplier: 1,
+  })
+  function raf(time) {
+    lenis.raf(time);
+    ScrollTrigger.update();
+    requestAnimationFrame(raf)
+  }
+  requestAnimationFrame(raf)
+  lenis.stop();
+
+var Webflow = Webflow || [];
+Webflow.push(function () {
+    lenis.start();
+});
+
+  
+
 jQuery(document).ready(function ($) {
+    lenis.start();
+    
 
         // Smooth Scroll
     // const lenis = new Lenis()
@@ -16,20 +39,7 @@ jQuery(document).ready(function ($) {
 
     // lenis.start()
 
-    const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      })
-      
-      function raf(time) {
-        lenis.raf(time);
-        ScrollTrigger.update();
-        requestAnimationFrame(raf)
-      }
-      
-      requestAnimationFrame(raf)
 
-      lenis.start()
 
 
 
