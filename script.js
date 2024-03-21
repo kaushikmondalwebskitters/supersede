@@ -8,58 +8,58 @@ var isDekstop = true;
 if (window.innerWidth <= responsive_size) {
     isDekstop = false;
     document.body.classList.add("mobileLayout");
-  }
+}
 const page_container = document.querySelector("[data-scroll-container]");
 var loco_scroll;
 
 var Webflow = Webflow || [];
 Webflow.push(function () {
-  //for desktop
-  if (isDekstop) {
-    loco_scroll = new LocomotiveScroll({
-      el: page_container,
-      smooth: true,
-      class: "inviewport",
-      reloadOnContextChange: true,
-      offset: [0, 0],
-      repeat: true,
-      initPosition: { x: 0, y: 0 },
-      direction: "vertical",
-      getDirection: true,
-      getSpeed: true,
-      tablet: { breakpoint: 0, smooth: false },
-      smartphone: { smooth: false },
-    });
-    loco_scroll.on("scroll", ScrollTrigger.update);
-    ScrollTrigger.scrollerProxy(page_container, {
-      scrollTop(value) {
-        return arguments.length
-          ? loco_scroll.scrollTo(value, 0, 0)
-          : loco_scroll.scroll.instance.scroll.y;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
-      pinType: page_container.style.transform ? "transform" : "fixed",
-    });
-    ScrollTrigger.addEventListener("refresh", () => loco_scroll.update());
-    loco_scroll.stop();
-  }
-  function refresh() {
+    //for desktop
     if (isDekstop) {
-      loco_scroll.update();
+        loco_scroll = new LocomotiveScroll({
+            el: page_container,
+            smooth: true,
+            class: "inviewport",
+            reloadOnContextChange: true,
+            offset: [0, 0],
+            repeat: true,
+            initPosition: { x: 0, y: 0 },
+            direction: "vertical",
+            getDirection: true,
+            getSpeed: true,
+            tablet: { breakpoint: 0, smooth: false },
+            smartphone: { smooth: false },
+        });
+        loco_scroll.on("scroll", ScrollTrigger.update);
+        ScrollTrigger.scrollerProxy(page_container, {
+            scrollTop(value) {
+                return arguments.length
+                    ? loco_scroll.scrollTo(value, 0, 0)
+                    : loco_scroll.scroll.instance.scroll.y;
+            },
+            getBoundingClientRect() {
+                return {
+                    top: 0,
+                    left: 0,
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                };
+            },
+            pinType: page_container.style.transform ? "transform" : "fixed",
+        });
+        ScrollTrigger.addEventListener("refresh", () => loco_scroll.update());
+        loco_scroll.stop();
     }
-    ScrollTrigger.update();
-    ScrollTrigger.refresh();
-  }
-  refresh();
+    function refresh() {
+        if (isDekstop) {
+            loco_scroll.update();
+        }
+        ScrollTrigger.update();
+        ScrollTrigger.refresh();
+    }
+    refresh();
 
-  window.addEventListener("resize", refresh);
+    window.addEventListener("resize", refresh);
 
 
 
@@ -78,7 +78,7 @@ Webflow.push(function () {
     var lastScrollTop = 0;
     if (isDekstop) {
         loco_scroll.on("scroll", (e) => {
-           var st=e.delta.y;
+            var st = e.delta.y;
             if (st > 150) {
                 jQuery('.supersede-header').addClass('scroll_nav');
             } else {
@@ -98,27 +98,27 @@ Webflow.push(function () {
             lastScrollTop = st;
         });
     }
-    else{
+    else {
         $(window).scroll(function (event) {
-          var st=jQuery(window).scrollTop();
-          if (st > 150) {
-            jQuery('.supersede-header').addClass('scroll_nav');
-        } else {
-            jQuery('.supersede-header').removeClass('scroll_nav');
-        }
+            var st = jQuery(window).scrollTop();
+            if (st > 150) {
+                jQuery('.supersede-header').addClass('scroll_nav');
+            } else {
+                jQuery('.supersede-header').removeClass('scroll_nav');
+            }
 
-        if (st > lastScrollTop) {
-            // downscroll code
-            jQuery(".supersede-header").addClass("hideNav");
-        } else {
-            // upscroll code
-            jQuery(".supersede-header").removeClass("hideNav");
-        }
-        if (st <= window.innerHeight / 2) {
-            // downscroll code
-            jQuery(".supersede-header").removeClass("scroll_nav");
-        }
-        lastScrollTop = st;
+            if (st > lastScrollTop) {
+                // downscroll code
+                jQuery(".supersede-header").addClass("hideNav");
+            } else {
+                // upscroll code
+                jQuery(".supersede-header").removeClass("hideNav");
+            }
+            if (st <= window.innerHeight / 2) {
+                // downscroll code
+                jQuery(".supersede-header").removeClass("scroll_nav");
+            }
+            lastScrollTop = st;
         });
     }
     //show menu on scroll up
@@ -146,12 +146,12 @@ Webflow.push(function () {
 
 
     function afterLoad() {
- ScrollTrigger.clearScrollMemory();
-  window.history.scrollRestoration = "manual";
-  window.scrollTo(0, 0);
-  if (isDekstop) {
-    loco_scroll.start();
-  }
+        ScrollTrigger.clearScrollMemory();
+        window.history.scrollRestoration = "manual";
+        window.scrollTo(0, 0);
+        if (isDekstop) {
+            loco_scroll.start();
+        }
 
 
         if ($('[data-splitting]').length) {
@@ -544,9 +544,7 @@ Webflow.push(function () {
     setTimeout(() => {
         $('.loader').addClass('isEnding');
         afterLoad();
-        setTimeout(() => {
-            $(window).trigger('resize');
-        }, 100);
+        $(".supersede-header").addClass('active')
     }, 1000);
 
     setTimeout(() => {
