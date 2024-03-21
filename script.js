@@ -4,10 +4,7 @@
 
 gsap.registerPlugin(ScrollTrigger)
 
-const lenis = new Lenis({
-    lerp: 0.05, 
-    wheelMultiplier: 1,
-  })
+const lenis = new Lenis()
   function raf(time) {
     lenis.raf(time);
     ScrollTrigger.update();
