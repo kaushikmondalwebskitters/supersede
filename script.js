@@ -475,6 +475,10 @@ jQuery(document).ready(function ($) {
             opacity: 0,
             xPercent: -100,
         });
+        gsap.set(".supersede-inner-nav-btn", {
+            opacity: 0,
+            xPercent: -100,
+        });
         gsap.set(".supersede-nav-menu-wrapper", {
             opacity: 0,
             xPercent: -110,
@@ -490,6 +494,17 @@ jQuery(document).ready(function ($) {
         })
         .to(
             ".supersede-nav-menu-list-item",
+            {
+                opacity: 1,
+                xPercent: 0,
+                stagger: 0.1,
+                duration: 1,
+                ease: "Power3.easeOut",
+            },
+            "-=0.2"
+        )
+        .to(
+            ".supersede-inner-nav-btn",
             {
                 opacity: 1,
                 xPercent: 0,
