@@ -742,3 +742,29 @@
         display: none;
     }
 }
+
+@media (max-width: 767px) {
+    .fig_points .pt-column:nth-child(1) .pt {
+        left: -19px;
+    }
+
+    .fig_points .pt-column:nth-child(2) .pt {
+        right: -8px;
+    }
+
+    .fig_points .pt-column:nth-child(3) .pt {
+        left: -9px;
+    }
+
+    .fig_points .pt-column:nth-child(4) .pt {
+        right: -21px;
+    }
+
+    .fig_points .pt-column:nth-child(5) .pt {
+        left: -1px;
+    }
+
+    .fig_points .pt-column:nth-child(6) .pt {
+        right: -27px;
+    }
+}
