@@ -471,11 +471,7 @@ jQuery(document).ready(function ($) {
     /*menu*/
     let mediaScreen = gsap.matchMedia();
     mediaScreen.add("(max-width: 991px)", () => {
-        gsap.set(".supersede-nav-menu-list-item", {
-            opacity: 0,
-            xPercent: -100,
-        });
-        gsap.set(".supersede-inner-nav-btn", {
+        gsap.set("[menu-item]", {
             opacity: 0,
             xPercent: -100,
         });
@@ -493,7 +489,7 @@ jQuery(document).ready(function ($) {
             ease: "Power2.easeOut",
         })
         .to(
-            ".supersede-nav-menu-list-item",
+            "[menu-item]",
             {
                 opacity: 1,
                 xPercent: 0,
@@ -502,16 +498,6 @@ jQuery(document).ready(function ($) {
                 ease: "Power3.easeOut",
             },
             "-=0.2"
-        )
-        .to(
-            ".supersede-inner-nav-btn",
-            {
-                opacity: 1,
-                xPercent: 0,
-                stagger: 0.1,
-                duration: 1,
-                ease: "Power3.easeOut",
-            }
         )
         .pause();
     $(".menu-toggle-sp").on("click", function (e) {
