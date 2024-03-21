@@ -1,5 +1,61 @@
 /* https://kaushikmondalwebskitters.github.io/supersede/style.css */
 
+/*! locomotive-scroll v3.1.7 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth,
+html.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging,
+html.has-scroll-dragging * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 8px;
+  height: 100vh;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s, background 0.3s;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 110;
+  mix-blend-mode: difference;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-dragging .c-scrollbar,
+.has-scroll-scrolling .c-scrollbar {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.has-scroll-dragging .c-scrollbar {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 0.2vw;
+  margin: 0.1vw;
+  cursor: -webkit-grab;
+  cursor: grab;
+  border-radius: 1vw;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  background-color: rgba(5, 6, 18, 1);
+}
+/*--end locomotive scrollbar--*/
+
 /* loader start */
 .loader {
     top: 0;
