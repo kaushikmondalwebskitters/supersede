@@ -716,4 +716,8 @@
     }
 
     /*menu toggle end*/
+
+    .supersede-nav-menu-link::after {
+        display: none;
+    }
 }
