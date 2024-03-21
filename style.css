@@ -606,4 +606,9 @@
     .panel-spec-header-inner-new {
         font-size: 1.7vw;
     }
+
+    .building-manufacturing-block,
+    .building-manufacturing-slider-box {
+        max-height: 60vw;
+    }
 }
