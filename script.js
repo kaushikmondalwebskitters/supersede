@@ -15,43 +15,23 @@
 
 var Webflow = Webflow || [];
 Webflow.push(function () {
-        const lenis = new Lenis();
+    const lenis = new Lenis();
 
     function raf(time) {
         lenis.raf(time)
         requestAnimationFrame(raf)
     }
-   
+
     lenis.on('scroll', ScrollTrigger.update);
+    requestAnimationFrame(raf)
 
-gsap.ticker.add((time)=>{
-  lenis.raf(time * 1000)
-})
-
-// gsap.ticker.lagSmoothing(0)
-requestAnimationFrame(raf)
-// lenis.stop()
-
-// jQuery(document).ready(function ($) {    
-
-        // Smooth Scroll
-    // const lenis = new Lenis()
-
-    // function raf(time) {
-    //     lenis.raf(time)
-    //     requestAnimationFrame(raf)
-    // }
-    // requestAnimationFrame(raf)
-    // lenis.on('scroll', ScrollTrigger.update);
-
-    // lenis.start()
-
+    // jQuery(document).ready(function ($) {    
 
 
 
 
     let mediaScreen = gsap.matchMedia();
-    
+
 
     $(".new-cta-block-right .supersede-tertiary-btn").mouseenter(function () {
         $(".new-cta-logo").addClass('active')
@@ -463,7 +443,7 @@ requestAnimationFrame(raf)
                         }
                     },
                     onComplete: () => {
-                        ScrollTrigger.refresh(true); 
+                        ScrollTrigger.refresh(true);
                     }
                 }
             })
@@ -477,17 +457,17 @@ requestAnimationFrame(raf)
         if ($(".reveal").length) {
             var reveal = gsap.utils.toArray(".reveal > *");
             reveal.forEach((elem, i) => {
-              ScrollTrigger.create({
-                trigger: elem,
-                start: "top 80%",
-                end: "top 20%",
-                //toggleActions: "play reverse",
-                onEnter() {
-                  elem.classList.add('play-reveal');
-                }
-              });
+                ScrollTrigger.create({
+                    trigger: elem,
+                    start: "top 80%",
+                    end: "top 20%",
+                    //toggleActions: "play reverse",
+                    onEnter() {
+                        elem.classList.add('play-reveal');
+                    }
+                });
             })
-          }
+        }
 
     }
 
@@ -525,7 +505,7 @@ requestAnimationFrame(raf)
 
 
     /*menu*/
-    
+
     mediaScreen.add("(max-width: 991px)", () => {
         gsap.set("[menu-item]", {
             opacity: 0,
@@ -572,6 +552,6 @@ requestAnimationFrame(raf)
         }
     });
     /*menu*/
-// })
+    // })
 
 });
