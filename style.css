@@ -653,4 +653,9 @@
     .loader_logo {
         width: 12vw;
     }
+
+    .supersede-video-block-inner.active .supersede-video-wrap {
+        -webkit-mask-size: 70% 70%;
+        mask-size: 90% 90%;
+    }
 }
