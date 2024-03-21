@@ -74,22 +74,15 @@ Webflow.push(function () {
         $(".new-cta-logo").removeClass('active')
     });
 
-    function stickey_nav() {
-        if (jQuery(window).scrollTop() > 150) {
+
+    var lastScrollTop = 0;
+    function nav(st){
+        if (st > 150) {
             jQuery('.supersede-header').addClass('scroll_nav');
         } else {
             jQuery('.supersede-header').removeClass('scroll_nav');
         }
-    }
-    $(window).scroll(function () {
-        // sticky function call
-        stickey_nav();
-    });
-    //show menu on scroll up
 
-    var lastScrollTop = 0;
-    $(window).scroll(function (event) {
-        var st = $(this).scrollTop();
         if (st > lastScrollTop) {
             // downscroll code
             $(".supersede-header").addClass("hideNav");
@@ -102,7 +95,20 @@ Webflow.push(function () {
             $(".supersede-header").removeClass("scroll_nav");
         }
         lastScrollTop = st;
-    });
+    }
+
+    if (isDekstop) {
+        loco_scroll.on("scroll", (e) => {
+            nav(e.delta.y);
+        });
+    }
+    else{
+        $(window).scroll(function (event) {
+            var st =jQuery(window).scrollTop();
+            nav(e.delta.y);
+        });
+    }
+    //show menu on scroll up
 
 
 
