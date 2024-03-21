@@ -5,16 +5,29 @@
 jQuery(document).ready(function ($) {
 
         // Smooth Scroll
-    const lenis = new Lenis()
+    // const lenis = new Lenis()
 
-    function raf(time) {
-        lenis.raf(time)
+    // function raf(time) {
+    //     lenis.raf(time)
+    //     requestAnimationFrame(raf)
+    // }
+    // requestAnimationFrame(raf)
+    // lenis.on('scroll', ScrollTrigger.update);
+
+    // lenis.start()
+
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      })
+      
+      function raf(time) {
+        lenis.raf(time);
+        ScrollTrigger.update();
         requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
-    lenis.on('scroll', ScrollTrigger.update);
-
-    lenis.start()
+      }
+      
+      requestAnimationFrame(raf)
 
 
 
