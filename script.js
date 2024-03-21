@@ -385,46 +385,24 @@ jQuery(document).ready(function ($) {
         if ($(".supersede-video-block").length) {
 
             var element = document.querySelector(".supersede-video-block-inner");
-            gsap.to(".supersede-video-wrap", {
-                y: "-50vh",
-                scrollTrigger: {
-                    trigger: element,
-                    pin: true,
-                    pinSpacing: false,
-                    start: "top 0",
-                    end: "+=50%",
-                    scrub: true,
-                    // markers: true, 
-                    onUpdate: (self) => {
-                        if (self.progress > 0.5) {
-                            element.classList.add('active');
-                        } else {
-                            element.classList.remove('active');
-                        }
-                    }
-                }
-            })
-
-            // mediaScreen.add("(max-width: 767px)", () => { 
-            //     gsap.to(".supersede-video-wrap", {
-            //         y: "-25vh",
-            //         scrollTrigger: {
-            //             trigger: element,
-            //             pin: true,
-            //             pinSpacing: false,
-            //             start: "top 0",
-            //             end: "+=50%",
-            //             scrub: true,
-            //             // markers: true, 
-            //             onUpdate: (self) => {
-            //                 if (self.progress > 0.5) {
-            //                     element.classList.add('active');
-            //                 } else {
-            //                     element.classList.remove('active');
-            //                 }
+            // gsap.to(".supersede-video-wrap", {
+            //     y: "-50vh",
+            //     scrollTrigger: {
+            //         trigger: element,
+            //         pin: true,
+            //         pinSpacing: false,
+            //         start: "top 0",
+            //         end: "+=50%",
+            //         scrub: true,
+            //         // markers: true, 
+            //         onUpdate: (self) => {
+            //             if (self.progress > 0.5) {
+            //                 element.classList.add('active');
+            //             } else {
+            //                 element.classList.remove('active');
             //             }
             //         }
-            //     })
+            //     }
             // })
 
             // const  CAA = () => {
@@ -433,26 +411,26 @@ jQuery(document).ready(function ($) {
             // CAA(), window.addEventListener("resize", CAA);
             //, gsap.matchMedia().add("(min-width: 991px)", () => {})
 
-            // gsap.to(".supersede-video-item-f", {
-            //     y: "-50vh",
-            //     scrollTrigger: {
-            //         trigger: element,
-            //         pin: true,
-            //         start: "top top",
-            //         end: "+=50%",
-            //         scrub: true,
-            //         onUpdate: (self) => {
-            //             if (self.progress > 0.9) {
-            //                 element.classList.add('active');
-            //             } else {
-            //                 element.classList.remove('active');
-            //             }
-            //         },
-            //         onComplete: () => {
-            //             ScrollTrigger.refresh(true); 
-            //         }
-            //     }
-            // })
+            gsap.to(".supersede-video-item-f", {
+                y: "-50vh",
+                scrollTrigger: {
+                    trigger: element,
+                    pin: true,
+                    start: "top top",
+                    end: "+=50%",
+                    scrub: true,
+                    onUpdate: (self) => {
+                        if (self.progress > 0.9) {
+                            element.classList.add('active');
+                        } else {
+                            element.classList.remove('active');
+                        }
+                    },
+                    onComplete: () => {
+                        ScrollTrigger.refresh(true); 
+                    }
+                }
+            })
 
 
         }
