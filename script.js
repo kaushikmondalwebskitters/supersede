@@ -511,8 +511,7 @@ jQuery(document).ready(function ($) {
                 stagger: 0.1,
                 duration: 1,
                 ease: "Power3.easeOut",
-            },
-            "-=0.2"
+            }
         )
         .pause();
     $(".menu-toggle-sp").on("click", function (e) {
