@@ -727,6 +727,7 @@
 
     .building-manufacturing-slider .slick-dots {
         bottom: 6vw;
+        width: 92.125vw;
     }
 
     .building-manufacturing-slider .slick-dots li {
@@ -788,6 +789,8 @@
 
     .building-manufacturing-slider .slick-dots {
         bottom: 40px;
+        width: 100%;
+        max-width: 540px;
     }
 }
 
