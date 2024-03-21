@@ -53,7 +53,7 @@ jQuery(document).ready(function ($) {
     }
     requestAnimationFrame(raf)
     lenis.on('scroll', ScrollTrigger.update);
-    lenis.stop();
+    // lenis.stop();
 
     if ($('.building-manufacturing-slider').length) {
         $(".building-manufacturing-slider").slick({
@@ -436,7 +436,7 @@ jQuery(document).ready(function ($) {
         }
 
 
-        lenis.start();
+        // lenis.start();
 
         if ($(".reveal").length) {
             var reveal = gsap.utils.toArray(".reveal > *");
