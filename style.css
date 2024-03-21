@@ -482,11 +482,11 @@
 .supersede-video-block-inner.active .vid-top-logo,
 .supersede-video-block-inner.active .vid-bbtm-logo  {
     opacity: 0;
-} */
+}
 
 .supersede-video-block-inner.active .supersede-video-item:last-child {
     transform: translateY(0);
-}
+}*/
 
 .supersede-header.hideNav {
     transform: translateY(-100%);
