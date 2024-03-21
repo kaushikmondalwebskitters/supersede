@@ -2,7 +2,7 @@
 
 "use strict";
 
-gsap.registerPlugin(ScrollTrigger)
+// gsap.registerPlugin(ScrollTrigger)
 
 // const lenis = new Lenis()
 //   function raf(time) {
@@ -15,14 +15,12 @@ gsap.registerPlugin(ScrollTrigger)
 
 var Webflow = Webflow || [];
 Webflow.push(function () {
-    lenis.start();
+    // lenis.start();
 });
 
   
 
-jQuery(document).ready(function ($) {
-    lenis.start();
-    
+jQuery(document).ready(function ($) {    
 
         // Smooth Scroll
     const lenis = new Lenis()
