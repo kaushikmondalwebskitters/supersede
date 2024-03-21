@@ -112,7 +112,10 @@ Webflow.push(function () {
                 jQuery('.supersede-header').addClass('scroll_nav');
             } else {
                 jQuery('.supersede-header').removeClass('scroll_nav');
-                jQuery(".supersede-header").removeClass("hideNav");
+             
+            }
+            if (st < 50) {
+            jQuery(".supersede-header").removeClass("hideNav");
             }
             if (st <= window.innerHeight / 2) {
                 // downscroll code
