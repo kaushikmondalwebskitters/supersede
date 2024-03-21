@@ -497,6 +497,9 @@ jQuery(document).ready(function ($) {
     setTimeout(() => {
         $('.loader').addClass('isEnding');
         afterLoad();
+        setTimeout(() => {
+            $(window).trigger('resize');
+        }, 100);
     }, 1000);
 
     setTimeout(() => {
