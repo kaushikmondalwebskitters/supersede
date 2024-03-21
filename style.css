@@ -785,5 +785,15 @@
     .building-manufacturing-slider .slick-dots li a::before {
         height: 3px;
     }
+
+    .building-manufacturing-slider .slick-dots {
+        bottom: 40px;
+    }
+}
+
+@media (max-width: 479px) {
+    .building-manufacturing-block {
+        max-height: 450px;
+    }
 }
 
