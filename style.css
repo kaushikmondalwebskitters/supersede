@@ -532,3 +532,69 @@
     transform: none;
     transition: transform 2s cubic-bezier(.165,.84,.44,1);
 }
+
+@media (max-width: 1200px) and (min-width: 992px) {
+    .supersede-navbar-brand {
+        width: 17.125vw;
+    }
+
+    .supersede-nav-menu-link {
+        font-size: 1.3vw;
+    }
+
+    .supersede-nav-menu-link::after {
+        bottom: 2vw;
+    }
+
+    .supersede-nav-btn {
+        font-size: 1.3vw;
+    }
+
+    .supersede-nav-btn-circle {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .supersede-nav-btn-circle-icon {
+        width: 0.9vw;
+    }
+
+    .supersede-home-banner-subtitle {
+        font-size: 1.8vw;
+    }
+
+    .supersede-home-banner-title {
+        font-size: 5.45vw;
+    }
+
+    .pt {
+        font-size: 1.45vw;
+    }
+
+    .supersede-subtitle {
+        margin-bottom: 0.9vw;
+        font-size: 1.7vw;
+    }
+
+    .supersede-primary-btn,
+    .supersede-primary-btn-outline {
+        font-size: 1.28vw;
+    }
+
+    .supersede-primary-btn.introducing-primary-btn {
+        min-width: 28vw;
+        margin-right: 2vw;
+    }
+
+    .supersede-primary-btn-outline.introducing-primary-btn-outline {
+        min-width: 28vw;
+    }
+
+    .supersede-info-title {
+        font-size: 2.3vw;
+    }
+
+    .supersede-info-text {
+        font-size: 1.55vw;
+    }
+}
