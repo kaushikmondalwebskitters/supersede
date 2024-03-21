@@ -420,7 +420,7 @@ jQuery(document).ready(function ($) {
                     end: "+=50%",
                     scrub: true,
                     onUpdate: (self) => {
-                        if (self.progress > 0.9) {
+                        if (self.progress > 0.5) {
                             element.classList.add('active');
                         } else {
                             element.classList.remove('active');
