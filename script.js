@@ -15,25 +15,24 @@
 
 var Webflow = Webflow || [];
 Webflow.push(function () {
-        const lenis = new Lenis()
-
-        lenis.on('scroll', ({ scroll, limit, velocity, direction, progress}) => {
-            console.log({scroll, limit, velocity, direction, progress})
-        })
+        const lenis = new Lenis();
 
     function raf(time) {
         lenis.raf(time)
         requestAnimationFrame(raf)
     }
-    requestAnimationFrame(raf)
+   
     lenis.on('scroll', ScrollTrigger.update);
 
-    lenis.start()
-});
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
 
-  
+gsap.ticker.lagSmoothing(0)
+requestAnimationFrame(raf)
+// lenis.stop()
 
-jQuery(document).ready(function ($) {    
+// jQuery(document).ready(function ($) {    
 
         // Smooth Scroll
     // const lenis = new Lenis()
@@ -573,4 +572,6 @@ jQuery(document).ready(function ($) {
         }
     });
     /*menu*/
-})
+// })
+
+});
