@@ -13,7 +13,16 @@
 //   requestAnimationFrame(raf)
 //   lenis.stop();
 
-    //     // Smooth Scroll
+var Webflow = Webflow || [];
+Webflow.push(function () {
+    // lenis.start();
+});
+
+  
+
+jQuery(document).ready(function ($) {    
+
+        // Smooth Scroll
     const lenis = new Lenis()
 
     function raf(time) {
@@ -23,29 +32,7 @@
     requestAnimationFrame(raf)
     lenis.on('scroll', ScrollTrigger.update);
 
-    lenis.stop()
-
-var Webflow = Webflow || [];
-Webflow.push(function () {
-    lenis.start();
-});
-
-  
-
-jQuery(document).ready(function ($) {    
-    lenis.start();
-
-    //     // Smooth Scroll
-    // const lenis = new Lenis()
-
-    // function raf(time) {
-    //     lenis.raf(time)
-    //     requestAnimationFrame(raf)
-    // }
-    // requestAnimationFrame(raf)
-    // lenis.on('scroll', ScrollTrigger.update);
-
-    // lenis.start()
+    lenis.start()
 
 
 
