@@ -767,4 +767,11 @@
     .fig_points .pt-column:nth-child(6) .pt {
         right: -27px;
     }
+
+    .building-manufacturing-block {
+        height: auto;
+        max-height: unset;
+        min-height: 380px;
+    }
 }
+
