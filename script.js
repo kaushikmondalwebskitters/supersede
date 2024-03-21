@@ -407,7 +407,7 @@ jQuery(document).ready(function ($) {
 
             mediaScreen.add("(max-width: 991px)", () => {
                 gsap.to(".supersede-video-wrap", {
-                    y: "-3vh",
+                    y: "-25vh",
                     scrollTrigger: {
                         trigger: element,
                         pin: true,
