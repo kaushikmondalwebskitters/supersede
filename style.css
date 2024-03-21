@@ -534,6 +534,10 @@
 }
 
 @media (max-width: 1200px) and (min-width: 992px) {
+    .supersede-body {
+        font-size: 1.3vw;
+    }
+
     .supersede-navbar-brand {
         width: 17.125vw;
     }
@@ -610,5 +614,39 @@
     .building-manufacturing-block,
     .building-manufacturing-slider-box {
         max-height: 60vw;
+    }
+
+    .building-manufacturing-head-text {
+        font-size: 1.6vw;
+    }
+
+    .supersede-tertiary-btn {
+        font-size: 1.6vw;
+    }
+
+    .building-manufacturing-slider .slick-dots li {
+        font-size: 1.7vw;
+    }
+
+    .building-manufacturing-slider .slick-dots {
+        bottom: 6vw;
+    }
+
+    .ftr-tile {
+        padding-top: 2.5vw;
+    }
+
+    .supersede-footer-right-col:first-child {
+        width: 19%;
+    }
+
+    .supersede-footer-right-col:nth-child(2),
+    .supersede-footer-right-col:nth-child(3) {
+        width: 28%;
+    }
+
+    .ftr-box-menu {
+        padding-top: 1.5vw;
+        padding-right: 1vw;
     }
 }
