@@ -326,19 +326,18 @@ jQuery(document).ready(function ($) {
             });
         }
 
-        if ($(".supersede-footer-inner").length) {
-            // gsap.set(".supersede-footer-inner", { yPercent: 22, });
-            gsap.set(".ftr-btm-graphics", { yPercent: 22, });
-            gsap.to(".ftr-btm-graphics", {
-                yPercent: 0,
-                scrollTrigger: {
-                    trigger: ".supersede-footer",
-                    start: 'top 100%',
-                    end: 'bottom 0',
-                    scrub: true,
-                }
-            });
-        }
+        // if ($(".supersede-footer-inner").length) {
+        //     gsap.set(".ftr-btm-graphics", { yPercent: 22, });
+        //     gsap.to(".ftr-btm-graphics", {
+        //         yPercent: 0,
+        //         scrollTrigger: {
+        //             trigger: ".supersede-footer",
+        //             start: 'top 100%',
+        //             end: 'bottom 0',
+        //             scrub: true,
+        //         }
+        //     });
+        // }
 
         if ($(".building-manufacturing-block").length) {
             gsap.to(".building-manufacturing-block", {
