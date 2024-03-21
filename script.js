@@ -3,6 +3,8 @@
 "use strict";
 
 jQuery(document).ready(function ($) {
+    let mediaScreen = gsap.matchMedia();
+    
 
     $(".new-cta-block-right .supersede-tertiary-btn").mouseenter(function () {
         $(".new-cta-logo").addClass('active')
@@ -403,6 +405,28 @@ jQuery(document).ready(function ($) {
                 }
             })
 
+            mediaScreen.add("(max-width: 991px)", () => {
+                gsap.to(".supersede-video-wrap", {
+                    y: "-3vh",
+                    scrollTrigger: {
+                        trigger: element,
+                        pin: true,
+                        pinSpacing: false,
+                        start: "top 0",
+                        end: "+=50%",
+                        scrub: true,
+                        // markers: true, 
+                        onUpdate: (self) => {
+                            if (self.progress > 0.5) {
+                                element.classList.add('active');
+                            } else {
+                                element.classList.remove('active');
+                            }
+                        }
+                    }
+                })
+            })
+
             // const  CAA = () => {
             //    element.style.height = `${window.innerHeight * 2}px`
             // };
@@ -469,7 +493,7 @@ jQuery(document).ready(function ($) {
 
 
     /*menu*/
-    let mediaScreen = gsap.matchMedia();
+    
     mediaScreen.add("(max-width: 991px)", () => {
         gsap.set("[menu-item]", {
             opacity: 0,
