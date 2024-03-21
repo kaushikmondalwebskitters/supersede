@@ -405,27 +405,27 @@ jQuery(document).ready(function ($) {
                 }
             })
 
-            // mediaScreen.add("(max-width: 991px)", () => {
-            //     gsap.to(".supersede-video-wrap", {
-            //         y: "-25vh",
-            //         scrollTrigger: {
-            //             trigger: element,
-            //             pin: true,
-            //             pinSpacing: false,
-            //             start: "top 0",
-            //             end: "+=50%",
-            //             scrub: true,
-            //             // markers: true, 
-            //             onUpdate: (self) => {
-            //                 if (self.progress > 0.5) {
-            //                     element.classList.add('active');
-            //                 } else {
-            //                     element.classList.remove('active');
-            //                 }
-            //             }
-            //         }
-            //     })
-            // })
+            mediaScreen.add("(max-width: 767px)", () => {
+                gsap.to(".supersede-video-wrap", {
+                    y: "-25vh",
+                    scrollTrigger: {
+                        trigger: element,
+                        pin: true,
+                        pinSpacing: false,
+                        start: "top 0",
+                        end: "+=50%",
+                        scrub: true,
+                        // markers: true, 
+                        onUpdate: (self) => {
+                            if (self.progress > 0.5) {
+                                element.classList.add('active');
+                            } else {
+                                element.classList.remove('active');
+                            }
+                        }
+                    }
+                })
+            })
 
             // const  CAA = () => {
             //    element.style.height = `${window.innerHeight * 2}px`
