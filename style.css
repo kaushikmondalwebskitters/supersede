@@ -395,13 +395,13 @@
     z-index: 99;
     animation: text-clip4 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
     -webkit-animation: text-clip4 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-  }
+}
 
 
 
 @-webkit-keyframes text-clip4 {
     from {
-        
+
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
@@ -448,7 +448,7 @@
 }
 
 .supersede-video-block-inner.active .vid-top-logo,
-.supersede-video-block-inner.active .vid-bbtm-logo  {
+.supersede-video-block-inner.active .vid-bbtm-logo {
     opacity: 0;
 }
 
@@ -493,10 +493,10 @@
 }
 
 .supersede-header.scroll_nav {
-    box-shadow: 0 0px 13px rgba(255,255,255,0.25);
+    box-shadow: 0 0px 13px rgba(255, 255, 255, 0.25);
 }
 
-.nav-dropdown-new-list.w--open > .nav-dropdown-line,
+.nav-dropdown-new-list.w--open>.nav-dropdown-line,
 .nav-dropdown-new-list.w--open {
     animation: fadeInMenu 0.5s;
     -webkit-animation: fadeInMenu 0.5s;
@@ -525,12 +525,12 @@
     transform: scale(1.4);
     width: 100%;
     will-change: transform;
-    transition: transform 2s cubic-bezier(.165,.84,.44,1);
+    transition: transform 2s cubic-bezier(.165, .84, .44, 1);
 }
 
 .building-manufacturing-ftr.active .building-manufacturing-bg {
     transform: none;
-    transition: transform 2s cubic-bezier(.165,.84,.44,1);
+    transition: transform 2s cubic-bezier(.165, .84, .44, 1);
 }
 
 @media (max-width: 1200px) and (min-width: 992px) {
@@ -667,4 +667,53 @@
         padding-top: 15vw;
         padding-bottom: 5vw;
     }
+}
+
+@media (max-width: 991px) {
+
+    /*menu toggle start*/
+    .menu-toggle-sp {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .menu-button-line:first-child {
+        position: absolute;
+        top: 15px;
+        left: 0;
+    }
+
+    .menu-button-line:last-child {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+    }
+
+    .menu-toggle-sp.w--open {
+        z-index: 99999;
+    }
+
+    .menu-toggle-sp.w--open .menu-button-line:nth-child(2) {
+        opacity: 0;
+        transform: translatex(-28px);
+    }
+
+    .menu-toggle-sp.w--open .menu-button-line:first-child {
+        transform: rotate(45deg);
+        top: 25px;
+    }
+
+    .menu-toggle-sp.w--open .menu-button-line:last-child {
+        transform: rotate(-45deg);
+        top: 25px;
+    }
+
+    .supersede-nav-menu-wrapper {
+        display: block !important;
+        opacity: 0;
+    }
+
+    /*menu toggle end*/
 }
