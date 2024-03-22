@@ -792,7 +792,7 @@ html.has-scroll-dragging * {
     }
 
     .building-manufacturing-slider .slick-dots {
-        bottom: 6vw;
+        bottom: 7vw;
         width: 92.125vw;
     }
 
@@ -855,7 +855,7 @@ html.has-scroll-dragging * {
     }
 
     .building-manufacturing-slider .slick-dots {
-        bottom: 40px;
+        bottom: 65px;
         width: 100%;
         max-width: 540px;
     }
