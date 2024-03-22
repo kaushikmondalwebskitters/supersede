@@ -209,7 +209,7 @@ html.has-scroll-dragging * {
     margin: 0;
     padding: 0;
     position: absolute;
-    bottom: 3vw;
+    bottom: 5vw;
     width: 73.125vw;
     padding-left: 0.938vw;
     padding-right: 0.938vw;
