@@ -655,6 +655,17 @@ html.has-scroll-dragging * {
     }
 }
 
+.p-block-column > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.feature-slider-item.active .p-block-column > * {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 @media (max-width: 1200px) and (min-width: 992px) {
     .supersede-body {
         font-size: 1.3vw;
