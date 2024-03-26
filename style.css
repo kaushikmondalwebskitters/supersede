@@ -609,8 +609,6 @@ html.has-scroll-dragging * {
 }
 
 .feature-slider-main-innr {
-    position: relative;
-    overflow: hidden;
     height: 100vh;
 }
 
@@ -694,15 +692,17 @@ html.has-scroll-dragging * {
 }
 
 .table-box.new th {
-    padding: 0.825vw 0.825vw;
-    border-right: .063vw solid rgba(255,255,255,0.15);
+    padding: 1vw 1.5vw;
+    border-right: .063vw solid rgba(255, 255, 255, 0.15);
+    font-size: 1.2vw;
 }
 
 .table-box.new td {
-    padding: 0.625vw 0.825vw;
+    padding: 0.85vw 1.5vw;
     color: #000000;
-    border-bottom: .063vw solid rgba(6,5,4,0.10);
-    border-right: .063vw solid rgba(6,5,4,0.10);
+    border-bottom: .063vw solid rgba(6, 5, 4, 0.10);
+    border-right: .063vw solid rgba(6, 5, 4, 0.10);
+    font-size: 0.953vw;
 }
 
 .table-box.new td:last-child {
