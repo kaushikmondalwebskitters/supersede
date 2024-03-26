@@ -281,6 +281,7 @@ Webflow.push(function () {
         });
         marineTl.pause();
         ScrollTrigger.create({
+            scroller: isDekstop ? page_container : window,
             trigger: ".sb-block-marine",
             start: "top center",
             end: "+=1%",
