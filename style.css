@@ -689,6 +689,14 @@ html.has-scroll-dragging * {
     transform: scale(1);
 }
 
+.table-box.new thead {
+    background: #000000;
+}
+
+.table-box.new th {
+    padding: 0.825vw 0.825vw;
+}
+
 @media (max-width: 1200px) and (min-width: 992px) {
     .supersede-body { 
         font-size: 1.3vw;
