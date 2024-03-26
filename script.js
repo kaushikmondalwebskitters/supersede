@@ -67,8 +67,13 @@ Webflow.push(function () {
 
     let mediaScreen = gsap.matchMedia();
 
-    const target = document.querySelector('#next');
-    loco_scroll.scrollTo(target);
+
+    // const target = document.querySelector('#next');
+    // loco_scroll.scrollTo(target);
+
+    loco_scroll.on('call', func => {
+        $(document).trigger(func);
+    });
 
 
     $(".new-cta-block-right .supersede-tertiary-btn").mouseenter(function () {
