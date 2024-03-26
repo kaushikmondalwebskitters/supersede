@@ -680,6 +680,15 @@ html.has-scroll-dragging * {
     transform: translateY(0px);
 }
 
+.fe-head-icon {
+    transform: scale(0);
+    transition: all .4s ease-in-out;
+}
+
+.feature-slider-item.active .fe-head-icon {
+    transform: scale(1);
+}
+
 @media (max-width: 1200px) and (min-width: 992px) {
     .supersede-body { 
         font-size: 1.3vw;
