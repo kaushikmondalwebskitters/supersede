@@ -243,19 +243,11 @@ Webflow.push(function () {
         var mFooter = itemColumnMarine.find(".sb-block-marine-footer");
 
         var marineTl = gsap.timeline();
-        gsap.set([panel, greenCircleMarine, topTitle, mFooter], { opacity: 0, });
+        gsap.set([greenCircleMarine, topTitle, mFooter], { opacity: 0, });
         gsap.set(lineMarine, { width: 0, });
         gsap.set(greenCircleMarine, { scale: 0, });
-        gsap.set(panel, { scale: 0, });
         gsap.set(mFooter, { y: 25, });
 
-        marineTl
-            .to(panel,
-                {
-                    opacity: 1,
-                    scale: 1,
-                    ease: "Back.easeOut",
-                })
         itemColumnMarine.each(function (i) {
             marineTl
                 .to(greenCircleMarine.eq(i),
