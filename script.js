@@ -234,6 +234,74 @@ Webflow.push(function () {
         }, 100)
     }
 
+    if ($(".anim-sp").length) {
+        var itemColumnMarine = $(".sb-block-marine-column");
+        var panel = $(".p-panel");
+        var greenCircleMarine = itemColumnMarine.find(".sb-block-marine-sep-circle");
+        var lineMarine = itemColumnMarine.find(".sb-block-marine-sep-line");
+        var topTitle = itemColumnMarine.find(".sb-block-marine-top-heading");
+        var mFooter = itemColumnMarine.find(".sb-block-marine-footer");
+
+        var marineTl = gsap.timeline();
+        gsap.set([panel, greenCircleMarine, topTitle, mFooter], { opacity: 0, });
+        gsap.set(lineMarine, { width: 0, });
+        gsap.set(greenCircleMarine, { scale: 0, });
+        gsap.set(panel, { scale: 0, });
+        gsap.set(mFooter, { y: 25, });
+
+        marineTl
+            .to(panel,
+                {
+                    opacity: 1,
+                    scale: 1,
+                    ease: "Back.easeOut",
+                })
+        itemColumnMarine.each(function (i) {
+            marineTl
+                .to(greenCircleMarine.eq(i),
+                    {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.6,
+                        ease: "Back.easeOut",
+                    })
+                .to(lineMarine.eq(i),
+                    {
+                        width: "100%",
+                    }, "<")
+                .to(topTitle.eq(i),
+                    {
+                        opacity: 1,
+                    }, "-=0.15")
+                .to(mFooter.eq(i),
+                    {
+                        opacity: 1,
+                        y: 0,
+                    })
+        });
+        marineTl.pause();
+        ScrollTrigger.create({
+            trigger: ".sb-block-marine",
+            start: "top center",
+            end: "+=1%",
+            //animation: marineTl,
+            onUpdate: (self) => {
+                if (self.progress >= 0.95) {
+                    if (!$(".sb-block-marine").hasClass("anim")) {
+                        marineTl.timeScale(3.5).restart()
+                    }
+                    $(".sb-block-marine").addClass("anim");
+                } else if (self.progress < 0.95) {
+                    if ($(".sb-block-marine").hasClass("anim")) {
+                        marineTl.timeScale(5).reverse();
+                    }
+                    $(".sb-block-marine").removeClass("anim");
+                }
+            },
+            // markers: true,
+        })
+    }
+
     function afterLoad() {
         ScrollTrigger.clearScrollMemory();
         window.history.scrollRestoration = "manual";
