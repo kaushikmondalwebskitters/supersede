@@ -697,6 +697,21 @@ html.has-scroll-dragging * {
     padding: 0.825vw 0.825vw;
 }
 
+.table-box.new td {
+    padding: 0.625vw 0.825vw;
+    color: #000000;
+    border-bottom: .063vw solid rgba(6,5,4,0.10);
+    border-right: .063vw solid rgba(6,5,4,0.10);
+}
+
+.table-box.new td:last-child {
+    border-right: none;
+}
+
+.table-box.new tbody tr:last-child td {
+    border-bottom: none;
+}
+
 @media (max-width: 1200px) and (min-width: 992px) {
     .supersede-body { 
         font-size: 1.3vw;
