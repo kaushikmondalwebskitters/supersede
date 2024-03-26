@@ -695,6 +695,7 @@ html.has-scroll-dragging * {
 
 .table-box.new th {
     padding: 0.825vw 0.825vw;
+    border-right: .063vw solid rgba(255,255,255,0.15);
 }
 
 .table-box.new td {
