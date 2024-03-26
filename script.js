@@ -112,10 +112,10 @@ Webflow.push(function () {
                 jQuery('.supersede-header').addClass('scroll_nav');
             } else {
                 jQuery('.supersede-header').removeClass('scroll_nav');
-             
+
             }
             if (st < 50) {
-            jQuery(".supersede-header").removeClass("hideNav");
+                jQuery(".supersede-header").removeClass("hideNav");
             }
             if (st <= window.innerHeight / 2) {
                 // downscroll code
@@ -519,8 +519,93 @@ Webflow.push(function () {
                     }
                 }
             })
+        }
 
+        // marine page clip slider
+        if ($(".feature-slider-wrap").length) {
+            let content = $(".feature-slider-main-innr"),
+                pinup = $(".feature-slider-wrap"),
+                side_nav = $(".fea-dots-list"),
+                prev_sl = 0;
+            let $headline = content.children();
+            let headlines = gsap.utils.toArray($headline);
 
+            let totalDuration = headlines.length * 500,
+                singleDuration = totalDuration / headlines.length;
+
+            for (let m = 0; m < headlines.length; m++) {
+                $("<li class='fea-itemm'></li>").appendTo(side_nav);
+                //   content
+                //     .find(".feature-slider-item:eq(" + m + ")")
+                //     .css("zIndex", parseInt(headlines.length) - m);
+            }
+            content.find(".feature-slider-item:eq(0)").addClass("active");
+            side_nav.find(".fea-itemm:eq(0)").addClass("active");
+
+            setTimeout(function () {
+
+                ScrollTrigger.create({
+                    scroller: isDekstop ? page_container : window,
+                    trigger: pinup,
+                    start: "top top",
+                    end: "+=" + totalDuration,
+                    pin: true,
+                    scrub: true
+                });
+                let timeline_sl = gsap.timeline();
+                headlines.forEach((elem, i) => {
+                    timeline_sl = ScrollTrigger.create({
+                        scroller: isDekstop ? page_container : window,
+                        trigger: content,
+                        start: "top -=" + singleDuration * i,
+                        end: "+=" + singleDuration,
+                        toggleActions: "play reverse play reverse",
+                        onEnter: function () {
+                            $headline.removeClass("active");
+                            $(elem).addClass("active");
+                            $headline.removeClass("prev next");
+                            $(elem).prev().addClass("prev");
+                            //   $(elem).next().addClass("next");  
+                            side_nav.find("li").removeClass("active");
+                            side_nav.find("li:eq(" + i + ")").addClass("active");
+                            prev_sl = i;
+                        },
+                        onEnterBack: function () {
+                            $headline.removeClass("active");
+                            $(elem).addClass("active");
+                            $headline.removeClass("prev next");
+                            //   $(elem).prev().addClass("prev");
+                            $(elem).next().addClass("next");
+                            side_nav.find("li").removeClass("active");
+                            side_nav.find("li:eq(" + i + ")").addClass("active");
+                            prev_sl = i;
+                        }
+                    });
+                });
+                side_nav.find("li").each(function () {
+                    this.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        let now_index = $(this).index();
+                        // console.log(prev_sl, now_index);
+                        if (prev_sl < now_index) {
+                            // console.log("nxt");
+                            window.scrollTo(
+                                0,
+                                document.documentElement.scrollTop +
+                                singleDuration * Math.abs(now_index - prev_sl)
+                            );
+                        }
+                        if (prev_sl > now_index) {
+                            // console.log("prev");
+                            window.scrollTo(
+                                0,
+                                document.documentElement.scrollTop -
+                                singleDuration * Math.abs(now_index - prev_sl)
+                            );
+                        }
+                    });
+                });
+            }, 100)
         }
 
 
