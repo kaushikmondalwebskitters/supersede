@@ -628,8 +628,18 @@ html.has-scroll-dragging * {
     -webkit-animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
+.p-block-wrapper.new {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
 .feature-slider-item.active .p-block-wrapper.new {
     z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
 }
   
 .feature-slider-item.prev,
