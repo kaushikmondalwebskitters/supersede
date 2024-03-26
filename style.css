@@ -713,6 +713,11 @@ html.has-scroll-dragging * {
     border-bottom: none;
 }
 
+.green-white-circle::before {
+    top: 0;
+    left: 0;
+}
+
 @media (max-width: 1200px) and (min-width: 992px) {
     .supersede-body { 
         font-size: 1.3vw;
