@@ -505,7 +505,7 @@ Webflow.push(function () {
                     trigger: element,
                     pin: true,
                     start: "top top",
-                    end: "+=50%",
+                    end: "+=60%",
                     scrub: true,
                     onUpdate: (self) => {
                         if (self.progress > 0.5) {
