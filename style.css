@@ -851,7 +851,7 @@ html.has-scroll-dragging * {
     .building-manufacturing-slider .slick-dots li {
         font-size: 15px;
         padding: 0 6px;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.12em; 
     }
 
     .building-manufacturing-slider .slick-dots li a {
