@@ -622,10 +622,14 @@ html.has-scroll-dragging * {
     left: 0;
 }
 
-.feature-slider-item.active{
+.feature-slider-item.active .p-block-right-bg{
     z-index: 99;
     animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
     -webkit-animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.feature-slider-item.active .p-block-wrapper.new {
+    z-index: 99;
 }
   
 .feature-slider-item.prev,
