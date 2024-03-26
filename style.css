@@ -185,7 +185,7 @@ html.has-scroll-dragging * {
 
 .supersede-primary-btn:hover .supersede-primary-btn-text,
 .supersede-primary-btn-outline:hover .supersede-primary-btn-text {
-    animation: BtnTextHover .6s ease
+    /* animation: BtnTextHover .6s ease */
 }
 
 @keyframes BtnTextHover {
