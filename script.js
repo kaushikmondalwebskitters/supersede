@@ -550,7 +550,7 @@ Webflow.push(function () {
                     start: "top top",
                     end: "+=" + totalDuration,
                     pin: true,
-                    scrub: true
+                    scrub: 1.2
                 });
                 let timeline_sl = gsap.timeline();
                 headlines.forEach((elem, i) => {
