@@ -845,7 +845,7 @@ html.has-scroll-dragging * {
     }
 
     .building-manufacturing-block {
-        max-height: 300px;
+        max-height: 500px;
     }
 
     .building-manufacturing-slider .slick-dots li {
