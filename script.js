@@ -67,6 +67,9 @@ Webflow.push(function () {
 
     let mediaScreen = gsap.matchMedia();
 
+    const target = document.querySelector('#next');
+    loco_scroll.scrollTo(target);
+
 
     $(".new-cta-block-right .supersede-tertiary-btn").mouseenter(function () {
         $(".new-cta-logo").addClass('active')
