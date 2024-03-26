@@ -608,6 +608,53 @@ html.has-scroll-dragging * {
     opacity: 1;
 }
 
+.feature-slider-main-innr {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.feature-slider-item {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.feature-slider-item.active{
+    z-index: 99;
+    animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    -webkit-animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+  
+.feature-slider-item.prev,
+.feature-slider-item.next{
+    z-index: 90 ;
+}
+
+@-webkit-keyframes slide-clip {
+    from {
+        -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    to {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes slide-clip {
+    from {
+        -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    to {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
 @media (max-width: 1200px) and (min-width: 992px) {
     .supersede-body {
         font-size: 1.3vw;
