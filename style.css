@@ -3,57 +3,64 @@
 /*! locomotive-scroll v3.1.7 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 html.has-scroll-smooth,
 html.has-scroll-smooth body {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 html.has-scroll-dragging,
 html.has-scroll-dragging * {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
 .c-scrollbar {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 8px;
-  height: 100vh;
-  transform-origin: center right;
-  transition: transform 0.3s, opacity 0.3s, background 0.3s;
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0);
-  z-index: 110;
-  mix-blend-mode: difference;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 8px;
+    height: 100vh;
+    transform-origin: center right;
+    transition: transform 0.3s, opacity 0.3s, background 0.3s;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 110;
+    mix-blend-mode: difference;
 }
+
 .c-scrollbar:hover {
-  transform: scaleX(1.45);
+    transform: scaleX(1.45);
 }
+
 .c-scrollbar:hover,
 .has-scroll-dragging .c-scrollbar,
 .has-scroll-scrolling .c-scrollbar {
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.05);
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.05);
 }
+
 .has-scroll-dragging .c-scrollbar {
-  background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
+
 .c-scrollbar_thumb {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.2);
-  width: 0.2vw;
-  margin: 0.1vw;
-  cursor: -webkit-grab;
-  cursor: grab;
-  border-radius: 1vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 0.2vw;
+    margin: 0.1vw;
+    cursor: -webkit-grab;
+    cursor: grab;
+    border-radius: 1vw;
 }
+
 .has-scroll-dragging .c-scrollbar_thumb {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-  background-color: rgba(5, 6, 18, 1);
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+    background-color: rgba(5, 6, 18, 1);
 }
+
 /*--end locomotive scrollbar--*/
 
 /* loader start */
@@ -620,7 +627,7 @@ html.has-scroll-dragging * {
     left: 0;
 }
 
-.feature-slider-item.active .p-block-right-bg{
+.feature-slider-item.active .p-block-right-bg {
     z-index: 99;
     animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
     -webkit-animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
@@ -639,10 +646,10 @@ html.has-scroll-dragging * {
     visibility: visible;
     pointer-events: all;
 }
-  
+
 .feature-slider-item.prev,
-.feature-slider-item.next{
-    z-index: 90 ;
+.feature-slider-item.next {
+    z-index: 90;
 }
 
 @-webkit-keyframes slide-clip {
@@ -650,6 +657,7 @@ html.has-scroll-dragging * {
         -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
         clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
     }
+
     to {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -661,19 +669,20 @@ html.has-scroll-dragging * {
         -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
         clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
     }
+
     to {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
 
-.p-block-column > * {
+.p-block-column>* {
     opacity: 0;
     transform: translateY(30px);
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-.feature-slider-item.active .p-block-column > * {
+.feature-slider-item.active .p-block-column>* {
     opacity: 1;
     transform: translateY(0px);
 }
@@ -718,32 +727,34 @@ html.has-scroll-dragging * {
     left: 0;
 }
 
-.sb-block-marine-sep-circle, 
-  .sb-block-marine-sep-circle::before {
+.sb-block-marine-sep-circle,
+.sb-block-marine-sep-circle::before {
     content: " ";
     border-radius: 50%;
     background-color: transparent;
     border: 0.063vw solid #ffffff;
-  }
-  
-  .sb-block-marine-sep-circle::before {
+}
+
+.sb-block-marine-sep-circle::before {
     animation: mymove 2s infinite;
     position: absolute;
-    background-color: rgba(255,255,255,0.38);
+    background-color: rgba(255, 255, 255, 0.38);
     width: 100%;
     height: 100%;
-  }
-  
-  .sb-block-marine-sep {
+}
+
+.sb-block-marine-sep {
     width: calc(100% - 1.5vw);
-  }
-  
-  .sb-block-marine-column.right .sb-block-marine-sep {
+}
+
+.sb-block-marine-column.right .sb-block-marine-sep {
     margin-left: 1.8vw;
-  }
+}
+
+/* RESPONSIVE START */
 
 @media (max-width: 1200px) and (min-width: 992px) {
-    .supersede-body { 
+    .supersede-body {
         font-size: 1.3vw;
     }
 
@@ -876,6 +887,87 @@ html.has-scroll-dragging * {
         padding-top: 15vw;
         padding-bottom: 5vw;
     }
+
+    .bnr-scroll.inner {
+        bottom: 1.963vw;
+    }
+
+    .banner-scroll-circle {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .banner-scroll-down-arrow {
+        width: 2.288vw;
+    }
+
+    .banner-scroll-text {
+        font-size: 1.02vw;
+        top: -1.8vw;
+        margin-left: -0.59vw;
+    }
+
+    .inner-banner-line {
+        width: 106.463vw;
+    }
+
+    .sb-block-marine-sep-line {
+        height: 0.263vw;
+    }
+
+    .fe-head-icon {
+        width: 5.425vw;
+        margin-bottom: 2.5vw;
+    }
+
+    .p-block-column.new {
+        font-size: 1.7vw;
+    }
+
+    .p-block-wrapper.new {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .fe-head-title {
+        font-size: 2.1vw;
+    }
+
+    .fe-head {
+        padding-bottom: 3.6vw;
+    }
+
+    .p-spec-heading-title {
+        font-size: 3.3vw;
+    }
+
+    .table-box.new th {
+        padding: 1.7vw 2.3vw;
+        font-size: 1.5vw;
+    }
+
+    .table-box.new td {
+        padding: 1.35vw 2.3vw;
+        font-size: 1.353vw;
+    }
+
+    .supersede-home-introducing-head-btn.rd-new {
+        padding-top: 3.1vw;
+    }
+
+    .supersede-home-introducing-head-btn.rd-new {
+        padding-top: 1.5vw;
+    }
+
+    .sd-new-copy {
+        padding-top: 3.2vw;
+    }
+
+    .supersede-specification-head-text {
+        font-size: 1.65vw;
+        line-height: 1.6em;
+    }
 }
 
 @media (max-width: 991px) {
@@ -947,7 +1039,7 @@ html.has-scroll-dragging * {
         padding: 0 0 1.825vw;
     }
 
-    .ftr-box-menu-list-item-link::after, 
+    .ftr-box-menu-list-item-link::after,
     .ftr-tile-link::after {
         display: none;
     }
@@ -985,7 +1077,7 @@ html.has-scroll-dragging * {
     .building-manufacturing-slider .slick-dots li {
         font-size: 15px;
         padding: 0 6px;
-        letter-spacing: 0.12em; 
+        letter-spacing: 0.12em;
     }
 
     .building-manufacturing-slider .slick-dots li a {
@@ -1019,4 +1111,3 @@ html.has-scroll-dragging * {
         max-height: 550px;
     }
 }
-
