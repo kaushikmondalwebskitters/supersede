@@ -644,8 +644,8 @@ html.has-scroll-dragging * {
 
 .p-block-wrapper.new {
     z-index: 99;
-    /* opacity: 0;
-    visibility: hidden; */
+    opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transition: all .3s ease-in-out;
 }
@@ -718,6 +718,33 @@ html.has-scroll-dragging * {
 
 .marine-half-slider .slick-track {
     height: 100%;
+}
+
+.marine-half-slider .slick-dots {
+    position: absolute;
+    top: 50%;
+    left: 2.55vw;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transform: translate(0, -50%);
+}
+
+.marine-half-slider .slick-dots li {
+    margin: 0.5vw 0;
+}
+
+.marine-half-slider .slick-dots li button {
+    width: 1.1vw;
+    height: 1.1vw;
+    font-size: 0;
+    background: transparent;
+    border: 1px solid #d0fd04;
+    transition: all .4s ease-in-out;
+}
+
+.marine-half-slider .slick-dots li.slick-active button {
+    background: #d0fd04;
 }
 
 .table-box.new thead {
