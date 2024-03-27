@@ -627,7 +627,8 @@ html.has-scroll-dragging * {
     left: 0;
 }
 
-.feature-slider-item.active .p-block-right-bg {
+.feature-slider-item.active .p-block-right-bg,
+.feature-slider-item.slick-current.slick-active .p-block-right-bg {
     z-index: 99;
     animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
     -webkit-animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
@@ -697,6 +698,10 @@ html.has-scroll-dragging * {
 .feature-slider-item.active .fe-head-icon,
 .feature-slider-item.slick-current.slick-active .fe-head-icon  {
     transform: scale(1);
+}
+
+.slick-slide .fe-head-icon {
+    display: inline-block!important;
 }
 
 .table-box.new thead {
