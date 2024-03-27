@@ -1060,6 +1060,12 @@ html.has-scroll-dragging * {
         width: 1.4vw;
         height: 1.4vw;
     }
+
+    .ov-sub-content {
+        width: 23vw;
+        padding: 1.4vw;
+        font-size: 1.4vw;
+    }
 }
 
 @media (max-width: 991px) {
@@ -1153,6 +1159,12 @@ html.has-scroll-dragging * {
     .table-box.new td {
         padding: 2.05vw 2.3vw;
         font-size: 1.753vw;
+    }
+
+    .ov-sub-content {
+        width: 28vw;
+        padding: 1.9vw;
+        font-size: 1.7vw;
     }
 }
 
@@ -1248,10 +1260,21 @@ html.has-scroll-dragging * {
         width: 16px;
         height: 16px;
     }
+
+    .ov-sub-content {
+        width: 195px;
+        padding: 15px 15px;
+        font-size: 14px;
+        border: none;
+    }
 }
 
 @media (max-width: 479px) {
     .building-manufacturing-block {
         max-height: 550px;
+    }
+
+    .ov-sub-content {
+        font-size: 12px;
     }
 }
