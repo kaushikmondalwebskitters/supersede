@@ -1267,6 +1267,10 @@ html.has-scroll-dragging * {
         font-size: 14px;
         border: none;
     }
+
+    .feature-slider-main-innr {
+        height: 100vh;
+    }
 }
 
 @media (max-width: 479px) {
