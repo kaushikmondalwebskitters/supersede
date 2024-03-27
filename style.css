@@ -751,6 +751,16 @@ html.has-scroll-dragging * {
     margin-left: 1.8vw;
 }
 
+[transparent-header] .supersede-header {
+    background: transparent;
+    border-bottom: 0.063vw solid rgba(255, 255, 255, 0.4);
+}
+
+[transparent-header] .supersede-header.scroll_nav {
+    background: #000000;
+    border-color: transparent;
+}
+
 /* RESPONSIVE START */
 
 @media (max-width: 1200px) and (min-width: 992px) {
