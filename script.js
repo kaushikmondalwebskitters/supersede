@@ -68,10 +68,12 @@ Webflow.push(function () {
     let mediaScreen = gsap.matchMedia();
 
 
-    const target = document.querySelector('#next');
-    $(".banner-scroll-link-block").on('click', function(){
-        loco_scroll.scrollTo(target);
-    })
+    if ($('[data-click]').length) {
+        const target = document.querySelector('#next');
+        $("[data-click]").on('click', function () {
+            loco_scroll.scrollTo(target);
+        })
+    }
 
 
 
