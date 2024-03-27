@@ -156,8 +156,8 @@ Webflow.push(function () {
         })
     }
 
-    if ($(['marine-half-slider']).length) {
-        $(['marine-half-slider']).slick({
+    if ($(".marine-half-slider").length) {
+        $(".marine-half-slider").slick({
             arrows: false,
             infinite: true,
             slidesToShow: 1,
