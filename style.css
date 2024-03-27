@@ -761,6 +761,10 @@ html.has-scroll-dragging * {
     border-color: transparent;
 }
 
+[transparent-header] .nav-dropdown-new-list {
+    background-color: rgba(226,226,226,0.30);
+}
+
 /* RESPONSIVE START */
 
 @media (max-width: 1200px) and (min-width: 992px) {
