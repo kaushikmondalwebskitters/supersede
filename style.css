@@ -622,9 +622,11 @@ html.has-scroll-dragging * {
 .feature-slider-item {
     height: 100%;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: absolute!important;
+    top: 0!important;
+    left: 0!important;
+    opacity: 1!important;
+    transition: unset!important;
 }
 
 .feature-slider-item.active .p-block-right-bg,
@@ -702,6 +704,14 @@ html.has-scroll-dragging * {
 
 .slick-slide .fe-head-icon {
     display: inline-block!important;
+}
+
+.marine-half-slider .slick-list {
+    height: 100%;
+}
+
+.marine-half-slider .slick-track {
+    height: 100%;
 }
 
 .table-box.new thead {
