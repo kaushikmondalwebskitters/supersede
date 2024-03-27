@@ -968,6 +968,14 @@ html.has-scroll-dragging * {
         font-size: 1.65vw;
         line-height: 1.6em;
     }
+
+    .banner-scroll-link-block.for-desk {
+        display: none;
+    }
+
+    .banner-scroll-link-block.for-tm {
+        display: inline-block;
+    }
 }
 
 @media (max-width: 991px) {
