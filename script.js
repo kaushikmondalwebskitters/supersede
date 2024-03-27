@@ -158,7 +158,7 @@ Webflow.push(function () {
 
 
     // marine page clip slider
-    if ($(".feature-slider-wrap").length) {
+    if ($("['marine-scroll-slider']").length) {
         let content = $(".feature-slider-main-innr"),
             pinup = $(".feature-slider-wrap"),
             side_nav = $(".fea-dots-list"),
