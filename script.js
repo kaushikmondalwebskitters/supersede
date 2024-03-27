@@ -156,6 +156,18 @@ Webflow.push(function () {
         })
     }
 
+    if ($(['marine-half-slider']).length) {
+        $(['marine-half-slider']).slick({
+            arrows: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            //autoplay: true,
+            dots: true
+        })
+    }
+
 
     // marine page clip slider
     // if ($(['marine-scroll-slider']).length) {
