@@ -1146,13 +1146,13 @@ html.has-scroll-dragging * {
     }
 
     .table-box.new th {
-        padding: 1.7vw 2.3vw;
-        font-size: 1.5vw;
+        padding: 2vw 2.3vw;
+        font-size: 1.8vw;
     }
 
     .table-box.new td {
-        padding: 1.35vw 2.3vw;
-        font-size: 1.353vw;
+        padding: 2.05vw 2.3vw;
+        font-size: 1.753vw;
     }
 }
 
