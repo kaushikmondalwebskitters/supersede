@@ -746,6 +746,7 @@ html.has-scroll-dragging * {
 .marine-half-slider .slick-dots li button {
     width: 1.1vw;
     height: 1.1vw;
+    padding: 0;
     font-size: 0;
     background: transparent;
     border: 1px solid #d0fd04;
@@ -1049,6 +1050,10 @@ html.has-scroll-dragging * {
 
     .banner-scroll-link-block.for-tm {
         display: inline-block;
+    }
+
+    .panel-spec-wrapper-box-table-data-new._3rd {
+        font-size: 1.4vw;
     }
 }
 
