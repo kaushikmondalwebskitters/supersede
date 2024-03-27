@@ -1055,6 +1055,11 @@ html.has-scroll-dragging * {
     .panel-spec-wrapper-box-table-data-new._3rd {
         font-size: 1.4vw;
     }
+
+    .marine-half-slider .slick-dots li button {
+        width: 1.4vw;
+        height: 1.4vw;
+    }
 }
 
 @media (max-width: 991px) {
