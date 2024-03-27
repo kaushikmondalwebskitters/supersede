@@ -627,11 +627,17 @@ html.has-scroll-dragging * {
     left: 0!important;
     opacity: 1!important;
     transition: unset!important;
+    z-index: 99!important;
 }
 
-.feature-slider-item.active .p-block-right-bg,
-.feature-slider-item.slick-current.slick-active .p-block-right-bg {
+.feature-slider-item.active .p-block-right-bg {
     z-index: 99;
+    animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    -webkit-animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.feature-slider-item.slick-current.slick-active {
+    z-index: 999999 !important;
     animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
     -webkit-animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
