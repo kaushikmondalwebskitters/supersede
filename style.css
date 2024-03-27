@@ -637,11 +637,11 @@ html.has-scroll-dragging * {
     -webkit-animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
-/* .feature-slider-item.slick-current.slick-active {
+.feature-slider-item.slick-current.slick-active {
     z-index: 999999 !important;
-    animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-    -webkit-animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-} */
+    /* animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    -webkit-animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both; */
+}
 
 /* .p-block-right-bg {
     opacity: 0;
