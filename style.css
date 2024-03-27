@@ -642,6 +642,14 @@ html.has-scroll-dragging * {
     -webkit-animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
+.p-block-right-bg {
+    opacity: 0;
+}
+
+.feature-slider-item.slick-current.slick-active .p-block-right-bg {
+    opacity: 1;
+}
+
 .p-block-wrapper.new {
     z-index: 99;
     opacity: 0;
