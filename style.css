@@ -1218,6 +1218,16 @@ html.has-scroll-dragging * {
         -webkit-mask-size: 90% 90%;
         mask-size: 90% 90%;
     }
+
+    .table-box.new th {
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+
+    .table-box.new td {
+        padding: 14px 20px;
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 479px) {
