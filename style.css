@@ -1135,6 +1135,25 @@ html.has-scroll-dragging * {
     .ftr-tile-link::after {
         display: none;
     }
+
+    .feature-slider-main-innr {
+        height: 70vh;
+    }
+
+    .marine-half-slider .slick-dots li button {
+        width: 1.6vw;
+        height: 1.6vw;
+    }
+
+    .table-box.new th {
+        padding: 1.7vw 2.3vw;
+        font-size: 1.5vw;
+    }
+
+    .table-box.new td {
+        padding: 1.35vw 2.3vw;
+        font-size: 1.353vw;
+    }
 }
 
 @media (max-width: 767px) {
