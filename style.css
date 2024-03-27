@@ -1159,6 +1159,7 @@ html.has-scroll-dragging * {
 @media (max-width: 767px) {
     .fig_points .pt-column:nth-child(1) .pt {
         left: -19px;
+        text-align: left;
     }
 
     .fig_points .pt-column:nth-child(2) .pt {
@@ -1167,6 +1168,7 @@ html.has-scroll-dragging * {
 
     .fig_points .pt-column:nth-child(3) .pt {
         left: -9px;
+        text-align: left;
     }
 
     .fig_points .pt-column:nth-child(4) .pt {
@@ -1175,6 +1177,7 @@ html.has-scroll-dragging * {
 
     .fig_points .pt-column:nth-child(5) .pt {
         left: -1px;
+        text-align: left;
     }
 
     .fig_points .pt-column:nth-child(6) .pt {
