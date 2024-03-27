@@ -653,8 +653,8 @@ html.has-scroll-dragging * {
 
 .p-block-wrapper.new {
     z-index: 99;
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0;
+    visibility: hidden; */
     pointer-events: none;
     transition: all .3s ease-in-out;
 }
