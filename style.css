@@ -849,13 +849,13 @@ html.has-scroll-dragging * {
 }
 
 .marine-half-slider .slick-prev {
-    left: 2vw;
+    left: 6vw;
     background: url(https://uploads-ssl.webflow.com/659801cf81794869cad57b69/661523b5d6bf0d76095a5db9_slider-prev-arrow.svg) center center no-repeat transparent;
     background-size: 1vw;
 }
 
 .marine-half-slider .slick-next {
-    right: 2vw;
+    right: 6vw;
     background: url(https://uploads-ssl.webflow.com/659801cf81794869cad57b69/6615238187aa646b299964b2_slider-next-arrow.svg) center center no-repeat transparent;
     background-size: 1vw;
 }
@@ -1180,9 +1180,13 @@ html.has-scroll-dragging * {
         height: 70vh;
     }
 
+    .marine-half-slider .slick-dots {
+        bottom: 4vw;
+    }
+
     .marine-half-slider .slick-dots li button {
-        width: 1.6vw;
-        height: 1.6vw;
+        width: 5vw;
+        height: .7vw;
     }
 
     .table-box.new th {
@@ -1199,6 +1203,14 @@ html.has-scroll-dragging * {
         width: 28vw;
         padding: 1.9vw;
         font-size: 1.7vw;
+    }
+
+    .marine-half-slider .slick-prev {
+        left: 1vw;
+    }
+
+    .marine-half-slider .slick-next {
+        right: 1vw;
     }
 }
 
