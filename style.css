@@ -733,7 +733,7 @@ html.has-scroll-dragging * {
 .marine-half-slider .slick-dots {
     position: absolute;
     top: auto;
-    bottom: 2vw;
+    bottom: 3vw;
     left: 0;
     padding: 0;
     margin: 0;
@@ -836,8 +836,8 @@ html.has-scroll-dragging * {
     height: 4.388vw;
     border-radius: 50%;
     position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
+    bottom: 1.2vw;
+    /* transform: translate(0, -50%); */
     z-index: 99;
     font-size: 0;
     border: 0.052vw solid #ffffff;
@@ -851,13 +851,13 @@ html.has-scroll-dragging * {
 }
 
 .marine-half-slider .slick-prev {
-    left: 6vw;
+    left: calc(50% - 20vw);
     background: url(https://uploads-ssl.webflow.com/659801cf81794869cad57b69/661523b5d6bf0d76095a5db9_slider-prev-arrow.svg) center center no-repeat transparent;
     background-size: 1vw;
 }
 
 .marine-half-slider .slick-next {
-    right: 6vw;
+    right: calc(50% - 20vw);
     background: url(https://uploads-ssl.webflow.com/659801cf81794869cad57b69/6615238187aa646b299964b2_slider-next-arrow.svg) center center no-repeat transparent;
     background-size: 1vw;
 }
