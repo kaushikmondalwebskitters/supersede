@@ -616,29 +616,29 @@ html.has-scroll-dragging * {
 }
 
 .feature-slider-main-innr {
-    height: 100vh;
+    height: 78vh;
 }
 
 .feature-slider-item {
     height: 100%;
     width: 100%;
-    position: absolute!important;
+    /* position: absolute!important;
     top: 0!important;
     left: 0!important;
     opacity: 1!important;
     transition: unset!important;
-    z-index: 99!important;
+    z-index: 99!important; */
 }
 
-.feature-slider-item.active .p-block-right-bg,
+/* .feature-slider-item.active .p-block-right-bg,
 .feature-slider-item.slick-current.slick-active .p-block-right-bg {
     z-index: 99;
     animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
     -webkit-animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-}
+} */
 
 .feature-slider-item.slick-current.slick-active {
-    z-index: 999999 !important;
+    /* z-index: 999999 !important; */
     /* animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
     -webkit-animation: slide-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both; */
 }
