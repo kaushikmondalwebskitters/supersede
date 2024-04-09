@@ -2,7 +2,7 @@
 
 "use strict";
 
-const responsive_size = 1024; 
+const responsive_size = 1024;
 var isDekstop = true;
 //detect device width
 if (window.innerWidth <= responsive_size) {
@@ -158,6 +158,8 @@ Webflow.push(function () {
 
     if ($(".marine-half-slider").length) {
         $(".marine-half-slider").slick({
+            autoplay: true,
+            autoplaySpeed: 4000,
             arrows: true,
             infinite: true,
             slidesToShow: 1,
