@@ -848,6 +848,8 @@ html.has-scroll-dragging * {
 
 .marine-half-slider .slick-arrow:hover {
     opacity: 1;
+    background-color: #d0fd04;
+    border-color: transparent;
 }
 
 .marine-half-slider .slick-prev {
