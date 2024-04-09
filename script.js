@@ -2,7 +2,7 @@
 
 "use strict";
 
-const responsive_size = 1024;
+const responsive_size = 1024; 
 var isDekstop = true;
 //detect device width
 if (window.innerWidth <= responsive_size) {
