@@ -158,7 +158,7 @@ Webflow.push(function () {
 
     if ($(".marine-half-slider").length) {
         $(".marine-half-slider").slick({
-            arrows: false,
+            arrows: true,
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
