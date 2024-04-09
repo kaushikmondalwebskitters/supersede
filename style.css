@@ -1303,8 +1303,8 @@ html.has-scroll-dragging * {
     }
 
     .marine-half-slider .slick-dots li button {
-        width: 16px;
-        height: 16px;
+        width: 32px;
+        height: 4px;
     }
 
     .ov-sub-content {
@@ -1317,6 +1317,10 @@ html.has-scroll-dragging * {
     .feature-slider-main-innr {
         height: 56vh;
     }
+
+    .marine-half-slider .slick-arrow {
+        display: none!important;
+    }
 }
 
 @media (max-width: 479px) {
@@ -1326,5 +1330,9 @@ html.has-scroll-dragging * {
 
     .ov-sub-content {
         font-size: 12px;
+    }
+
+    .feature-slider-main-innr {
+        height: 70vh;
     }
 }
