@@ -1178,9 +1178,9 @@ html.has-scroll-dragging * {
         display: none;
     }
 
-    .feature-slider-main-innr { 
+    /* .feature-slider-main-innr { 
         height: 70vh;
-    }
+    } */
 
     .marine-half-slider .slick-dots {
         bottom: 4vw;
@@ -1316,9 +1316,9 @@ html.has-scroll-dragging * {
         border: none;
     }
 
-    .feature-slider-main-innr {
+    /* .feature-slider-main-innr {
         height: 56vh;
-    }
+    } */
 
     .marine-half-slider .slick-arrow {
         display: none!important;
@@ -1334,7 +1334,7 @@ html.has-scroll-dragging * {
         font-size: 12px;
     }
 
-    .feature-slider-main-innr {
+    /* .feature-slider-main-innr {
         height: 70vh;
-    }
+    } */
 }
