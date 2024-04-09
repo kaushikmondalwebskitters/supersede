@@ -830,6 +830,35 @@ html.has-scroll-dragging * {
     background-color: rgba(226,226,226,0.30);
 }
 
+.marine-half-slider .slick-arrow {
+    width: 4.388vw;
+    height: 4.388vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 99;
+    border: 0.052vw solid #ffffff;
+    opacity: 0.5;
+    transition: all .4s ease-in-out;
+}
+
+.marine-half-slider .slick-arrow:hover {
+    opacity: 1;
+}
+
+.marine-half-slider .slick-prev {
+    left: 2vw;
+    background: url(https://uploads-ssl.webflow.com/659801cf81794869cad57b69/661523b5d6bf0d76095a5db9_slider-prev-arrow.svg) center center no-repeat transparent;
+    background-size: 4vw;
+}
+
+.marine-half-slider .slick-next {
+    right: 2vw;
+    background: url(https://uploads-ssl.webflow.com/659801cf81794869cad57b69/6615238187aa646b299964b2_slider-next-arrow.svg) center center no-repeat transparent;
+    background-size: 4vw;
+}
+
 /* RESPONSIVE START */
 
 @media (max-width: 1200px) and (min-width: 992px) {
