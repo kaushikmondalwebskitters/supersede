@@ -1176,7 +1176,7 @@ html.has-scroll-dragging * {
         display: none;
     }
 
-    .feature-slider-main-innr {
+    .feature-slider-main-innr { 
         height: 70vh;
     }
 
