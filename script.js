@@ -322,6 +322,19 @@ Webflow.push(function () {
                 }
             });
 
+            gsap.to(".new-home-btn", {
+                opacity: 0,
+                yPercent: -36,
+                scrollTrigger: {
+                    scroller: isDekstop ? page_container : window,
+                    trigger: ".supersede-home-banner",
+                    start: 'top 0',
+                    end: 'bottom 90%',
+                    scrub: true,
+                    //markers: true,
+                }
+            });
+
             gsap.to(".supersede-home-banner-title", {
                 // opacity: 0,
                 yPercent: -56,
