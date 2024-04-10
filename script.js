@@ -804,10 +804,10 @@ Webflow.push(function () {
         });
         /*menu*/
 
-        setTimeout(() => {
-            loco_scroll.update();
-            ScrollTrigger.refresh();
-        }, 2500);
+        // setTimeout(() => {
+        //     loco_scroll.update();
+        //     ScrollTrigger.refresh();
+        // }, 2500);
 
 
     }
