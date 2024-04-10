@@ -841,7 +841,7 @@ html.has-scroll-dragging * {
     z-index: 99;
     font-size: 0;
     border: 0.052vw solid #ffffff;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     cursor: pointer;
     transition: all .4s ease-in-out;
 }
