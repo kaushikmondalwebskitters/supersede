@@ -806,7 +806,7 @@ Webflow.push(function () {
 
         setTimeout(() => {
             loco_scroll.update();
-        }, 1000);
+        }, 2000);
 
 
     }
