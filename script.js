@@ -363,7 +363,7 @@ Webflow.push(function () {
             });
 
             gsap.to(".env-logo", {
-                yPercent: 7,
+                yPercent: 15,
                 scrollTrigger: {
                     scroller: isDekstop ? page_container : window,
                     trigger: ".supersede-home-banner-env",
