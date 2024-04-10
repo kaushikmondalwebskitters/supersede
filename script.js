@@ -361,6 +361,18 @@ Webflow.push(function () {
                     // markers: true,
                 }
             });
+
+            gsap.to(".env-logo", {
+                yPercent: 7,
+                scrollTrigger: {
+                    scroller: isDekstop ? page_container : window,
+                    trigger: ".supersede-home-banner-env",
+                    start: 'top 0',
+                    end: 'bottom 50%',
+                    scrub: true,
+                    // markers: true,
+                }
+            });
         }
 
         if ($(".supersede-home-intro").length) {
