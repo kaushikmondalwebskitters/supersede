@@ -350,7 +350,7 @@ Webflow.push(function () {
         }
 
         if ($(".supersede-home-banner-env").length) {
-            gsap.to("..supersede-home-banner-overlay-inner", {
+            gsap.to(".supersede-home-banner-overlay-inner", {
                 yPercent: -56,
                 scrollTrigger: {
                     scroller: isDekstop ? page_container : window,
