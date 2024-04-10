@@ -349,6 +349,20 @@ Webflow.push(function () {
             });
         }
 
+        if ($(".supersede-home-banner-env").length) {
+            gsap.to("..supersede-home-banner-overlay-inner", {
+                yPercent: -56,
+                scrollTrigger: {
+                    scroller: isDekstop ? page_container : window,
+                    trigger: ".supersede-home-banner-env",
+                    start: 'top 0',
+                    end: 'bottom 50%',
+                    scrub: true,
+                    // markers: true,
+                }
+            });
+        }
+
         if ($(".supersede-home-intro").length) {
 
             // gsap.set(".supersede-home-intro", {
@@ -795,5 +809,7 @@ Webflow.push(function () {
     });
     /*menu*/
     // })
+
+
 
 });
