@@ -864,6 +864,10 @@ html.has-scroll-dragging * {
     background-size: 1vw;
 }
 
+.marine-half-slider .slick-dots li:only-child {
+    display: none;
+}
+
 /* RESPONSIVE START */
 
 @media (max-width: 1200px) and (min-width: 992px) {
