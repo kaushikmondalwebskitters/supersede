@@ -807,7 +807,7 @@ Webflow.push(function () {
         setTimeout(() => {
             loco_scroll.update();
             ScrollTrigger.refresh();
-        }, 4000);
+        }, 2500);
 
 
     }
