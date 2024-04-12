@@ -868,6 +868,14 @@ html.has-scroll-dragging * {
     display: none;
 }
 
+.blg-shrt-info,
+.blog-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
 /* RESPONSIVE START */
 
 @media (max-width: 1200px) and (min-width: 992px) {
