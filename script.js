@@ -824,6 +824,12 @@ Webflow.push(function () {
 
 
 
+    $(".w-pagination-next").on('click', function () {
+        loco_scroll.update();
+        ScrollTrigger.refresh();
+    })
+
+
 
 
 
