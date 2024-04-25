@@ -875,6 +875,14 @@ html.has-scroll-dragging * {
     overflow: hidden;
 }
 
+.related-blog-slider .blog-collection-list .slick-track {
+    display: flex;
+}
+
+.related-blog-slider .blog-collection-list .slick-slide {
+    height: auto;
+}
+
 /* RESPONSIVE START */
 
 @media (max-width: 1200px) and (min-width: 992px) {
