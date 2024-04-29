@@ -159,7 +159,7 @@ Webflow.push(function () {
     if ($(".marine-half-slider").length) {
         $(".marine-half-slider").slick({
             autoplay: true,
-            autoplaySpeed: 4000,
+            autoplaySpeed: 6000,
             arrows: true,
             infinite: true,
             slidesToShow: 1,
