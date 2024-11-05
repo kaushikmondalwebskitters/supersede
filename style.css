@@ -308,6 +308,11 @@ html.has-scroll-dragging * {
     width: 100%
 }
 
+.supersede-nav-menu-link.supersede-nav-menu-link-updated::after {
+    background-color: #000000;
+    bottom: 1.2vw;
+}
+
 .building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-head-text,
 .building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-head-title,
 .building-manufacturing-slider .slick-slide.slick-current .vd-btn,
