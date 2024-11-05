@@ -309,8 +309,17 @@ html.has-scroll-dragging * {
 }
 
 .supersede-nav-menu-link.supersede-nav-menu-link-updated::after {
-    background-color: #000000;
-    bottom: 1.2vw;
+    /* background-color: #000000;
+    bottom: 1.2vw; */
+    display: none;
+}
+
+.ftr-box-menu-list-item-link-updated:hover::after,
+.ftr-tile-link-updated:hover::after,
+.nav-dropdown-new-updated:hover .supersede-nav-menu-link::after,
+.supersede-nav-menu-link-updated.w--current::after,
+.supersede-nav-menu-link-updated:hover::after {
+    color: var(--green);
 }
 
 .building-manufacturing-slider .slick-slide.slick-current .building-manufacturing-head-text,
