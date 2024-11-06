@@ -75,10 +75,22 @@ Webflow.push(function () {
         });
     }
 
-    $('.arc-exp-btn-tigger').on('click', function(){
-        $(this).closest(".prd-accordion-box").find('.prd-modal').addClass('open-opoup');
+    // $('.arc-exp-btn-tigger').on('click', function(){
+    //     $(this).closest(".prd-accordion-box").find('.prd-modal').addClass('open-opoup');
+    //     $('body').addClass('open-opoup-body');
+    //     loco_scroll.stop();
+    // })
+
+    function modalOpen(d) {
         $('body').addClass('open-opoup-body');
+        $(d).addClass('open-opoup');
         loco_scroll.stop();
+    }
+
+    $('[data-modal]').on('click', function () {
+        let targetModalId = $(this).attr('data-modal');
+        let targetModal = $('data-id' + targetModalId);
+        modalOpen(targetModal)
     })
 
     $('.prd-modal-close').on('click', function(){
