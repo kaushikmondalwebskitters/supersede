@@ -69,20 +69,17 @@ Webflow.push(function () {
             $(this).next().stop(true, true).slideToggle();
             $(".prd-accordion-toggle").not(this).parent().removeClass('open');
             $(".prd-accordion-toggle").not(this).next().slideUp();
-            loco_scroll.update(), ScrollTrigger.refresh();
         });
     }
 
     $('.arc-exp-btn-tigger').on('click', function(){
         $(this).closest(".prd-accordion-box").find('.prd-modal').addClass('open-opoup');
         $('body').addClass('open-opoup-body');
-        loco_scroll.update(), ScrollTrigger.refresh();
     })
 
     $('.prd-modal-close').on('click', function(){
         $(this).closest('.prd-modal').removeClass('open-opoup');
         $('body').removeClass('open-opoup-body');
-        loco_scroll.update(), ScrollTrigger.refresh();
     })
 
 
