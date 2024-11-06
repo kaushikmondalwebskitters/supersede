@@ -74,12 +74,12 @@ Webflow.push(function () {
 
     $('.arc-exp-btn-tigger').on('click', function(){
         $(this).closest(".prd-accordion-box").find('.prd-modal').addClass('open-opoup');
-        $(body).addClass('open-opoup-body');
+        $('body').addClass('open-opoup-body');
     })
 
     $('.prd-modal-close').on('click', function(){
         $(this).closest('.prd-modal').removeClass('open-opoup');
-        $(body).removeClass('open-opoup-body');
+        $('body').removeClass('open-opoup-body');
     })
 
 
