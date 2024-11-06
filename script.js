@@ -72,6 +72,16 @@ Webflow.push(function () {
         });
     }
 
+    $('.arc-exp-btn-tigger').on('click', function(){
+        $(this).closest(".prd-accordion-box").find('.prd-modal').addClass('open-opoup');
+        $(body).addClass('open-opoup-body');
+    })
+
+    $('.prd-modal-close').on('click', function(){
+        $(this).closest('.prd-modal').removeClass('open-opoup');
+        $(body).removeClass('open-opoup-body');
+    })
+
 
     var s = 0;
     isDekstop ? loco_scroll.on("scroll", e => {
