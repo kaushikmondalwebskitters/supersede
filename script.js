@@ -89,7 +89,7 @@ Webflow.push(function () {
 
     $('[data-modal]').on('click', function () {
         let targetModalId = $(this).attr('data-modal');
-        let targetModal = $('data-id' + targetModalId);
+        let targetModal = $('{data-id="' + targetModalId + '"');
         modalOpen(targetModal)
     })
 
