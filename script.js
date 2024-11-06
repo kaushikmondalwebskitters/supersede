@@ -59,6 +59,20 @@ Webflow.push(function () {
     }).mouseleave(function () {
     $(".new-cta-logo").removeClass("active")
     });
+
+     // accordion js
+    $(".prd-accordion-collection-item:first .prd-accordion-box ").addClass("open");
+    $(".prd-accordion-collection-item:first .prd-accordion-box .prd-accordion-content").slideDown();
+    if ($(".prd-accordion-toggle").length) {
+        $('.prd-accordion-toggle').on('click', function () {
+            $(this).parent().toggleClass('open');
+            $(this).next().stop(true, true).slideToggle();
+            $(".prd-accordion-toggle").not(this).parent().removeClass('open');
+            $(".prd-accordion-toggle").not(this).next().slideUp();
+        });
+    }
+
+
     var s = 0;
     isDekstop ? loco_scroll.on("scroll", e => {
         var t = e.delta.y;
