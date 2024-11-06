@@ -69,7 +69,9 @@ Webflow.push(function () {
             $(this).next().stop(true, true).slideToggle();
             $(".prd-accordion-toggle").not(this).parent().removeClass('open');
             $(".prd-accordion-toggle").not(this).next().slideUp();
-            loco_scroll.update(), ScrollTrigger.refresh();
+            setTimeout(() => {
+                loco_scroll.update(), ScrollTrigger.refresh();
+            }, 1000);
         });
     }
 
