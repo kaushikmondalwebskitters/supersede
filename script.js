@@ -71,18 +71,20 @@ Webflow.push(function () {
             $(".prd-accordion-toggle").not(this).next().slideUp();
             setTimeout(() => {
                 loco_scroll.update(), ScrollTrigger.refresh();
-            }, 1000);
+            }, 400);
         });
     }
 
     $('.arc-exp-btn-tigger').on('click', function(){
         $(this).closest(".prd-accordion-box").find('.prd-modal').addClass('open-opoup');
         $('body').addClass('open-opoup-body');
+        loco_scroll.stop();
     })
 
     $('.prd-modal-close').on('click', function(){
         $(this).closest('.prd-modal').removeClass('open-opoup');
         $('body').removeClass('open-opoup-body');
+        loco_scroll.start();
     })
 
 
