@@ -103,6 +103,10 @@ Webflow.push(function () {
         });
     }
 
+    setTimeout(() => {
+        loco_scroll.update(), ScrollTrigger.refresh();
+    }, 6000);
+
     // $('.arc-exp-btn-tigger').on('click', function(){
     //     $(this).closest(".prd-accordion-box").find('.prd-modal').addClass('open-opoup');
     //     $('body').addClass('open-opoup-body');
