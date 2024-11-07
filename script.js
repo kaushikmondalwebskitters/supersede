@@ -144,11 +144,11 @@ Webflow.push(function () {
         observer.observe(this);
     });
 
-    $('.spec-progressbar-block .m-board-accordion-content-tab-link.nwrp').on('click', function(){
-        setTimeout(() => {
-            loco_scroll.update(), ScrollTrigger.refresh();
-        }, 100);
-    })
+    // $('.spec-progressbar-block .m-board-accordion-content-tab-link.nwrp').on('click', function(){
+    //     setTimeout(() => {
+    //         loco_scroll.update(), ScrollTrigger.refresh();
+    //     }, 100);
+    // })
 
 
 
