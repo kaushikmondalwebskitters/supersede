@@ -5,6 +5,9 @@ window.innerWidth <= 1024 && (isDekstop = !1, document.body.classList.add("mobil
 const page_container = document.querySelector("[data-scroll-container]");
 var Webflow = Webflow || [];
 Webflow.push(function () {
+    setTimeout(() => {
+        loco_scroll.update(), ScrollTrigger.update(), ScrollTrigger.refresh();
+    }, 6000);
     function e() {
         isDekstop && loco_scroll.update(), ScrollTrigger.update(), ScrollTrigger.refresh()
     }
@@ -103,9 +106,7 @@ Webflow.push(function () {
         });
     }
 
-    setTimeout(() => {
-        loco_scroll.update(), ScrollTrigger.refresh();
-    }, 6000);
+
 
     // $('.arc-exp-btn-tigger').on('click', function(){
     //     $(this).closest(".prd-accordion-box").find('.prd-modal').addClass('open-opoup');
