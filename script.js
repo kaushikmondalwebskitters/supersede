@@ -118,6 +118,32 @@ Webflow.push(function () {
         });
     }
 
+    // Create a new IntersectionObserver instance
+    var observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+            // Check if the section is in the viewport
+            if (entry.isIntersecting) {
+                var $section = $(entry.target);
+                var width = $section.data('width');
+                
+                // Animate the width and add the percentage text
+                $section.animate({ width: width }, 2500);
+                $section.after('<span class="perc">' + width + '</span>');
+                
+                // Fade in the percentage after a delay
+                $('.perc').delay(3000).fadeIn(1000);
+                
+                // Stop observing the section after animation is triggered
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when at least 50% of the section is visible
+    
+    // Target sections to observe
+    $('.spec-prg-item > div').each(function() {
+        observer.observe(this);
+    });
+
 
 
     // $('.arc-exp-btn-tigger').on('click', function(){
