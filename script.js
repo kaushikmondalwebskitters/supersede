@@ -106,6 +106,18 @@ Webflow.push(function () {
         });
     }
 
+    if ($(".tmb-accordion-block .tmb-accordion-toggle").length) {
+        $('.tmb-accordion-block .tmb-accordion-toggle').on('click', function () {
+            $(this).parent().toggleClass('open');
+            $(this).next().stop(true, true).slideToggle();
+            $(".tmb-accordion-block .tmb-accordion-toggle").not(this).parent().removeClass('open');
+            $(".tmb-accordion-block .tmb-accordion-toggle").not(this).next().slideUp();
+            setTimeout(() => {
+                loco_scroll.update(), ScrollTrigger.refresh();
+            }, 300);
+        });
+    }
+
 
 
     // $('.arc-exp-btn-tigger').on('click', function(){
