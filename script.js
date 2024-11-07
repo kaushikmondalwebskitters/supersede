@@ -85,7 +85,7 @@ Webflow.push(function () {
             $(".m-board-sec .m-board-accordion-toggle").not(this).next().slideUp();
             setTimeout(() => {
                 loco_scroll.update(), ScrollTrigger.refresh();
-            }, 400);
+            }, 300);
         });
     }
 
@@ -99,7 +99,7 @@ Webflow.push(function () {
             $(".m-board-sec-cmp .m-board-accordion-toggle").not(this).next().slideUp();
             setTimeout(() => {
                 loco_scroll.update(), ScrollTrigger.refresh();
-            }, 400);
+            }, 300);
         });
     }
 
