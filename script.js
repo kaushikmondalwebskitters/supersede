@@ -89,6 +89,20 @@ Webflow.push(function () {
         });
     }
 
+    $(".m-board-sec-cmp .m-board-sec-item:first .m-board-sec-item-bx").addClass("open");
+    $(".m-board-sec-cmp .m-board-sec-item:first .m-board-sec-item-bx .m-board-accordion-content").slideDown();
+    if ($(".m-board-sec-cmp .m-board-accordion-toggle").length) {
+        $('.m-board-sec-cmp .m-board-accordion-toggle').on('click', function () {
+            $(this).parent().toggleClass('open');
+            $(this).next().stop(true, true).slideToggle();
+            $(".m-board-sec-cmp .m-board-accordion-toggle").not(this).parent().removeClass('open');
+            $(".m-board-sec-cmp .m-board-accordion-toggle").not(this).next().slideUp();
+            setTimeout(() => {
+                loco_scroll.update(), ScrollTrigger.refresh();
+            }, 400);
+        });
+    }
+
     // $('.arc-exp-btn-tigger').on('click', function(){
     //     $(this).closest(".prd-accordion-box").find('.prd-modal').addClass('open-opoup');
     //     $('body').addClass('open-opoup-body');
