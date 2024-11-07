@@ -140,7 +140,7 @@ Webflow.push(function () {
     }, { threshold: 0.5 }); // Trigger when at least 50% of the section is visible
     
     // Target sections to observe
-    $('.spec-prg-item > div').each(function() {
+    $('.spec-prg-item-prg > div').each(function() {
         observer.observe(this);
     });
 
