@@ -147,7 +147,7 @@ Webflow.push(function () {
     $('.spec-progressbar-block .m-board-accordion-content-tab-link.nwrp').on('click', function(){
         setTimeout(() => {
             loco_scroll.update(), ScrollTrigger.refresh();
-        }, 300);
+        }, 100);
     })
 
 
