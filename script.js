@@ -9,7 +9,7 @@ Webflow.push(function () {
     //     loco_scroll.update(), ScrollTrigger.update(), ScrollTrigger.refresh();
     // }, 6000);
     function e() {
-        isDekstop && loco_scroll.update(), ScrollTrigger.update(), ScrollTrigger.refresh()
+        isDekstop && loco_scroll.update(), ScrollTrigger.update()
     }
     isDekstop && ((loco_scroll = new LocomotiveScroll({
         el: page_container,
