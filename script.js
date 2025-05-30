@@ -114,7 +114,7 @@ Webflow.push(function () {
             $(".tmb-accordion-block .tmb-accordion-toggle").not(this).next().slideUp();
             setTimeout(() => {
                 loco_scroll.update(), ScrollTrigger.refresh();
-            }, 1000);
+            }, 300);
         });
     }
 
