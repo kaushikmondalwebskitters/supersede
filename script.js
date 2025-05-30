@@ -106,39 +106,17 @@ Webflow.push(function () {
         });
     }
 
-    // if ($(".tmb-accordion-block .tmb-accordion-toggle").length) {
-    //     $('.tmb-accordion-block .tmb-accordion-toggle').on('click', function () {
-    //         $(this).parent().toggleClass('open');
-    //         $(this).next().stop(true, true).slideToggle();
-    //         $(".tmb-accordion-block .tmb-accordion-toggle").not(this).parent().removeClass('open');
-    //         $(".tmb-accordion-block .tmb-accordion-toggle").not(this).next().slideUp();
-    //         setTimeout(() => {
-    //             loco_scroll.update(), ScrollTrigger.refresh();
-    //         }, 300);
-    //     });
-    // }
-
     if ($(".tmb-accordion-block .tmb-accordion-toggle").length) {
-    $('.tmb-accordion-block .tmb-accordion-toggle').on('click', function () {
-        const $this = $(this);
-        const $content = $this.next();
-
-        // Toggle current
-        $this.parent().toggleClass('open');
-        $content.stop(true, true).slideToggle({
-            duration: 1000,
-            complete: function () {
-                // Ensure loco_scroll and ScrollTrigger update AFTER animation completes
-                if (typeof loco_scroll !== 'undefined') loco_scroll.update();
-                if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
-            }
+        $('.tmb-accordion-block .tmb-accordion-toggle').on('click', function () {
+            $(this).parent().toggleClass('open');
+            $(this).next().stop(true, true).slideToggle();
+            $(".tmb-accordion-block .tmb-accordion-toggle").not(this).parent().removeClass('open');
+            $(".tmb-accordion-block .tmb-accordion-toggle").not(this).next().slideUp();
+            setTimeout(() => {
+                loco_scroll.update(), ScrollTrigger.refresh();
+            }, 1000);
         });
-
-        // Close others
-        $(".tmb-accordion-block .tmb-accordion-toggle").not(this).parent().removeClass('open');
-        $(".tmb-accordion-block .tmb-accordion-toggle").not(this).next().slideUp();
-    });
-}
+    }
 
     // Create a new IntersectionObserver instance
     var observer = new IntersectionObserver(function(entries, observer) {
