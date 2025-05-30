@@ -126,7 +126,7 @@ Webflow.push(function () {
         // Toggle current
         $this.parent().toggleClass('open');
         $content.stop(true, true).slideToggle({
-            duration: 300,
+            duration: 1000,
             complete: function () {
                 // Ensure loco_scroll and ScrollTrigger update AFTER animation completes
                 if (typeof loco_scroll !== 'undefined') loco_scroll.update();
