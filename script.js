@@ -386,35 +386,6 @@ Webflow.push(function () {
                         }
                     })
                 }
-
-                // Select all elements with the class
-                document.querySelectorAll(".data-number-class").forEach((el) => {
-                    let countTo = parseInt(el.getAttribute("data-count"), 10);
-
-                    // Create the ScrollTrigger
-                    ScrollTrigger.create({
-                    trigger: el,
-                    start: "top 80%", // when element enters viewport
-                    once: true,       // only trigger once
-                    onEnter: () => {
-                        gsap.fromTo(el, 
-                                    { innerText: 0 },
-                                    {
-                        innerText: countTo,
-                        duration: 2,
-                        ease: "power1.out",
-                        snap: { innerText: 1 }, // makes it count in whole numbers
-                        onUpdate: function () {
-                            el.innerText = Math.floor(el.innerText);
-                        },
-                        onComplete: function () {
-                            el.innerText = countTo;
-                        }
-                        }
-                                );
-                    }
-                    });
-                });
                 if ($(".supersede-video-block").length) {
                     var c = document.querySelector(".supersede-video-block-inner");
                     gsap.to(".supersede-video-item-f", {
