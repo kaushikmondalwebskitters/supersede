@@ -510,8 +510,8 @@ Webflow.push(function () {
         ScrollTrigger.create({
             trigger: el,
             start: "top 80%",
-            //once: true,
-            markers: true,
+            once: true,
+            //markers: true,
             scroller: isDekstop?page_container : window,
             onEnter: () => {
             gsap.fromTo(
@@ -535,4 +535,6 @@ Webflow.push(function () {
         });
         });
     }
+
+    
 });
