@@ -212,6 +212,15 @@ Webflow.push(function () {
         slidesToScroll: 1,
         fade: !0,
         dots: !0
+    }),$(".lg-banner-slider").length && $(".lg-banner-slider").slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: false,
+        dots: false
     }), setTimeout(() => {
         $(".loader").addClass("isEnding"),
             function e() {
@@ -536,5 +545,5 @@ Webflow.push(function () {
         });
     }
 
-    
+
 });
