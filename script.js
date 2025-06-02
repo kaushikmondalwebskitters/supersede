@@ -512,7 +512,7 @@ Webflow.push(function () {
             start: "top 80%",
             //once: true,
             markers: true,
-            scroller: isDekstop?loco_scroll : window,
+            scroller: isDekstop?page_container : window,
             onEnter: () => {
             gsap.fromTo(
                 el,
