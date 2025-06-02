@@ -501,4 +501,38 @@ Webflow.push(function () {
     }, 1e3), $(".w-pagination-next").on("click", function () {
         loco_scroll.update(), ScrollTrigger.refresh()
     })
+
+    const num = document.querySelectorAll(".data-number-class");
+    if (num.length) {
+        num.forEach((el) => {
+        let countTo = parseInt(el.getAttribute("data-count"), 10);
+
+        ScrollTrigger.create({
+            trigger: el,
+            start: "top 80%",
+            //once: true,
+            markers: true,
+            scroller: isDekstop?loco_scroll : window,
+            onEnter: () => {
+            gsap.fromTo(
+                el,
+                { innerText: 0 },
+                {
+                innerText: countTo,
+                duration: 2,
+                ease: "power1.out",
+                snap: { innerText: 1 },
+                onUpdate: function () {
+                    el.innerText = Math.floor(el.innerText);
+                },
+                onComplete: function () {
+                    el.innerText = countTo;
+                },
+                }
+            );
+            },
+            
+        });
+        });
+    }
 });
