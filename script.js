@@ -106,7 +106,7 @@ Webflow.push(function () {
         });
     }
 
-    if ($(".tmb-accordion-block .tmb-accordion-toggle").length) {
+    if ($(".#cal-heightaccr").length) {
         $('.tmb-accordion-block .tmb-accordion-toggle').on('click', function () {
             $(this).parent().toggleClass('open');
             $(this).next().stop(true, true).slideToggle();
