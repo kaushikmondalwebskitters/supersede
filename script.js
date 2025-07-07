@@ -134,7 +134,6 @@ Webflow.push(function () {
         }
     });
 
-    alert('log')
 
     if ($(".job-category-collection-list-wrapper").length) {
         $(".job-category-collection-item:first").addClass("open");
