@@ -142,22 +142,22 @@ Webflow.push(function () {
         //         loco_scroll.update(), ScrollTrigger.refresh();
         //     }, 300);
         // });
-        $('.job-category-header').on('click', function () {
-            const $current = $(this);
-            const $currentContent = $current.next();
-            const $others = $(".job-category-header").not(this);
+        // $('.job-category-header').on('click', function () {
+        //     const $current = $(this);
+        //     const $currentContent = $current.next();
+        //     const $others = $(".job-category-header").not(this);
 
-            $current.parent().toggleClass('open');
-            $currentContent.stop(true, true).slideToggle();
+        //     $current.parent().toggleClass('open');
+        //     $currentContent.stop(true, true).slideToggle();
 
-            $others.parent().removeClass('open');
-            const $othersContent = $others.next().stop(true, true).slideUp();
+        //     $others.parent().removeClass('open');
+        //     const $othersContent = $others.next().stop(true, true).slideUp();
 
-            $.when($currentContent, $othersContent).promise().done(function () {
-                loco_scroll.update();
-                ScrollTrigger.refresh();
-            });
-        });
+        //     $.when($currentContent, $othersContent).promise().done(function () {
+        //         loco_scroll.update();
+        //         ScrollTrigger.refresh();
+        //     });
+        // });
     }
 
     // Create a new IntersectionObserver instance
