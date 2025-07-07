@@ -579,14 +579,14 @@ Webflow.push(function () {
         });
     }
 
-    $('.job-category-collection-item').each(function () {
-        const $item = $(this);
-        setTimeout(() => {
+    setTimeout(() => {        
+        $('.job-category-collection-item').each(function () {
+            const $item = $(this);
             if ($item.find('.job-data .w-dyn-empty').length > 0) {
                 $item.addClass('hide');
             }
-        }, 500);
-    });
+        });
+    }, 500);
 
 
 });
