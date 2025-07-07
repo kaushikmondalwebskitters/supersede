@@ -129,7 +129,10 @@ Webflow.push(function () {
 
     if ($(".job-category-collection-list-wrapper").length) {
         $(".job-category-collection-item:first").addClass("open");
-        $(".job-category-collection-item:first .job-data").slideDown();
+        $(".job-category-collection-item:first .job-data").slideDown(function () {
+            loco_scroll.update();
+            ScrollTrigger.refresh();
+        });
         $('.job-category-header').on('click', function () {
             $(this).parent().toggleClass('open');
             $(this).next().stop(true, true).slideToggle();
