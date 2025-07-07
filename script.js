@@ -58,12 +58,12 @@ Webflow.push(function () {
     });
 
     $(".new-cta-block-right .updated-def-btn").mouseenter(function () {
-    $(".new-cta-logo").addClass("active")
+        $(".new-cta-logo").addClass("active")
     }).mouseleave(function () {
-    $(".new-cta-logo").removeClass("active")
+        $(".new-cta-logo").removeClass("active")
     });
 
-     // accordion js
+    // accordion js
     $(".prd-accordion-collection-item:first .prd-accordion-box ").addClass("open");
     $(".prd-accordion-collection-item:first .prd-accordion-box .prd-accordion-content").slideDown();
     if ($(".prd-accordion-toggle").length) {
@@ -127,29 +127,43 @@ Webflow.push(function () {
         });
     }
 
+    if ($(".job-category-collection-list-wrapper").length) {
+        $(".job-category-collection-item:first").addClass("open");
+        $(".job-category-collection-item:first .job-data").slideDown();
+        $('.job-category-header').on('click', function () {
+            $(this).parent().toggleClass('open');
+            $(this).next().stop(true, true).slideToggle();
+            $(".job-category-header").not(this).parent().removeClass('open');
+            $(".job-category-header").not(this).next().slideUp();
+            setTimeout(() => {
+                loco_scroll.update(), ScrollTrigger.refresh();
+            }, 300);
+        });
+    }
+
     // Create a new IntersectionObserver instance
-    var observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(function(entry) {
+    var observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
             // Check if the section is in the viewport
             if (entry.isIntersecting) {
                 var $section = $(entry.target);
                 var width = $section.data('width');
-                
+
                 // Animate the width and add the percentage text
                 $section.animate({ width: width }, 2500);
                 $section.after('<span class="perc">' + width + '</span>');
-                
+
                 // Fade in the percentage after a delay
                 $('.perc').delay(3000).fadeIn(1000);
-                
+
                 // Stop observing the section after animation is triggered
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 }); // Trigger when at least 50% of the section is visible
-    
+
     // Target sections to observe
-    $('.spec-prg-item-prg > div').each(function() {
+    $('.spec-prg-item-prg > div').each(function () {
         observer.observe(this);
     });
 
@@ -179,7 +193,7 @@ Webflow.push(function () {
         modalOpen(targetModal)
     })
 
-    $('.prd-modal-close').on('click', function(){
+    $('.prd-modal-close').on('click', function () {
         $(this).closest('.prd-modal').removeClass('open-opoup');
         $('body').removeClass('open-opoup-body');
         loco_scroll.start();
@@ -212,7 +226,7 @@ Webflow.push(function () {
         slidesToScroll: 1,
         fade: !0,
         dots: !0
-    }),$(".lg-banner-slider").length && $(".lg-banner-slider").slick({
+    }), $(".lg-banner-slider").length && $(".lg-banner-slider").slick({
         autoplay: true,
         autoplaySpeed: 5000,
         arrows: false,
@@ -514,34 +528,34 @@ Webflow.push(function () {
     const num = document.querySelectorAll(".data-number-class");
     if (num.length) {
         num.forEach((el) => {
-        let countTo = parseInt(el.getAttribute("data-count"), 10);
+            let countTo = parseInt(el.getAttribute("data-count"), 10);
 
-        ScrollTrigger.create({
-            trigger: el,
-            start: "top 80%",
-            once: true,
-            //markers: true,
-            scroller: isDekstop?page_container : window,
-            onEnter: () => {
-            gsap.fromTo(
-                el,
-                { innerText: 0 },
-                {
-                innerText: countTo,
-                duration: 2,
-                ease: "power1.out",
-                snap: { innerText: 1 },
-                onUpdate: function () {
-                    el.innerText = Math.floor(el.innerText);
+            ScrollTrigger.create({
+                trigger: el,
+                start: "top 80%",
+                once: true,
+                //markers: true,
+                scroller: isDekstop ? page_container : window,
+                onEnter: () => {
+                    gsap.fromTo(
+                        el,
+                        { innerText: 0 },
+                        {
+                            innerText: countTo,
+                            duration: 2,
+                            ease: "power1.out",
+                            snap: { innerText: 1 },
+                            onUpdate: function () {
+                                el.innerText = Math.floor(el.innerText);
+                            },
+                            onComplete: function () {
+                                el.innerText = countTo;
+                            },
+                        }
+                    );
                 },
-                onComplete: function () {
-                    el.innerText = countTo;
-                },
-                }
-            );
-            },
-            
-        });
+
+            });
         });
     }
 
