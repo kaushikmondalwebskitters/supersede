@@ -127,6 +127,13 @@ Webflow.push(function () {
         });
     }
 
+    $('.job-category-collection-item').each(function () {
+        const $item = $(this);
+        if ($item.find('.job-data .w-dyn-empty').length > 0) {
+            $item.addClass('hide');
+        }
+    });
+
     if ($(".job-category-collection-list-wrapper").length) {
         $(".job-category-collection-item:first").addClass("open");
         $(".job-category-collection-item:first .job-data").slideDown(function () {
