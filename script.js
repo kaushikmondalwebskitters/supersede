@@ -585,7 +585,7 @@ Webflow.push(function () {
                 $item.addClass('hide');
             }
         });
-    }, 500);
+    }, 1000);
 
 
 });
