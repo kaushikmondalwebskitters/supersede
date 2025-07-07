@@ -133,32 +133,31 @@ Webflow.push(function () {
             loco_scroll.update();
             ScrollTrigger.refresh();
         });
-        // $('.job-category-header').on('click', function () {
-        //     $(this).parent().toggleClass('open');
-        //     $(this).next().stop(true, true).slideToggle();
-        //     $(".job-category-header").not(this).parent().removeClass('open');
-        //     $(".job-category-header").not(this).next().slideUp();
-        //     setTimeout(() => {
-        //         loco_scroll.update(), ScrollTrigger.refresh();
-        //     }, 300);
-        // });
         $('.job-category-header').on('click', function () {
-            const $current = $(this);
-            const $currentContent = $current.next();
-            const $others = $(".job-category-header").not(this);
-
-            $current.parent().toggleClass('open');
-            $currentContent.stop(true, true).slideToggle();
-
-            $others.parent().removeClass('open');
-            const $othersContent = $others.next().stop(true, true).slideUp();
-
-            // Wait for all slide animations to finish
-            $.when($currentContent, $othersContent).promise().done(function () {
-                loco_scroll.update();
-                ScrollTrigger.refresh();
-            });
+            $(this).parent().toggleClass('open');
+            $(this).next().stop(true, true).slideToggle();
+            $(".job-category-header").not(this).parent().removeClass('open');
+            $(".job-category-header").not(this).next().slideUp();
+            setTimeout(() => {
+                loco_scroll.update(), ScrollTrigger.refresh();
+            }, 300);
         });
+        // $('.job-category-header').on('click', function () {
+        //     const $current = $(this);
+        //     const $currentContent = $current.next();
+        //     const $others = $(".job-category-header").not(this);
+
+        //     $current.parent().toggleClass('open');
+        //     $currentContent.stop(true, true).slideToggle();
+
+        //     $others.parent().removeClass('open');
+        //     const $othersContent = $others.next().stop(true, true).slideUp();
+
+        //     $.when($currentContent, $othersContent).promise().done(function () {
+        //         loco_scroll.update();
+        //         ScrollTrigger.refresh();
+        //     });
+        // });
     }
 
     // Create a new IntersectionObserver instance
