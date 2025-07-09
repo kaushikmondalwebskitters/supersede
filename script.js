@@ -587,5 +587,8 @@ Webflow.push(function () {
         });
     }, 1000);
 
+    setTimeout(() => {
+                loco_scroll.update(), ScrollTrigger.refresh();
+            }, 1000);
 
 });
